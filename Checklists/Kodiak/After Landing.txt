@@ -1,0 +1,5 @@
+Fuel Condition Lever: LOW IDLE
+Lights: SET
+Flaps: UP
+Auxiliary Fuel Pump: OFF
+Pitot Heat: OFF

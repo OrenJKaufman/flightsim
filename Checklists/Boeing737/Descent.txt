@@ -1,0 +1,4 @@
+Maximum bank angle: 25
+Pressurization
+Auto brake: Check
+Landing data: VREF and minimums

@@ -1,0 +1,6 @@
+Fuel pumps: On
+APU: On
+Generators: On
+Takeoff speeds: Set
+MCP: Set
+Anti-collision light: On

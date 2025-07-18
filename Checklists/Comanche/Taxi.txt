@@ -1,0 +1,10 @@
+Primer: Locked
+Avionics: On
+Ammeter: Check
+Radios: On
+Transponder: Check
+Altimeter: Set
+Heading: Set
+Landing Gear Light: Green
+Nav Lights: Check
+Brakes: Test

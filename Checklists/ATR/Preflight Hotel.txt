@@ -1,0 +1,34 @@
+Battery: On
+Power Levers: Ground Idle
+Gust Lock: Engaged
+Condition Levers: Fuel Shutoff
+Flaps Lever: Up
+Hydraulic: Available
+Propeller Brake: On
+Fuel Pump 2: On
+Engine Start: A and B
+Start 2
+NH 10%
+Right Condition Lever: Feather
+NH 45%
+Start 2: extinguished
+DC Gen 2 Fault: Off
+Engine Start: Off
+Fuel Pumps: Both On
+Nav Light: On
+Emergency Exit Lights: Armed
+Overhead Panel: No White Lights
+FMS Setup
+Takeoff Data: Confirm
+Transponder: Standby
+Altimeter: Set Local
+Power Management: Takeoff
+Flight Director: On
+NAV Source: As Desired
+Heading: Set
+Altitude: Set
+Speed Mode: FMS
+Weather Radar: Standby
+Idle Gate: Verify Ground
+Elevator Trim: Takeoff
+Call for Final Cockpit Preparation Checklist

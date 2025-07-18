@@ -1,0 +1,3 @@
+Altimeters
+ILS frequency and course
+Landing lights: On

@@ -1,0 +1,8 @@
+Flaps: Set
+Speed brakes: 0%
+TCAS: Set
+Go Around Button: Push
+Pitot: On
+Landing lights: On
+Strobe lights: On
+Taxi lights: Off

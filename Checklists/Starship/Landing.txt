@@ -1,0 +1,8 @@
+Pressurization: Check progress
+Auto Feather: Arm
+Landing Gear: Down
+Flaps: Extend
+Lights: As Required
+Auto pilot: Disconnect
+Propeller Sync: Off
+Yaw Damper: Off

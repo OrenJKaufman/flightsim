@@ -1,0 +1,10 @@
+Gust Lock: Release
+Conditions Levers: Verify Auto
+Takeoff Config Test
+Transponder: On
+T CAS: Auto
+Weather Radar: On
+Flight Controls: Free
+Landing Lights: On
+Strobe Lights: On
+Call for Before Takeoff Checklist

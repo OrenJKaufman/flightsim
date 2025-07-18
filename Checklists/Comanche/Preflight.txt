@@ -1,0 +1,9 @@
+Parking Brake: Set
+Landing Gear Switch: Down
+Flaps: Up
+Radios: Off
+Autopilot: Off
+Avionics: Off
+Electrical Switches: Off
+Circuit Breakers: Check
+Beacon: On

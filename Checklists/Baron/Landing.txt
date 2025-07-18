@@ -1,0 +1,4 @@
+Gear: DOWN
+Flaps: FULL
+Propeller Lever: HIGH RPM
+Mixture: FULL RICH

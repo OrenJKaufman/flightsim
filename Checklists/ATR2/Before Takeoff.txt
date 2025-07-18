@@ -1,0 +1,14 @@
+Rotation Speed: Review
+Acceleration Altitude: Review
+Gust Lock: Released
+Flight Controls: Check
+Transponder: On
+T CAS: Auto
+Weather Radar: On
+Copilot MCDU: Flight Plan
+Pilot MFD: Set
+Copilot MFD: Set
+Landing and Strobe Lights: On
+Overhead Panel No White or Fault Lights: Check
+Call for Before Takeoff Checklist
+Heading Mode: Hold

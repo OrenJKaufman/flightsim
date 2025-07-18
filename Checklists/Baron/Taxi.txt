@@ -1,0 +1,7 @@
+Altimeter: SET LOCAL
+Weather Radar: STANDBY
+Taxi Lights: ON
+Transponder: STANDBY
+Mixture: LEAN
+Parking Brake: RELEASE
+Brakes: TEST

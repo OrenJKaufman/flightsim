@@ -1,0 +1,6 @@
+Call for Before Landing Checklist
+Landing Gear: Down
+Flaps: 30
+Power Management: Takeoff
+Landing Lights: On
+Yaw Damper: Off

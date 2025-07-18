@@ -1,0 +1,5 @@
+Engine start switches: Continuous
+Speed brake: Armed
+Auto brake
+Landing Gear: Down
+Flaps: 30 or 40

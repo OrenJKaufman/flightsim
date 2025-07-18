@@ -1,0 +1,7 @@
+Battery: On
+Ground Power: On
+Emergency exit lights: On
+IRS: naav
+Window Heat: On
+Parking Brake: Set
+Engine start levers: Cutoff

@@ -1,0 +1,5 @@
+Flaps: Up
+Strobes: Off
+Fuel Pump: Off
+Mixture: Lean
+Trim: Neutral

@@ -1,0 +1,14 @@
+Taxi lights: Off
+Parking brake: On
+Engine start levers: Cut off
+Ground Power: On
+APU: Off
+Fuel pumps: Off
+IRS: Off
+Window heat: Off
+Emergency Exit Lights: Off
+Packs: Off
+Electric hydraulic: Off
+Lights: Off
+Ground Power: Off
+Battery: Off

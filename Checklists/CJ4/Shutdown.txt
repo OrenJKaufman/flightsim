@@ -1,0 +1,8 @@
+Parking brake: Set
+Emergency lights: Off
+Standby flight display: Off
+Avionics: Off
+Throttles: Idle
+Engine run stop buttons: both stop
+Exterior lights: Off
+Battery: off

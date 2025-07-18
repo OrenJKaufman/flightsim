@@ -1,0 +1,7 @@
+Taxi Lights: ON
+Landing and Strobe Lights: OFF
+Flaps: UP
+Cowl Flaps: OPEN
+Weather Radar: OFF
+Cabin Pressure Mode: DUMP
+Cabin Door Seal Mode: OFF

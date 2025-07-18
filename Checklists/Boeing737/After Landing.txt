@@ -1,0 +1,12 @@
+Speed brake: up
+Flaps: up
+Auto brake: Off
+APU: On
+Landing Lights: Off
+Taxi Lights: On
+Position Lights: Steady
+Flight Director: Off
+Auto throttle: off
+Engine start switches: Off
+Logo lights: On
+Generators: On

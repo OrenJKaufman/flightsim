@@ -1,0 +1,11 @@
+Parking Brake: SET
+Auxiliary Bus Switch: OFF
+Power Lever: IDLE
+Propeller Lever: FEATHER
+Generator and Alternator: OFF
+ITT: STABILIZED
+Fuel Condition Lever: CUTOFF
+Fuel Selector Switches: BOTH OFF
+Avionics Master Switch: OFF
+Master Switch: OFF
+Lights: OFF

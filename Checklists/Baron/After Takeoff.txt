@@ -1,0 +1,5 @@
+Landing Gear: UP
+Flaps: UP
+Taxi Lights: OFF
+Propeller Sync: ON
+Cabin Pressurization: CHECK

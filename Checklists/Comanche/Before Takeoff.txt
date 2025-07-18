@@ -1,0 +1,14 @@
+Controls: Free and correct
+Elevator Trim: Check
+Rudder Trim: Check
+Door: Check
+Flaps: Check
+Fuel Selectors: Check
+Fuel Pump: On
+Mixture: Full Rich
+Propellor: Full forward
+Carb Heat: Off
+Engine Gauges: Check
+Pitot Heat: Check
+Strobes: On
+Landing Lights: Check

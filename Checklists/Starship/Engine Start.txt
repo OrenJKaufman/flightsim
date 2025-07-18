@@ -1,0 +1,31 @@
+Battery Volts: 20 volts minimum
+Propeller Levers: Feather
+aykaz Pilot and Copilot Avionics: Off
+Left and Right Generators: Off
+Battery: On
+External Power Source: Connect
+External Power Volts: 28 to 28.4 volts
+External Power Switch: On
+aykaz: On
+Right Ignition and Engine Start: On
+12% N1: Right condition lever start
+N1 and ITT 1000 Degrees Maximum: Monitor
+Right Oil Pressure: Check
+Right Ignition and Engine Start: Off
+65% N1: Right condition lever run
+Left Ignition and Engine Start: On
+12% N1: Left condition lever start
+N1 and ITT 1000 Degrees Maximum: Monitor
+Left Oil Pressure: Check
+Left Ignition and Engine Start: Off
+65% N1: Left condition lever run
+External Power Switch: Off
+External Power Source: Disconnect
+Right Generator: Reset then On
+Right Generator Volts: 27.5 to 29 volts
+Left Generator: Reset then On
+Left Generator Volts: 27.5 to 29 volts
+Generator Ties: Normal
+Left and Right Generator Ties Open Messages: Extinguished
+Generator Load: Paralleled
+Propeller Levers: Full Forward

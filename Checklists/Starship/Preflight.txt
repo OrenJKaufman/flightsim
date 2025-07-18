@@ -1,0 +1,43 @@
+Parking Brake: Set
+Covers: Removed
+Doors: Secured
+Circuit Breakers: All in
+Outboard Reversionary Panels: As Required
+Static Source: Normal
+Oxygen Supply: System Ready
+Ice Protection: Off
+Landing Gear: Down
+Anti-Skid: Armed
+Center Reversionary Panel: As Required
+Standby Instruments: On
+Standby Battery Power On Annunciator: Illuminated
+Power Levers: Idle
+Propeller Levers: Full Forward
+Condition Levers: Fuel Cutoff
+Bleed Air Valves: Off
+Temperature Mode: Off
+Battery: On
+Triple Fed Bus Volts: 22 volts minimum
+Center Bus Volts: 23 volts minimum
+aykaz: On
+Firewall Fuel Valves: Push closed
+Extinguisher and Firewall Valve: Illuminated
+Standby Pumps: On
+Fuel Pressure Low Annunciators: Illuminated
+Firewall Fuel Valves: Push open
+Extinguisher and Firewall Valve: Extinguished
+Fuel Pressure Low Annunciators: Extinguished
+Standby Pumps: Off
+Fuel Pressure Low Annunciators: Illuminated
+Transfer Flow: Left and right
+Fuel Transfer Message: Illuminated
+Fuel Pressure Low Annunciators: Extinguished
+Transfer Flow: Off
+Avionic Air Fail Message: Illuminated
+Avionics Alternate Blower: On
+Avionics Alternate Blower On Message: Illuminated
+Avionic Air Fail Message: Extinguished
+Avionics Alternate Blower: Off
+Fuel Quantity Total and Aft: Check
+Oxygen Pressure: Confirm
+Lights: As Required

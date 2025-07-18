@@ -1,0 +1,10 @@
+Auxiliary Fuel Pump: ON
+Fuel Quantity: CHECK
+Wing Flaps: 20 degrees
+Trims: SET
+Pitot Heat: AS REQUIRED
+Autopilot: SET
+Transponder: SET AND ON
+Lights: SET
+Propeller Lever: MAX RPM
+Fuel Condition Lever: HIGH IDLE

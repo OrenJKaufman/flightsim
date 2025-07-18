@@ -1,0 +1,8 @@
+Taxi Lights: On
+Landing Lights: Off
+Strobe Lights: Off
+Probes and Windshield Heating: Off
+Flaps: Up
+Gust Lock: On
+Weather Radar: Standby
+Call for After Landing Checklist

@@ -1,0 +1,2 @@
+Cabin Altitude Preselector: SET
+Cowl Flaps: CLOSED

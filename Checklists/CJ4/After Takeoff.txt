@@ -1,0 +1,4 @@
+Landing gear: Up
+Flaps: 0
+Throttles: Climb
+Yaw Damper: On

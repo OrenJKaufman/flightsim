@@ -1,0 +1,9 @@
+Landing Gear: Up
+Flaps: Up
+Taxi Lights: Off
+Power Management: Climb
+Yaw Damper: On
+Call for After Takeoff Checklist
+10,000 feet
+Landing Lights: Off
+Cabin Pressurization: Check

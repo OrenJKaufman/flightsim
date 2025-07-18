@@ -1,0 +1,14 @@
+Fuel Selectors: Check
+Mixture: Rich
+Throttle: Cracked
+Propellor: Full forward
+Carb Heat: Off
+Master Switch: On
+Fuel Pump: On
+Fuel Pressure: Check
+Fuel Pump: Off
+Primer: 1 to 5 strokes
+Magnetos: Both
+Starter: Push
+Oil Pressure: Check
+Mixture: Lean as required

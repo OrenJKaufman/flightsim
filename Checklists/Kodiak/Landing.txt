@@ -1,0 +1,2 @@
+Flaps: FULL
+Yaw Damper: OFF

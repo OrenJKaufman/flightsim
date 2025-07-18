@@ -1,0 +1,5 @@
+Landing Lights: ON
+Altimeters: CHECK
+Propeller Sync: OFF
+Mixture: FULL RICH
+Propeller Lever: HIGH RPM

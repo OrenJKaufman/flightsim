@@ -1,0 +1,16 @@
+Parking Brake: SET
+Mixture: RICH
+Throttle: 1700 RPM
+Propeller Exercise: 300 RPM DROP
+Magnetos: CHECK
+Cabin Altitude: FIELD ELEVATION
+Cabin Differential: 0
+Cabin Climb Rate: 10 OCLOCK
+Cabin Altitude Selector: 1000 FEET BELOW FIELD ELEVATION
+Cabin Door Seal Mode: PRESSURIZED
+Cabin Pressure Mode: PRESSURIZED
+Cabin Pressure Test: HOLD AND CONFIRM DESCENT
+Cabin Pressure Mode: DUMP
+Cabin Door Seal Mode: OFF
+Cabin Altitude Selector: CRUISE ALTITUDE
+Throttle: 1000 RPM

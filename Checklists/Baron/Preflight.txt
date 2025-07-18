@@ -1,0 +1,9 @@
+Parking Brake: SET
+Landing Gear: DOWN
+Flaps: UP
+Cowl Flap: OPEN
+Fuel Selector Valves: BOTH ON
+Avionics Switch: OFF
+Battery: ON
+Alternators: ON
+Naav Lights: ON

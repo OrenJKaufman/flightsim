@@ -1,0 +1,24 @@
+Doors: Closed
+Tail Prop and Wheel Chocks: Stowed
+Beacon Light: On
+Taxi Lights: On
+Call for Before Propeller Rotation Checklist
+ATC Push and Start Clearance: Requested
+Pushback: Requested
+Propeller Brake: Off
+NP: 14%
+Condition Lever 2: Auto
+NP: 70%
+AC and Hydraulic: Check
+Engine Start: A and B
+Start 1: On
+NH: 10%
+Condition Lever 1: Feather
+NH: 45%
+Engine Start: Off
+Start 1 and DC Gen 1 Fault Lights Off: Check
+Condition Lever 1: Auto
+NP: 70%
+AC and Hydraulic: Check
+Overhead Panel No White or Fault Lights: Check
+MFD System Pages No Fault Messages: Check

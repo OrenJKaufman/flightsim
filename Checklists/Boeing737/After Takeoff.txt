@@ -1,0 +1,7 @@
+Engine bleeds: On
+Packs: Auto
+Landing gear: up and Off
+Flaps: up and no lights
+Start switches: Off
+Auto brake: Off
+Taxi Lights: Off

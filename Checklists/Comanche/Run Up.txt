@@ -1,0 +1,11 @@
+Position: Into wind
+Brakes: Hold
+Fuel Quantity: Check
+Fuel Selectors: Check
+Mixture: Check
+Throttle: 2000 RPM
+Engine Instruments: Check
+Magnetos: Check
+Propellor: Cycle 3 times
+Propellor: 1500 RPM
+Carb Heat: Check

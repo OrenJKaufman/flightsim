@@ -1,0 +1,6 @@
+Battery: On
+Ground Power: On
+Emergency Lights: Armed
+Standby Flight Display: On
+Avionics: Dispatch
+Parking Brake: Set

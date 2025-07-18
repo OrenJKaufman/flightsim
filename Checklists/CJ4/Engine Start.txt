@@ -1,0 +1,7 @@
+Beacon: On
+Throttles: Idle
+Engine Starter: Push
+N2 equals 20%
+Engine Run Stop: Run
+Other engine: repeat
+Ground power: disconnect

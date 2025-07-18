@@ -1,0 +1,8 @@
+Parking Brake: SET
+Avionics: OFF
+Throttles: 1000 RPM
+Mixture: CUT OFF
+Ignition Switches: OFF
+Lights: OFF
+Alternators: OFF
+Battery: OFF

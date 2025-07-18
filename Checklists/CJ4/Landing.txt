@@ -1,0 +1,4 @@
+Landing Gear: Down
+Flaps: 35
+Speed brakes: 0%
+Yaw Damper: disengage

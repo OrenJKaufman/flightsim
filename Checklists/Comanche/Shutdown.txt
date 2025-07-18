@@ -1,0 +1,11 @@
+Parking Brake: Set
+Radios: Off
+Transponder: Off
+Avionics: Off
+Master Switch: Off
+Throttle: Closed
+Mixture: Idle cutoff
+Magnetos: Off
+Controls: Secure
+Doors: Closed
+Tie Downs: Secure

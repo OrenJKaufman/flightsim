@@ -1,0 +1,7 @@
+Landing gear: Up
+Flaps: Retract
+Yaw Damper: On
+Climb Power: 90% Torque 840 degrees ITT 1600 RPM
+Propeller Sync: On
+Lights: As Required
+At Cruise: Auto feather Off

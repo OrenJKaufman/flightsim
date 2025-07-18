@@ -1,0 +1,3 @@
+Altimeter: SET LOCAL
+Transponder: STANDBY
+Taxi Lights: ON

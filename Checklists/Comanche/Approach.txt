@@ -1,0 +1,11 @@
+Autopilot: Off
+Fuel Pump: On
+Fuel Selectors: Check
+Fuel Levels: Check
+Fuel Pressure: Check
+Mixture: Rich
+Propellor: Full forward
+Carb Heat: Check
+Airspeed: 120
+Landing Gear: Down
+Flaps: Check

@@ -1,0 +1,16 @@
+Parking brake: Set
+Oxygen Supply: Push Off
+Engine Ice Protection: Off
+Windshield Heat: Off
+Pilot and Copilot Avionics: Off
+Standby Instruments: Off
+Bleed Air Valves: Off
+Temperature Mode: Off
+ITT: Stabilized
+Condition Levers: Fuel Cutoff
+Propellers: Feathered
+ITT: Monitor for fuel Cutoff
+Overhead Panel Switches: All Off
+aykaz: Off
+Master Switches: Off
+Covers: On

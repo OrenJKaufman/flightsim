@@ -1,0 +1,11 @@
+Pilot and Copilot Avionics: On
+Standby Indicators: On
+Bleed Air Valves: Both
+Blowers and Temperature: Set
+Temperature Mode Selector: Auto
+Lights: As Required
+Flaps: Retract
+AHRS Aligning Message: Extinguished
+CDU Time Date and Position: Verify
+Radar: Standby
+Brakes: Checked

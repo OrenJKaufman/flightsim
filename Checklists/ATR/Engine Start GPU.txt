@@ -1,0 +1,29 @@
+Doors: Closed
+Parking Brake: Set
+Beacon: On
+Power Levers: Ground Idle
+Condition Levers: Fuel Shutoff
+Call for Before Propeller Rotation Checklist
+Engine Start: A and B
+Start 2
+NH 10%
+Right Condition Lever: Feather
+NH 45%
+Start 2: extinguished
+Right Condition Lever: Auto
+DC External Power: Off
+AC External Power: Off
+DC Gen 2 Fault: Off
+GPU: Removed
+Chocks: Removed
+Tail Prop: Removed
+Pushback
+Engine Start: A and B
+Start 1
+NH 10%
+Left Condition Lever: Feather
+NH 45%
+Start 1: extinguished
+DC Gen 1 Fault: Off
+Left Condition Lever: Auto
+Engine Start: Off

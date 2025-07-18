@@ -1,0 +1,5 @@
+Above 10000 feet
+Fuel pumps: On
+Lights Taxi and Landing: Off
+APU: Off
+Pressurization

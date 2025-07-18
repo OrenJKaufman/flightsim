@@ -1,0 +1,16 @@
+Beacon: ON
+Right Propeller Lever: HIGH RPM
+Right Mixture: FULL RICH
+Right Throttle: FULL OPEN
+Right Fuel Boost Pump: HI 3 SECONDS THEN OFF
+Right Throttle: HALF INCH OPEN
+Right Ignition Switch: START
+Right Throttle: 1000 RPM
+Left Propeller Lever: HIGH RPM
+Left Mixture: FULL RICH
+Left Throttle: FULL OPEN
+Left Fuel Boost Pump: HI 3 SECONDS THEN OFF
+Left Throttle: HALF INCH OPEN
+Left Ignition Switch: START
+Left Throttle: 1000 RPM
+Avionics Master: ON

@@ -1,0 +1,7 @@
+Generators: On
+Isolation valve: Auto
+Bleed APU: Off
+Engine start switches: Continuous
+Auto brake: RTO
+Position lights: Steady
+Transponder: Set

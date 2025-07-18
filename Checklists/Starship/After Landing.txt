@@ -1,0 +1,7 @@
+Stall Warning Heat: Off
+Pitot Heat: Off
+Windshield Heat: As Required
+Vent Cable Heat: Off
+Engine Auto Ignition: Off
+Lights: As Required
+Flaps Retract

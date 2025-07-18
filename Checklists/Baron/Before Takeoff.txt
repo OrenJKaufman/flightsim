@@ -1,0 +1,12 @@
+Heading: SET
+Navigation Source: RESET
+Elevator Trim: CHECK
+Flaps: CHECK
+Cabin Altitude Selector: CHECK
+Cabin Door Seal Mode: PRESSURIZED
+Cabin Pressure Mode: PRESSURIZED
+Air Conditioning: OFF
+Fuel Boost Pumps: OFF
+Transponder: SET AND ON
+Weather Radar: ON
+Landing and Strobe Lights: ON

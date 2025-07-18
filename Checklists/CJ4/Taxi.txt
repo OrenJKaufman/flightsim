@@ -1,0 +1,5 @@
+Avionics Switch: On
+Altimeter: Set
+Nav lights: On
+Taxi lights: On
+Parking brake: Release

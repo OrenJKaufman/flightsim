@@ -1,0 +1,3 @@
+Landing Gear Light: Green
+Flaps: Down
+Airspeed: 90

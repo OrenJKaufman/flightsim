@@ -1,0 +1,25 @@
+Annunciators: Push to test
+Surface De-ice and Ice Protection: As Required
+Pressurization Altitude: 1000 feet above cruise
+Rate Knob: 10 oclock Position
+Manual Cabin Altitude Control: Normal Full counter clockwise
+Avionics: Check and Set
+Autopilot: Engage
+Autopilot: Yoke Disconnect
+Flaps: As desired
+Flight Controls: Free and correct
+Auto Feather: Arm
+Standby Altimeter: Set
+Flight and Engine Displays: Check
+Stall Warning Heat: On
+Pitot Heat: On
+Engine Ice Protection: As Required
+Vent Cable Heat: On
+Bleed Air Valves: Both
+Transponder: On
+Annunciators and aykaz Messages: Consider
+External Lights: As Required
+Windshield Heat: Low
+Engine Auto Ignition: As Required
+Generator Loads: Check
+Pitch and Roll and Rudder Trims: Centered and Green

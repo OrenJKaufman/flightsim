@@ -1,0 +1,36 @@
+Battery: On
+Navigation Lights: On
+DC External Power: On
+Overhead Panel: No White Lights
+Emergency Exit Lights: Armed
+Gust Lock and Idle Gate: Check
+Weather Radar: Standby
+Landing Gear Lever: Down
+Fuel Quantity: Check and Reset
+ATC Delivery Clearance: Requested
+Barometer: Set
+Transponder: Set and Standby
+FMS: Setup
+Takeoff Data: Confirmed
+Elevator Trim: Set
+Power Management: Takeoff
+Weather Radar: Standby
+Heading: Set
+Heading Select Mode: Set
+Navigation Mode: Armed
+Altitude: Set
+Speed Mode: Auto
+IAS Mode: Set
+Call for Final Cockpit Preparation Checklist
+Propeller Brake: On
+Wing Light: On
+Beacon Light: On
+Engine Start: A and B
+Start 2: On
+NH: 10%
+Condition Lever 2: Feather
+NH: 45%
+Start 2 Light Off: Check
+External DC Power: Off
+DC Gen 2 Fault Light Off: Check
+GPU: Disconnected

@@ -1,0 +1,6 @@
+Speed brakes: 0%
+Flaps: 0
+Pitot: Off
+Landing lights: Off
+Taxi lights: On
+Strobe lights: Off

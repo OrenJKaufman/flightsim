@@ -1,0 +1,6 @@
+Flaps: UP
+Yaw Damper: ON
+Auxiliary Fuel Pump: STANDBY
+Pitot Heat: AS REQUIRED
+Lights: CHECK
+Cruise Climb Speed: 120 KNOTS

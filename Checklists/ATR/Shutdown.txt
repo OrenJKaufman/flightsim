@@ -1,0 +1,14 @@
+Parking Brake: Set
+Power Levers: Ground Idle
+Condition Levers: Feather
+Taxi Lights: Off
+Condition Levers: Fuel Shutoff
+Fuel Pumps: Off
+Call for Parking Checklist
+Chocks: On
+Oxygen: Off
+Exterior Lights: Off
+Weather Radar: Off
+Emergency Exit Lights: Off
+Call for Leaving Aircraft Checklist
+Battery: Off

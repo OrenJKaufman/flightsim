@@ -1,0 +1,13 @@
+Beacon: ON
+Auxiliary Fuel Pump: ON
+Ignition Switch: ON
+Starter Switch: ON
+Check NG Accelerating Through 14%
+Fuel Condition Lever: LOW IDLE
+Check NG Minimum 52%
+Starter Switch: OFF
+Ignition Switch: OFF
+Propeller Lever: MAX RPM
+Auxiliary Fuel Pump: STANDBY
+Generator and Alternator: ON
+Auxiliary Bus Switch: ON

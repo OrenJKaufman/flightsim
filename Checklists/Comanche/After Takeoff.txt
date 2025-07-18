@@ -1,0 +1,9 @@
+Landing Gear: Up
+Flaps: Up
+Airspeed: 105
+1000 feet: Check
+Fuel Pump: Off
+Throttle: Check
+Propellor: 2400 RPM
+CHT Temperature: Check
+Mixture: Lean

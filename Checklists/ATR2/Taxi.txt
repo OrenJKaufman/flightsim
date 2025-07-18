@@ -1,0 +1,6 @@
+Taxi Lights: On
+Anti skid test: Performed
+Flaps: 15
+Call for Before Taxi Checklist
+ATC Taxi: Requested
+Call for Taxi Checklist

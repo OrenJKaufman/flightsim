@@ -1,0 +1,4 @@
+Flaps: Set
+Stabilizer trim: Set
+Position lights: Strobe
+Landing Lights: On

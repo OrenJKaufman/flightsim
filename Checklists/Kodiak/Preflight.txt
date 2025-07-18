@@ -1,0 +1,10 @@
+Parking Brake: SET
+Master Switch: ON
+Avionics Master Switch: ON
+Naav Lights: ON
+Fuel Selector Valves: LEFT and RIGHT ON
+Firewall Fuel Shutoff: FUEL ON
+Power Lever: IDLE
+Propeller Lever: FEATHER
+Fuel Condition Lever: CUTOFF
+Wing Flaps: UP
