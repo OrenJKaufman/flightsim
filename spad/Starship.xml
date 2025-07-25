@@ -3,12 +3,12 @@
     <Variable Name="PROFILE:COM SPACING OVERRIDE" Value="0" ValueType="Decimal" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 4" Value="Ice" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 1" Value="Flight" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="Switch" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="Startup" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="Switch" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="Lights" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
   </Variables>
   <Devices>
     <Device VendorID="0x0FD9" ProductID="0x006C" DevicePath="\\?\hid#vid_0fd9&amp;pid_006c#b&amp;1c4d507f&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="CL07L2A00420" DeviceIndex="0" Version="3">
@@ -13264,52 +13264,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_PLUS_IMAGE">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
-                          <GaugeTextLayer Layer="2" Name="Label1" Width="200" Height="66" Font="Calibri" FontSize="30">
-                            <Text>COM 1</Text>
-                          </GaugeTextLayer>
-                          <GaugeTextLayer Layer="4" Name="Label2" X="200" Width="200" Height="66" Font="Calibri" FontSize="30">
-                            <Text>COM 2</Text>
-                          </GaugeTextLayer>
-                          <GaugeTextLayer Layer="6" Name="Label3" X="400" Width="200" Font="Calibri" FontSize="30" />
-                          <GaugeTextLayer Layer="7" Name="Label4" X="600" Width="200" Font="Calibri" FontSize="30">
-                            <Text>ATC VOLUME (MUTE)</Text>
-                          </GaugeTextLayer>
-                          <GaugeTextLayer Layer="3" Name="COM1 Volume" Y="66" Width="200" Height="34" Font="Calibri" FontSize="24" />
-                          <GaugeTextLayer Layer="5" Name="COM2 Volume" X="200" Y="66" Width="200" Height="34" Font="Calibri" FontSize="24" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="LABEL">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM VOLUME:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLabel TargetLayer="3" Text=" [SIMCONNECT:COM VOLUME:1]" TextType="Exp" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="LABEL">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM VOLUME:2" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLabel TargetLayer="5" Text=" [SIMCONNECT:COM VOLUME:2]" TextType="Exp" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_E_4">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -13343,6 +13297,106 @@
                       </Keys>
                     </KeyboardMacro>
                   </EventActionKeyboard>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_E_3">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LVAR:bksq_HeadphoneSimulationTarget" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="LVAR:bksq_HeadphoneSimulationTarget" SourceDataDefinition="IF( [LOCAL:LAST BKSQ HEADPHONESIMULATIONTARGET] = 0,&#xD;&#xA;0.75, [LOCAL:LAST BKSQ HEADPHONESIMULATIONTARGET])" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LVAR:bksq_HeadphoneSimulationTarget" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="LOCAL:LAST BKSQ HEADPHONESIMULATIONTARGET" SourceDataDefinition="LVAR:bksq_HeadphoneSimulationTarget" />
+                  <EventActionChangeValue TargetDataDefinition="LVAR:bksq_HeadphoneSimulationTarget" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_CLOCKWISE">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:bksq_HeadphoneSimulationTarget" Value="0.05" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="1" />
+                      <Option Key="VALUEMIN" Value="0.5" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:bksq_HeadphoneSimulationTarget" Value="0.05" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="1" />
+                      <Option Key="VALUEMIN" Value="0.5" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_PLUS_IMAGE">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Label1" Width="200" Height="66" Font="Calibri" FontSize="30">
+                            <Text>COM 1</Text>
+                          </GaugeTextLayer>
+                          <GaugeTextLayer Layer="4" Name="Label2" X="200" Width="200" Height="66" Font="Calibri" FontSize="30">
+                            <Text>COM 2</Text>
+                          </GaugeTextLayer>
+                          <GaugeTextLayer Layer="6" Name="Label3" X="400" Width="200" Height="66" Font="Calibri" FontSize="30">
+                            <Text>HEADPHONE</Text>
+                          </GaugeTextLayer>
+                          <GaugeTextLayer Layer="8" Name="Label4" X="600" Width="200" Font="Calibri" FontSize="30">
+                            <Text>ATC VOLUME (MUTE)</Text>
+                          </GaugeTextLayer>
+                          <GaugeTextLayer Layer="3" Name="COM1 Volume" Y="66" Width="200" Height="34" Font="Calibri" FontSize="24" />
+                          <GaugeTextLayer Layer="5" Name="COM2 Volume" X="200" Y="66" Width="200" Height="34" Font="Calibri" FontSize="24" />
+                          <GaugeTextLayer Layer="7" Name="Headphone Volume" X="400" Y="66" Width="200" Height="34" Font="Calibri" FontSize="24" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="LABEL">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM VOLUME:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionLabel TargetLayer="3" Text=" [SIMCONNECT:COM VOLUME:1]" TextType="Exp" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="LABEL">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM VOLUME:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionLabel TargetLayer="5" Text=" [SIMCONNECT:COM VOLUME:2]" TextType="Exp" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="LABEL">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="LVAR:bksq_HeadphoneSimulationTarget" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionLabel TargetLayer="7" Text=" [LVAR:bksq_HeadphoneSimulationTarget] * 100" TextType="Exp" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -14693,34 +14747,6 @@
     <Device VendorID="0x294B" ProductID="0x1900" DevicePath="\\?\hid#vid_294b&amp;pid_1900#d&amp;2d8801a0&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="BUTTON_3">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSLONG">
-                <Comment>Reset TrackIR</Comment>
-                <EventActions>
-                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
-                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
-                      <Keys>
-                        <Keys>F12</Keys>
-                      </Keys>
-                    </KeyboardMacro>
-                  </EventActionKeyboard>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESSSHORT">
-                <Comment>Pause TrackIR</Comment>
-                <EventActions>
-                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
-                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
-                      <Keys>
-                        <Keys>F9</Keys>
-                      </Keys>
-                    </KeyboardMacro>
-                  </EventActionKeyboard>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="BUTTON_2">
             <EventDefinitions>
               <EventDefinition Trigger="PRESSSHORT">
@@ -15212,6 +15238,27 @@
                 </EventConditions>
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="SOUTH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_3">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESSLONG">
+                <Comment>Reset TrackIR</Comment>
+                <EventActions>
+                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
+                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
+                      <Keys>
+                        <Keys>F12</Keys>
+                      </Keys>
+                    </KeyboardMacro>
+                  </EventActionKeyboard>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESSSHORT">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="60" JoystickMode="PRESSANDRELEASE" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -16119,9 +16166,9 @@
     <CustomClientEvent Name="RTU_TransponderStandbyButton_1" EventID="H:RTU_TransponderStandbyButton_1" SubCategory="Bksq Starship" />
     <CustomClientEvent Name="RTU_ComSquelchButtonPress_1" EventID="H:RTU_ComSquelchButtonPress_1" SubCategory="Bksq Starship" />
   </CustomClientEvents>
-  <ProfileInformation ProfileID="f38f6fbb-82df-458b-8d0d-a56a5b6a5e4c" Version="0.260">
+  <ProfileInformation ProfileID="f38f6fbb-82df-458b-8d0d-a56a5b6a5e4c" Version="0.267">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-07-13T09:58:38.9513022-06:00</LastChanged>
+    <LastChanged>2025-07-18T18:52:12.5026655-06:00</LastChanged>
   </ProfileInformation>
 </Profile>

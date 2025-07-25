@@ -21767,34 +21767,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="BUTTON_3">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSLONG">
-                <Comment>Reset TrackIR</Comment>
-                <EventActions>
-                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
-                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
-                      <Keys>
-                        <Keys>F12</Keys>
-                      </Keys>
-                    </KeyboardMacro>
-                  </EventActionKeyboard>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESSSHORT">
-                <Comment>Pause TrackIR</Comment>
-                <EventActions>
-                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
-                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
-                      <Keys>
-                        <Keys>F9</Keys>
-                      </Keys>
-                    </KeyboardMacro>
-                  </EventActionKeyboard>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="BUTTON_2">
             <EventDefinitions>
               <EventDefinition Trigger="PRESSSHORT">
@@ -22292,6 +22264,27 @@
                   <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_POS_STROBE">
                     <Parameter Value="2" />
                   </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_3">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESSLONG">
+                <Comment>Reset TrackIR</Comment>
+                <EventActions>
+                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
+                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
+                      <Keys>
+                        <Keys>F12</Keys>
+                      </Keys>
+                    </KeyboardMacro>
+                  </EventActionKeyboard>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESSSHORT">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="60" JoystickMode="PRESSANDRELEASE" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -23209,9 +23202,9 @@
       <Expression>Len([SIMCONNECT:TRANSPONDER CODE:1])</Expression>
     </CustomExpression>
   </CustomExpressions>
-  <ProfileInformation ProfileID="e1024a36-4dd9-4df8-b460-4bcd26710565" Version="0.104">
+  <ProfileInformation ProfileID="e1024a36-4dd9-4df8-b460-4bcd26710565" Version="0.105">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-06-08T14:26:27.4119457-06:00</LastChanged>
+    <LastChanged>2025-07-20T13:47:16.8953999-06:00</LastChanged>
   </ProfileInformation>
 </Profile>

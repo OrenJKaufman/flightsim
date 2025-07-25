@@ -3,12 +3,12 @@
     <Variable Name="PROFILE:COM SPACING OVERRIDE" Value="0" ValueType="Decimal" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 4" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 1" Value="Flight" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
   </Variables>
   <Devices>
     <Device VendorID="0x0FD9" ProductID="0x006C" DevicePath="\\?\hid#vid_0fd9&amp;pid_006c#b&amp;1c4d507f&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="CL07L2A00420" DeviceIndex="0" Version="3">
@@ -4827,27 +4827,27 @@
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:NavInstrLightSwitchPct" Value="5" ValueOperation="Increment">
+                  <EventActionChangeValue TargetDataDefinition="LVAR:NavInstrLightSwitchPct" Value="0.05" ValueOperation="Increment">
                     <Options>
                       <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="100" />
+                      <Option Key="VALUEMAX" Value="1" />
                     </Options>
                   </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:NavInstrLightSwitchPct" Value="5" ValueOperation="Decrement">
+                  <EventActionChangeValue TargetDataDefinition="LVAR:NavInstrLightSwitchPct" Value="0.05" ValueOperation="Decrement">
                     <Options>
                       <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="100" />
+                      <Option Key="VALUEMAX" Value="1" />
                     </Options>
                   </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="LVAR:NavInstrLightSwitchPct" SourceDataDefinition="IF( [LVAR:NavInstrLightSwitchPct] &lt; 100, 100, 0)" />
+                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="LVAR:NavInstrLightSwitchPct" SourceDataDefinition="IF( [LVAR:NavInstrLightSwitchPct] &lt; 1, 1, 0)" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -6688,34 +6688,6 @@
     <Device VendorID="0x294B" ProductID="0x1900" DevicePath="\\?\hid#vid_294b&amp;pid_1900#d&amp;2d8801a0&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="BUTTON_3">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSLONG">
-                <Comment>Reset TrackIR</Comment>
-                <EventActions>
-                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
-                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
-                      <Keys>
-                        <Keys>F12</Keys>
-                      </Keys>
-                    </KeyboardMacro>
-                  </EventActionKeyboard>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESSSHORT">
-                <Comment>Pause TrackIR</Comment>
-                <EventActions>
-                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
-                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
-                      <Keys>
-                        <Keys>F9</Keys>
-                      </Keys>
-                    </KeyboardMacro>
-                  </EventActionKeyboard>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="BUTTON_2">
             <EventDefinitions>
               <EventDefinition Trigger="PRESSSHORT">
@@ -7070,6 +7042,27 @@
                 <Options>
                   <Option Key="HELD_FREQUENCY" Value="50" />
                 </Options>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_3">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESSLONG">
+                <Comment>Reset TrackIR</Comment>
+                <EventActions>
+                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
+                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
+                      <Keys>
+                        <Keys>F12</Keys>
+                      </Keys>
+                    </KeyboardMacro>
+                  </EventActionKeyboard>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESSSHORT">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="60" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
               </EventDefinition>
             </EventDefinitions>
           </Event>
@@ -7480,9 +7473,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="4a7bbc47-b89d-457c-8d58-cb58799f80bc" Version="0.45">
+  <ProfileInformation ProfileID="4a7bbc47-b89d-457c-8d58-cb58799f80bc" Version="0.48">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-07-18T14:14:58.2845634-06:00</LastChanged>
+    <LastChanged>2025-07-19T15:02:34.3162823-06:00</LastChanged>
   </ProfileInformation>
 </Profile>
