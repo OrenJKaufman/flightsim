@@ -3,12 +3,12 @@
     <Variable Name="PROFILE:COM SPACING OVERRIDE" Value="0" ValueType="Decimal" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 4" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 1" Value="Flight" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
   </Variables>
   <Devices>
     <Device VendorID="0x0FD9" ProductID="0x006C" DevicePath="\\?\hid#vid_0fd9&amp;pid_006c#b&amp;1c4d507f&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="CL07L2A00420" DeviceIndex="0" Version="3">
@@ -260,7 +260,7 @@
                       <SimpleGauge>
                         <GaugeLayers>
                           <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="EDM_Step" ImageId="6d7e396c-bb47-551d-b6f7-15a5a37de639" />
+                          <GaugeImageLayer Layer="1" Name="EDM_Step" ImageId="0e60da68-7e70-5a03-b1c3-cf3496768345" />
                           <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -1452,7 +1452,7 @@
                       <SimpleGauge>
                         <GaugeLayers>
                           <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="EDM_LF" ImageId="c323f93c-09ce-551b-afed-c24ef371bb18" />
+                          <GaugeImageLayer Layer="1" Name="EDM_LF" ImageId="bff6758f-162b-50ae-acb5-7de87d47e118" />
                           <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -3291,7 +3291,6 @@
         <Image Id="{f2bdeb37-06b6-5baf-97ef-72d2d1d68be5}" Name="FuelSel_R_off" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\A2A Comanche\icons\FuelSel_R_off.png" />
         <Image Id="{185a1bf3-c0c0-5baa-b8aa-e81f21f8bd68}" Name="PA24_standard_switch_y_off" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\A2A Comanche\icons\PA24_standard_switch_y_off.png" />
         <Image Id="{ea62e2b8-299c-503e-8e06-dadc3542c234}" Name="PA24_standard_switch_y_on" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\A2A Comanche\icons\PA24_standard_switch_y_on.png" />
-        <Image Id="{6d7e396c-bb47-551d-b6f7-15a5a37de639}" Name="EDM_Step" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\A2A Comanche\icons\EDM_Step.png" />
         <Image Id="{c9db7a21-7e3a-536e-8eea-e8278fc0fddc}" Name="DME_0" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\A2A Comanche\icons\DME_0.png" />
         <Image Id="{345d84b5-4d9b-5c06-b819-6e7cd5b2b8c4}" Name="DME_1" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\A2A Comanche\icons\DME_1.png" />
         <Image Id="{177e94dd-6b97-5d38-9d6d-e8001df85aad}" Name="DME_2" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\A2A Comanche\icons\DME_2.png" />
@@ -3319,7 +3318,6 @@
         <Image Id="{23a986b2-9d87-58fa-b7a1-dab24bf8751f}" Name="PA24_standard_switch_orange_on" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\A2A Comanche\icons\PA24_standard_switch_orange_on.png" />
         <Image Id="{f010bc11-aa00-509c-b4a8-68f960f169e1}" Name="switch_off_side" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\B247D\icons\switch_off_side.png" />
         <Image Id="{dcd405bf-930d-56dd-867d-8822d28d37d0}" Name="switch_on_side" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\B247D\icons\switch_on_side.png" />
-        <Image Id="{c323f93c-09ce-551b-afed-c24ef371bb18}" Name="EDM_LF" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\A2A Comanche\icons\EDM_LF.png" />
       </Images>
       <Events />
       <Extensions />
@@ -7473,9 +7471,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="4a7bbc47-b89d-457c-8d58-cb58799f80bc" Version="0.48">
+  <ProfileInformation ProfileID="4a7bbc47-b89d-457c-8d58-cb58799f80bc" Version="0.49">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-07-19T15:02:34.3162823-06:00</LastChanged>
+    <LastChanged>2025-08-02T11:32:19.0284265-06:00</LastChanged>
   </ProfileInformation>
 </Profile>

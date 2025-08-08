@@ -20464,90 +20464,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_PLUS_IMAGE">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
-                          <GaugeTextLayer Layer="2" Name="Label 1" Width="200" Height="66" Font="Calibri" FontSize="30">
-                            <Text>Sim Rate</Text>
-                          </GaugeTextLayer>
-                          <GaugeTextLayer Layer="3" Name="Sim Rate 1X" Y="66" Width="200" Height="34" Foreground="Green" Font="Calibri" FontSize="30">
-                            <Text>1 X</Text>
-                          </GaugeTextLayer>
-                          <GaugeTextLayer Layer="4" Name="Sim Rate Medium" Y="66" Width="200" Height="34" Foreground="Yellow" Font="Calibri" FontSize="30">
-                            <Text>X</Text>
-                          </GaugeTextLayer>
-                          <GaugeTextLayer Layer="5" Name="Sim Rate Max" Y="66" Width="200" Height="34" Foreground="Red" Font="Calibri" FontSize="30">
-                            <Text>XXX</Text>
-                          </GaugeTextLayer>
-                          <GaugeTextLayer Layer="6" Name="TextLayer 6" X="200" Width="200" Height="66" Font="Calibri" FontSize="30">
-                            <Text>Drone Speed</Text>
-                          </GaugeTextLayer>
-                          <GaugeTextLayer Layer="7" Name="Drone Speed" X="200" Y="66" Width="200" Height="34" Font="Calibri" FontSize="30">
-                            <Text>-</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="MODE" IsFinal="true" Priority="30">
-                <EventConditions>
-                  <EventCondition ConditionComparator="LessOrEqual" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLayerMode TargetLayer="3" TargetMode="1" />
-                  <EventActionLayerMode TargetLayer="4" TargetMode="0" />
-                  <EventActionLayerMode TargetLayer="5" TargetMode="0" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="MODE" IsFinal="true" Priority="20">
-                <EventConditions>
-                  <EventCondition ConditionComparator="LessOrEqual" ConditionTargetValue="8" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
-                  <EventCondition ConditionComparator="Greater" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLayerMode TargetLayer="3" TargetMode="0" />
-                  <EventActionLayerMode TargetLayer="4" TargetMode="1" />
-                  <EventActionLayerMode TargetLayer="5" TargetMode="0" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="MODE" IsFinal="true" Priority="10">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Greater" ConditionTargetValue="8" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLayerMode TargetLayer="3" TargetMode="0" />
-                  <EventActionLayerMode TargetLayer="4" TargetMode="0" />
-                  <EventActionLayerMode TargetLayer="5" TargetMode="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="LABEL" Priority="40">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLabel TargetLayer="4" Text="ToString( [SIMCONNECT:SIMULATION RATE] ) + ' X'" TextType="Exp" />
-                  <EventActionLabel TargetLayer="5" Text="ToString( [SIMCONNECT:SIMULATION RATE] ) + ' X'" TextType="Exp" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="LABEL" Priority="40">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLabel TargetLayer="7" Text="ToString( [MSFS:DRONE CAMERA SPEED TRAVELLING]  / 100) + ' %'" TextType="Exp" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_1_1">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -20904,6 +20820,77 @@
               <EventDefinition Trigger="PAGE_ACTIVATED" IsFinal="true" Priority="5" ConditionBinding="OR">
                 <EventActions>
                   <EventActionPlateColor TargetLayer="0" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_PLUS_IMAGE">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Label 1" Width="200" Height="66" Font="Calibri" FontSize="30">
+                            <Text>Sim Rate</Text>
+                          </GaugeTextLayer>
+                          <GaugeTextLayer Layer="3" Name="Sim Rate" Y="66" Width="200" Height="34" Foreground="Green" Font="Calibri" FontSize="30">
+                            <Text>1 X</Text>
+                          </GaugeTextLayer>
+                          <GaugeTextLayer Layer="4" Name="TextLayer 6" X="200" Width="200" Height="66" Font="Calibri" FontSize="30">
+                            <Text>Drone Speed</Text>
+                          </GaugeTextLayer>
+                          <GaugeTextLayer Layer="5" Name="Drone Speed" X="200" Y="66" Width="200" Height="34" Font="Calibri" FontSize="30">
+                            <Text>-</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="LABEL" Priority="40">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionLabel TargetLayer="3" Text="ToString( [SIMCONNECT:SIMULATION RATE] ) + ' X'" TextType="Exp" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="LABEL" Priority="40">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionLabel TargetLayer="5" Text="ToString( [MSFS:DRONE CAMERA SPEED TRAVELLING]  / 100) + ' %'" TextType="Exp" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="LessOrEqual" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="3" Color="#FF008000" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Greater" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
+                  <EventCondition ConditionComparator="LessOrEqual" ConditionTargetValue="8" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="3" Color="#FFFFFF00" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Greater" ConditionTargetValue="8" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="3" Color="#FFFF0000" TargetScope="1" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -22972,7 +22959,7 @@
       <Extensions>
         <Extension type="ProfileGauges">
           <Gauges>
-            <Gauge Filename="arc://C:\Users\oren\SPAD.neXt\gauges\fipgauges\B737FLAPS.snp;B737FLAPS.xml" IsActiveGauge="true" ProfileGaugeID="0952442b-051a-4595-b143-b9e48f01a682">
+            <Gauge Filename="arc://C:\Users\oren\SPAD.neXt\gauges\fipgauges\B737FLAPS.snp;B737FLAPS.xml" IsActiveGauge="false" ProfileGaugeID="0952442b-051a-4595-b143-b9e48f01a682">
               <GaugeButton BoundTo="FIP_BUTTON_PAGEUP">
                 <Event type="SPADBaseEvent">
                   <BaseEvent BoundTo="FIP_BUTTON_PAGEUP">
@@ -23202,9 +23189,9 @@
       <Expression>Len([SIMCONNECT:TRANSPONDER CODE:1])</Expression>
     </CustomExpression>
   </CustomExpressions>
-  <ProfileInformation ProfileID="e1024a36-4dd9-4df8-b460-4bcd26710565" Version="0.105">
+  <ProfileInformation ProfileID="e1024a36-4dd9-4df8-b460-4bcd26710565" Version="0.106">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-07-20T13:47:16.8953999-06:00</LastChanged>
+    <LastChanged>2025-07-27T11:18:07.8631428-06:00</LastChanged>
   </ProfileInformation>
 </Profile>
