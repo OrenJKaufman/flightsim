@@ -1,0 +1,16 @@
+Throttle: Idle
+Propellor: Full forward
+Mixture: Lean
+Alternate air and static: Closed
+Fuel Selector: Check
+Strobe light: On
+Fuel Pump: On
+Throttle: Cracked
+Mixture: Rich 3 to 5 seconds
+Throttle: Reduce
+Ignition: Start
+Mixture: Rich
+Oil pressure: Check
+Fuel Pump: Off
+Alternator: On
+Engine indicators: Check

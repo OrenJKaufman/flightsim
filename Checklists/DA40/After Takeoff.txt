@@ -1,0 +1,3 @@
+Propellor: 2400 RPM
+Fuel Pump: Off
+Lights: As required

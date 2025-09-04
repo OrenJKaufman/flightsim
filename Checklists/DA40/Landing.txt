@@ -1,0 +1,3 @@
+Mixture: Rich
+Propellor: Full forward
+Flaps: Landing

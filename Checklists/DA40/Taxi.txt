@@ -1,0 +1,7 @@
+Avionics: On
+Lights: As Required
+Flaps: Check
+Pitot: Check
+Autopilot: Check
+Trim: Takeoff
+Brakes: Check

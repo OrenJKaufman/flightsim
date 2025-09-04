@@ -1,0 +1,4 @@
+Fuel Pump: Off
+Pitot: Off
+Lights: As required
+Flaps: Up

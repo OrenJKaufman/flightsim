@@ -1,0 +1,4 @@
+Parking Brake: Set
+Electrical Switches: Off
+Circuit Breakers: Check
+Battery: On

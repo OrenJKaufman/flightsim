@@ -1,0 +1,7 @@
+Fuel Pump: On
+Throttle: 2000 RPM
+Propellor: Cycle 3 times
+Magnetos: Check
+Circuit Breakers: Check
+Electrical Indicators: Check
+Throttle: Idle

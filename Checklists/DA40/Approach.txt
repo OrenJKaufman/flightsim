@@ -1,0 +1,4 @@
+Fuel selector: Check
+Fuel Pump: On
+Flaps: Takeoff
+Lights: Check

@@ -1,0 +1,7 @@
+Parking brake: Set
+Avionics: Off
+Electrical Switches: Off
+Throttle: 1000 RPM
+Mixture: Lean
+Ignition: Off
+Master Switches: Off

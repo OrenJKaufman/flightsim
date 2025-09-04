@@ -1,0 +1,2 @@
+Pitot: As required
+Transponder: On
