@@ -19025,7 +19025,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19070,7 +19070,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19115,7 +19115,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19160,7 +19160,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19205,7 +19205,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19250,7 +19250,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19295,7 +19295,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19340,7 +19340,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19393,27 +19393,27 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="800" Height="100" />
-                          <GaugeImageLayer Layer="1" Width="800" Height="100" ImageId="00000000-0000-0000-0000-000000000000" />
-                          <GaugeTextLayer Layer="2" Name="Label 1" Width="200" Height="100" Font="Calibri" FontSize="30">
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Label 1" Width="200" Font="Calibri" FontSize="30">
                             <Text>PFD            (DU)</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="3" Name="MFD Label" X="200" Width="200" Height="100" Font="Calibri" FontSize="30">
+                          <GaugeTextLayer Layer="3" Name="MFD Label" X="200" Width="200" Font="Calibri" FontSize="30">
                             <Text>MFD           (DU)</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="5" Name="Label 3" X="400" Width="200" Height="100" Font="Calibri" FontSize="30">
+                          <GaugeTextLayer Layer="5" Name="Label 3" X="400" Width="200" Font="Calibri" FontSize="30">
                             <Text>Upper        (DU)</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="6" Name="Label 4" X="600" Width="200" Height="100" Font="Calibri" FontSize="30">
+                          <GaugeTextLayer Layer="6" Name="Label 4" X="600" Width="200" Font="Calibri" FontSize="30">
                             <Text>Lower        (DU)</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="4" Name="MFD Inner Label" X="200" Width="200" Height="100" Font="Calibri" FontSize="30">
+                          <GaugeTextLayer Layer="4" Name="MFD Inner Label" X="200" Width="200" Font="Calibri" FontSize="30">
                             <Text>MFD Inner (DU)</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="7" Name="TextLayer 7" Width="25" Height="100" Background="DimGray" Font="Calibri" FontSize="30">
+                          <GaugeTextLayer Layer="7" Name="TextLayer 7" Width="25" Background="DimGray" Font="Calibri" FontSize="30">
                             <Text>&lt;</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="8" Name="TextLayer 8" X="775" Width="25" Height="100" Background="DimGray" Font="Calibri" FontSize="30">
+                          <GaugeTextLayer Layer="8" Name="TextLayer 8" X="775" Width="25" Background="DimGray" Font="Calibri" FontSize="30">
                             <Text>&gt;</Text>
                           </GaugeTextLayer>
                         </GaugeLayers>
@@ -19572,7 +19572,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19617,7 +19617,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19662,7 +19662,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19707,7 +19707,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19752,7 +19752,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19797,7 +19797,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19842,7 +19842,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19887,7 +19887,7 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="120" Height="120" />
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Calibri" FontSize="30" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -19940,15 +19940,15 @@
                     <Data type="SimpleGauge">
                       <SimpleGauge>
                         <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Width="800" Height="100" />
-                          <GaugeImageLayer Layer="1" Width="800" Height="100" ImageId="00000000-0000-0000-0000-000000000000" />
-                          <GaugeTextLayer Layer="2" Name="Label 1" Width="200" Height="100" Font="Calibri" FontSize="30">
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Label 1" Width="200" Font="Calibri" FontSize="30">
                             <Text>Panel         (Pedestal)</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="3" Name="Label 2" X="200" Width="200" Height="100" Font="Calibri" FontSize="30">
+                          <GaugeTextLayer Layer="3" Name="Label 2" X="200" Width="200" Font="Calibri" FontSize="30">
                             <Text>Flood  (Pedestal)</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="4" Name="TextLayer 4" Width="25" Height="100" Background="DimGray" Font="Calibri" FontSize="30">
+                          <GaugeTextLayer Layer="4" Name="TextLayer 4" Width="25" Background="DimGray" Font="Calibri" FontSize="30">
                             <Text>&lt;</Text>
                           </GaugeTextLayer>
                         </GaugeLayers>
@@ -22959,7 +22959,7 @@
       <Extensions>
         <Extension type="ProfileGauges">
           <Gauges>
-            <Gauge Filename="arc://C:\Users\oren\SPAD.neXt\gauges\fipgauges\B737FLAPS.snp;B737FLAPS.xml" IsActiveGauge="false" ProfileGaugeID="0952442b-051a-4595-b143-b9e48f01a682">
+            <Gauge Filename="arc://C:\Users\oren\SPAD.neXt\gauges\fipgauges\B737FLAPS.snp;B737FLAPS.xml" IsActiveGauge="true" ProfileGaugeID="0952442b-051a-4595-b143-b9e48f01a682">
               <GaugeButton BoundTo="FIP_BUTTON_PAGEUP">
                 <Event type="SPADBaseEvent">
                   <BaseEvent BoundTo="FIP_BUTTON_PAGEUP">
@@ -23192,6 +23192,6 @@
   <ProfileInformation ProfileID="e1024a36-4dd9-4df8-b460-4bcd26710565" Version="0.106">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-07-27T11:18:07.8631428-06:00</LastChanged>
+    <LastChanged>2025-09-09T20:52:28.1130636-06:00</LastChanged>
   </ProfileInformation>
 </Profile>
