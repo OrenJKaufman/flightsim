@@ -16,7 +16,7 @@ void Encoder::begin()
     pinMode(_pin1, INPUT_PULLUP);
     pinMode(_pin2, INPUT_PULLUP);
 
-    if (digitalRead(_pin1) == LOW && digitalRead(_pin2) == LOW)
+    if (_isLow(_pin1) && _isLow(_pin2))
     {
         _truthes = true;
     }
@@ -28,14 +28,18 @@ void Encoder::begin()
 
 void Encoder::process()
 {
-    _pin1Val = digitalRead(_pin1) == LOW;
-    _pin2Val = digitalRead(_pin2) == LOW;
+    _pin1Val = _isLow(_pin1);
+    _pin2Val = _isLow(_pin2);
 
     if (_movingClockwise || _movingCounterClockwise) {
         _processMoving();
     } else {
         _processNotMoving();
     }
+}
+
+bool Encoder::_isLow(int pin) {
+    return digitalRead(pin) == LOW;
 }
 
 bool Encoder::_bothFalse() {

@@ -22,6 +22,7 @@ private:
     bool _bothTrue();
     void _processNotMoving();
     void _processMoving();
+    bool _isLow(int pin);
 };
 
 #endif

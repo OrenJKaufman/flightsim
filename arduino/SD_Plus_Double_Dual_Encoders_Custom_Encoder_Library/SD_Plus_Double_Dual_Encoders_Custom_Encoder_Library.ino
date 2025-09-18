@@ -1,11 +1,22 @@
+//#define DEBUG
+
 #include <Encoder.h>
 
 // For a SPAD.neXt compatible Arduino library import CmdMessenger (4.0) into the Arduino IDE (recommended)
-
+#ifndef DEBUG
 #include <CmdMessenger.h>
 CmdMessenger messenger(Serial);
+#endif
 
 //----- ROTARIES -------
+#ifdef DEBUG
+void knobRotate(int id, int value) {
+  Serial.print("Rotate ID:");
+  Serial.print(id);
+  Serial.print(" VALUE: ");
+  Serial.println(value);
+}
+#else
 void knobRotate(int id, int value) {
   messenger.sendCmdStart(8);  // Channel no for sending input state to SPAD NEXT
   messenger.sendCmdArg(id);   // Input ID
@@ -13,6 +24,7 @@ void knobRotate(int id, int value) {
   messenger.sendCmdEnd();
   delay(25);
 }
+#endif
 
 void knobAOuterRotate(bool clockwise) {
   knobRotate(1000, clockwise ? 100 : -100);
@@ -41,6 +53,7 @@ void CheckAllEncoders() {
 
 //----- DEFINITIONS ------
 
+#ifndef DEBUG
 // AUTHOR ID - You need to request your unique authorkey and type in instead of XXXs below
 // To receive your unique authorkey, issue the command "!deviceinfo" on the SPAD.neXt discord.
 // This key will identify the device author and enable author-only functions like e.g. editing the device UI or
@@ -52,7 +65,7 @@ String authkey = "AUTH KEY";
 // To create a GUID you can use this site: https://www.guidgenerator.com/online-guid-generator.aspx (enable braces and hyphens)
 
 String guid = "{0091149E-1C2E-4988-B0E4-F90B5457838C}";
-
+#endif
 
 // TYPE IN YOUR ARDUINO PINS FOR A LED AND A BUTTON HERE
 
@@ -70,6 +83,11 @@ bool isStarted = false;
 
 //------------------- CALLBACKS and SPAD CONFIG ------------------------
 
+#ifdef DEBUG
+void attachCommandCallbacks() {
+  isStarted = true;
+}
+#else
 void attachCommandCallbacks() {
   messenger.sendCmd(3, "ATTACHING CALLBACKS!");
   messenger.attach(0, onIdentifyRequest);
@@ -181,44 +199,47 @@ void onIdentifyRequest() {
     return;
   }
 }
+#endif
 
 
 // ------------------------ PROCESS FUNCTIONS--------------------
 
+#ifdef DEBUG
+void sendCmd(int id, int value) {
+  Serial.print("Buggon ID:");
+  Serial.print(id);
+  Serial.print(" VALUE: ");
+  Serial.println(value);
+}
+#else
+void sendCmd(int id, int value) {
+  messenger.sendCmdStart(8);   // Channel no for sending input state to SPAD NEXT
+  messenger.sendCmdArg(id);  // Input ID
+  messenger.sendCmdArg(value);     // Value for off state
+  messenger.sendCmdEnd();
+  delay(25);
+}
+#endif
 
 void CheckAllButtons() {
   if (digitalRead(knob1button) != knob1buttonlast) {
     if (knob1buttonlast == 0) {
       knob1buttonlast = 1;
-      messenger.sendCmdStart(8);   // Channel no for sending input state to SPAD NEXT
-      messenger.sendCmdArg(1100);  // Input ID
-      messenger.sendCmdArg(0);     // Value for off state
-      messenger.sendCmdEnd();
+      sendCmd(1100, 0);
     } else {
       knob1buttonlast = 0;
-      messenger.sendCmdStart(8);   // Channel no for sending input state to SPAD NEXT
-      messenger.sendCmdArg(1100);  // Input ID
-      messenger.sendCmdArg(1);     // Value for on state
-      messenger.sendCmdEnd();
+      sendCmd(1100, 1);
     }
-    delay(25);
   }
 
   if (digitalRead(knob2button) != knob2buttonlast) {
     if (knob2buttonlast == 0) {
       knob2buttonlast = 1;
-      messenger.sendCmdStart(8);   // Channel no for sending input state to SPAD NEXT
-      messenger.sendCmdArg(2100);  // Input ID
-      messenger.sendCmdArg(0);     // Value for off state
-      messenger.sendCmdEnd();
+      sendCmd(2100, 0);
     } else {
       knob2buttonlast = 0;
-      messenger.sendCmdStart(8);   // Channel no for sending input state to SPAD NEXT
-      messenger.sendCmdArg(2100);  // Input ID
-      messenger.sendCmdArg(1);     // Value for on state
-      messenger.sendCmdEnd();
+      sendCmd(2100, 1);
     }
-    delay(25);
   }
 }
 
@@ -241,9 +262,10 @@ void setup() {
 
 void loop() {
   if (isStarted) {
-
     CheckAllButtons();
     CheckAllEncoders();
   }
+  #ifndef DEBUG
   messenger.feedinSerialData();
+  #endif
 }
