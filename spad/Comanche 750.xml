@@ -3,12 +3,12 @@
     <Variable Name="PROFILE:COM SPACING OVERRIDE" Value="0" ValueType="Decimal" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 4" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 1" Value="Flight" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
   </Variables>
   <Devices>
     <Device VendorID="0x0FD9" ProductID="0x006C" DevicePath="\\?\hid#vid_0fd9&amp;pid_006c#b&amp;1c4d507f&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="CL07L2A00420" DeviceIndex="0" Version="3">
@@ -479,130 +479,6 @@
                 </EventConditions>
                 <EventActions>
                   <EventActionPlateImage TargetLayer="1" Image="{a0162f2c-b94a-53cf-a45e-715b9b5fb787}" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_3_2">
-            <EventDefinitions>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LVAR:DmeFunction" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{c9db7a21-7e3a-536e-8eea-e8278fc0fddc}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="LVAR:DmeFunction" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{345d84b5-4d9b-5c06-b819-6e7cd5b2b8c4}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="LVAR:DmeFunction" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{177e94dd-6b97-5d38-9d6d-e8001df85aad}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="LVAR:DmeFunction" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{d42a00ab-95b4-557a-832c-ef839241712a}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="LVAR:DmeFunction" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{7d3a3b7e-d68f-5c5f-86ab-b3e2a9504dd8}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="LVAR:DmeFunction" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{204fd5e2-aac4-510b-acc2-7eca62058628}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="3" Name="Textlayer" Y="6" Height="84" Foreground="#FF000000" FontSize="17" FontStyle="1" VerticalAlignment="0" />
-                          <GaugeImageLayer Layer="2" Name="Selected" ImageId="a712a4d3-a6e8-58f8-a474-a8e81016bffd" Distortion="FLIP_XY" />
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="MODE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLayerMode TargetLayer="2" TargetMode="0" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="MODE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLayerMode TargetLayer="2" TargetMode="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT KNOB KEY" Value="DME" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT KNOB KEY" Value="" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="SCRIPT">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:CURRENT KNOB INC" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:Radio_Event_DME_6State">
-                    <Parameter Type="Exp" Value="MIN([LVAR:DmeFunction] + 1, 5)" />
-                  </EventActionControl>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT KNOB INC" Value="0" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="SCRIPT">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:CURRENT KNOB DEC" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:Radio_Event_DME_6State">
-                    <Parameter Type="Exp" Value="MAX( [LVAR:DmeFunction] - 1, 0)" />
-                  </EventActionControl>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT KNOB DEC" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1468,6 +1344,136 @@
               <EventDefinition Trigger="RELEASE">
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="LVAR:BUTTON_EDM730_LF" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_2">
+            <EventDefinitions>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LVAR:DmeFunction" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{c9db7a21-7e3a-536e-8eea-e8278fc0fddc}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="LVAR:DmeFunction" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{345d84b5-4d9b-5c06-b819-6e7cd5b2b8c4}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="LVAR:DmeFunction" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{177e94dd-6b97-5d38-9d6d-e8001df85aad}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="3" ConditionValueSource="LVAR:DmeFunction" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{d42a00ab-95b4-557a-832c-ef839241712a}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="4" ConditionValueSource="LVAR:DmeFunction" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{7d3a3b7e-d68f-5c5f-86ab-b3e2a9504dd8}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="LVAR:DmeFunction" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{204fd5e2-aac4-510b-acc2-7eca62058628}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="3" Name="Textlayer" Y="6" Height="84" Foreground="#FF000000" FontSize="17" FontStyle="1" VerticalAlignment="0" />
+                          <GaugeImageLayer Layer="2" Name="Selected" ImageId="a712a4d3-a6e8-58f8-a474-a8e81016bffd" Distortion="FLIP_XY" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="MODE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionLayerMode TargetLayer="2" TargetMode="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="MODE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionLayerMode TargetLayer="2" TargetMode="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT KNOB KEY" Value="DME" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT KNOB KEY" Value="" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SCRIPT">
+                <EventConditions>
+                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:CURRENT KNOB INC" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:DmeFunction" Value="1" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="5" />
+                    </Options>
+                  </EventActionChangeValue>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT KNOB INC" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SCRIPT">
+                <EventConditions>
+                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="DME" ConditionValueSource="LOCAL:CURRENT KNOB KEY" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:CURRENT KNOB DEC" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:DmeFunction" Value="1" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="5" />
+                    </Options>
+                  </EventActionChangeValue>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT KNOB DEC" Value="0" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -2637,25 +2643,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_4_3">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_3_2">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -2737,44 +2724,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_4_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_2">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_2_7">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -2829,25 +2778,6 @@
                           <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Background="Green" Font="Calibri" FontSize="28">
                             <Text>Pitch Down</Text>
                           </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_7">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
                         </GaugeLayers>
                       </SimpleGauge>
                     </Data>
@@ -3273,6 +3203,105 @@
                       </SimpleGauge>
                     </Data>
                   </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_1">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="50" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
+                            <Text>Toggle Char</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" ConditionBinding="OR">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="2" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="2" Color="#FF8B0000" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -5848,7 +5877,7 @@
       <Events />
       <CustomExpressions>
         <CustomExpression Name="CURRENT PAGE NAME">
-          <Expression> [LOCAL:DEVICE_0FD9_0084_CURRENT_PAGE_NAME_1] </Expression>
+          <Expression> [LOCAL:STREAMDECK_CURRENT_PAGE_NAME_2] </Expression>
         </CustomExpression>
       </CustomExpressions>
       <Extensions />
@@ -6756,222 +6785,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="HATSWITCH_0">
-            <EventDefinitions>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view right</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view right</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view left</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view left</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="100">
-                <Comment>External view</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="3" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="100">
-                <Comment>Instrument view</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="200">
-                <Comment>Previous instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="21" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="200">
-                <Comment>Next instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="22" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Top instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="16" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Bottom instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="15" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Middle instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Middle instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="6" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="302" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="303" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="303" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="302" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="301" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="301" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="300" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="300" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="BUTTON_5">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -7064,6 +6877,212 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="HATSWITCH_0">
+            <EventDefinitions>
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="108" ConditionBinding="OR">
+                <Comment>Quick view right</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="107" ConditionBinding="OR">
+                <Comment>Quick view right</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="110" ConditionBinding="OR">
+                <Comment>Quick view left</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="109" ConditionBinding="OR">
+                <Comment>Quick view left</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="106">
+                <Comment>External view</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="3" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="105">
+                <Comment>Instrument view</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="209">
+                <Comment>Next instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="LOCAL:TEMP VIEW INDEX" SourceDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="22" JoystickMode="PRESSANDRELEASE" />
+                  <EventActionDelay Delay="100" />
+                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="IF([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] ==  [LOCAL:TEMP VIEW INDEX],&#xD;&#xA;([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] +&#xD;&#xA; [SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2] + 1) %&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2],&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1])" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="208">
+                <Comment>Top instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="14" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="207">
+                <Comment>Bottom instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="12" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="206">
+                <Comment>Middle instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="13" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="307" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="205">
+                <Comment>Middle instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="13" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="210">
+                <Comment>Previous instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="LOCAL:TEMP VIEW INDEX" SourceDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="21" JoystickMode="PRESSANDRELEASE" />
+                  <EventActionDelay Delay="100" />
+                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="IF([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] ==  [LOCAL:TEMP VIEW INDEX],&#xD;&#xA;([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] +&#xD;&#xA; [SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2] - 1) %&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2],&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1])" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="309" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="310" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="308" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="305" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="306" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="303" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="304" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -7106,15 +7125,6 @@
               <Option Key="NAME" Value="Flaps" />
             </Options>
           </Event>
-          <Event BoundTo="BUTTON_8">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="60" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="PLATE_1_1">
             <EventDefinitions>
               <EventDefinition Trigger="BUTTONLIGHT">
@@ -7150,34 +7160,6 @@
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE" EnableAcceleration="true">
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT KNOB DEC" Value="1" ValueOperation="Increment" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_22">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Greater" ConditionTargetValue="-100" ConditionValueSource="SIMCONNECT:ELEVATOR TRIM PCT" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:ELEVATOR_TRIM_SET">
-                    <Parameter Type="Exp" Value="max(-16383, floor(( [SIMCONNECT:ELEVATOR TRIM PCT] - 3 ) * 163.84))" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_23">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Less" ConditionTargetValue="100" ConditionValueSource="SIMCONNECT:ELEVATOR TRIM PCT" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:ELEVATOR_TRIM_SET">
-                    <Parameter Type="Exp" Value="min(16384, floor(( [SIMCONNECT:ELEVATOR TRIM PCT] + 3 ) * 163.84))" />
-                  </EventActionControl>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -7301,6 +7283,24 @@
                 </EventConditions>
                 <EventActions>
                   <EventActionLEDColor Color="YELLOW" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_22">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:ELEV_TRIM_DN" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_23">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:ELEV_TRIM_UP" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -7456,6 +7456,623 @@
       <Events />
       <Extensions />
     </Device>
+    <Device VendorID="SPAD" ProductID="VDECK" DevicePath="VDCK0001" DeviceIndex="1" Version="3">
+      <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
+        <Events>
+          <Event BoundTo="EGSD_1_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_6">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_6">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_6">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_6">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+        </Events>
+        <Extensions />
+      </DevicePage>
+      <Events />
+      <Extensions />
+    </Device>
   </Devices>
   <Options>
     <Option Key="Saitek.BIP.EnableVirtualPower" Value="True" />
@@ -7471,9 +8088,17 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="4a7bbc47-b89d-457c-8d58-cb58799f80bc" Version="0.49">
+  <CustomExpressions>
+    <CustomExpression Name="HAT AS MOVE">
+      <Expression> [LOCAL:SIM_ISAVATAR]  ||
+[SIMCONNECT:CAMERA STATE] == 4 ||
+ [SIMCONNECT:IS SLEW ACTIVE] != 0 ||
+ [LOCAL:COCKPIT MOVE FLAG] != 0</Expression>
+    </CustomExpression>
+  </CustomExpressions>
+  <ProfileInformation ProfileID="4a7bbc47-b89d-457c-8d58-cb58799f80bc" Version="0.67">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-08-02T11:32:19.0284265-06:00</LastChanged>
+    <LastChanged>2025-11-29T20:36:22.9934307-07:00</LastChanged>
   </ProfileInformation>
 </Profile>

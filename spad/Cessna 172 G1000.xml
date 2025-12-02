@@ -357,30 +357,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_1_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="{120a357c-ed24-4fa8-bf54-54d10dacc8dd} [db]" ImageId="5ad5862f-333e-4f70-aadf-19f8f85c9df1" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="28" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="5" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_3_5">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -837,160 +813,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_4_7">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Arial" FontSize="21" FontStyle="1">
-                            <Text>CLR</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_MFD_1_Clear" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_8">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Arial" FontSize="21" FontStyle="1">
-                            <Text>ENT</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_MFD_1_Enter" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_3_7">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Arial" FontSize="21" FontStyle="1">
-                            <Text>FPL</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_MFD_1_FlightPlan" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_3_8">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Arial" FontSize="21" FontStyle="1">
-                            <Text>PROC</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_MFD_1_Procedure" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_7">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_D-TOButton" ImageId="9eb637eb-7228-5e37-8195-18e0f7287fe5" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_MFD_1_DirectTo" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_8">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Arial" FontSize="21" FontStyle="1">
-                            <Text>MENU</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_MFD_1_Menu" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_1_7">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -1038,25 +860,6 @@
               <EventDefinition Trigger="RELEASE">
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="127" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_3_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -1118,6 +921,210 @@
                       </SimpleGauge>
                     </Data>
                   </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="{120a357c-ed24-4fa8-bf54-54d10dacc8dd} [db]" ImageId="5ad5862f-333e-4f70-aadf-19f8f85c9df1" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="28" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="5" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_D-TOButton" ImageId="9eb637eb-7228-5e37-8195-18e0f7287fe5" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_DIRECTTO_MFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Arial" FontSize="21" FontStyle="1">
+                            <Text>FPL</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FPL_PUSH_MFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Arial" FontSize="21" FontStyle="1">
+                            <Text>CLR</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_CLR_MFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Arial" FontSize="21" FontStyle="1">
+                            <Text>MENU</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_MENU_PUSH_MFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Arial" FontSize="21" FontStyle="1">
+                            <Text>PROC</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_PROC_PUSH_MFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Arial" FontSize="21" FontStyle="1">
+                            <Text>ENT</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_ENT_PUSH_MFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" FontSize="30" TextType="Exp">
+                            <Text>IF( [LOCAL:AS1000 FMS PFD], 'PFD', 'MFD' )</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:AS1000 FMS PFD" Value="0" ValueOperation="ToggleBit" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -3064,25 +3071,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_4_3">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_3_2">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -3164,44 +3152,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_4_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_2">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_2_7">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -3256,25 +3206,6 @@
                           <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Background="Green" Font="Calibri" FontSize="28">
                             <Text>Pitch Down</Text>
                           </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_7">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
                         </GaugeLayers>
                       </SimpleGauge>
                     </Data>
@@ -3704,6 +3635,105 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="EGSD_4_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_1">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="50" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
+                            <Text>Toggle Char</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" ConditionBinding="OR">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="2" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="2" Color="#FF8B0000" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -3780,160 +3810,6 @@
                       </SimpleGauge>
                     </Data>
                   </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_1_4">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_D-TOButton" ImageId="9eb637eb-7228-5e37-8195-18e0f7287fe5" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_DirectTo" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_1_5">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Arial" FontSize="16" FontStyle="1">
-                            <Text>MENU</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Menu" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_4">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Arial" FontSize="16" FontStyle="1">
-                            <Text>FPL</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_FlightPlan" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_5">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Arial" FontSize="16" FontStyle="1">
-                            <Text>PROC</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Procedure" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_3_4">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Arial" FontSize="16" FontStyle="1">
-                            <Text>CLR</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Clear" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_3_5">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Arial" FontSize="16" FontStyle="1">
-                            <Text>ENT</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Enter" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -4120,6 +3996,160 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="EGSD_1_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_D-TOButton" ImageId="9eb637eb-7228-5e37-8195-18e0f7287fe5" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_DIRECTTO_PFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Arial" FontSize="16" FontStyle="1">
+                            <Text>FPL</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FPL_PUSH_PFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Arial" FontSize="16" FontStyle="1">
+                            <Text>CLR</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_CLR_PFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Arial" FontSize="16" FontStyle="1">
+                            <Text>MENU</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_MENU_PUSH_PFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Arial" FontSize="16" FontStyle="1">
+                            <Text>PROC</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_PROC_PUSH_PFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Arial" FontSize="16" FontStyle="1">
+                            <Text>ENT</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_ENT_PUSH_PFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -4137,353 +4167,6 @@
     <Device VendorID="0x0FD9" ProductID="0x0084" DevicePath="\\?\hid#vid_0fd9&amp;pid_0084#b&amp;2b464975&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="A00WA3361P44A8" DeviceIndex="1" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="EGSD_1_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
-                            <Text>AP</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_AP_1" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_1_2">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
-                            <Text>FD</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_FD_0_Mode" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
-                            <Text>HDG</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Heading_Mode" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_2">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
-                            <Text>ALT</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Altitude_Button" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_E_2">
-            <EventDefinitions>
-              <EventDefinition Trigger="TUNER_CLOCKWISE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:ALTITUDE BY 100" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Altitude_1000">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_CLOCKWISE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:ALTITUDE BY 100" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Altitude_100">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:ALTITUDE BY 100" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Altitude_1000">
-                    <Parameter Value="-1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:ALTITUDE BY 100" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Altitude_100">
-                    <Parameter Value="-1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_E_1">
-            <EventDefinitions>
-              <EventDefinition Trigger="TUNER_CLOCKWISE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HEADING SLOW" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Heading">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_CLOCKWISE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:HEADING SLOW" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="MSFS:AS1000_PFD_HEADING_FAST_INC">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HEADING SLOW" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Heading">
-                    <Parameter Value="-1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:HEADING SLOW" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="MSFS:AS1000_PFD_HEADING_FAST_DEC">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Heading_Sync" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_1_3">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
-                            <Text>APR</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Approach_Button" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_3">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
-                            <Text>NAV</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_NAV_Mode" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_E_3">
-            <EventDefinitions>
-              <EventDefinition Trigger="TUNER_CLOCKWISE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Course">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Course">
-                    <Parameter Value="-1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Course_Button" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_1_4">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
-                            <Text>VS</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_VS_Mode" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_4">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
-                            <Text>FLC</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_FLC_Button" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_E_4">
-            <EventDefinitions>
-              <EventDefinition Trigger="TUNER_CLOCKWISE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Range_Zoom">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Range_Zoom">
-                    <Parameter Value="-1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Range_Cursor" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_PLUS_IMAGE">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -4545,6 +4228,357 @@
                 </EventConditions>
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="LOCAL:ALTITUDE BY 100" Value="0" ValueOperation="ToggleBit" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
+                            <Text>AP</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_AP_PFD_Toggle" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
+                            <Text>HDG</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_HEADING_PFD_Toggle" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
+                            <Text>FD</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_FD_PFD_Toggle" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
+                            <Text>ALT</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_ALTITUDE_PFD_TOGGLE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
+                            <Text>APR</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_APPROACH_PFD_Toggle" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
+                            <Text>NAV</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_NAVIGATION_PFD_Toggle" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
+                            <Text>VS</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_VERTICALSPEED_PFD_TOGGLE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="G1000_GARMIN_Button" ImageId="2bf83a22-cdb6-52a5-a941-1acfe758503b" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="108" Height="108" Font="Arial" FontSize="28" FontStyle="1">
+                            <Text>FLC</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_FLIGHTLEVELCHANGE_PFD_TOGGLE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_E_1">
+            <EventDefinitions>
+              <EventDefinition Trigger="TUNER_CLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HEADING SLOW" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_HEADING_PFD_Inc">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+                <Options>
+                  <Option Key="ACCEL_MAX" Value="20" />
+                  <Option Key="ACCEL_MULTIPLIER" Value="3" />
+                </Options>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_CLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:HEADING SLOW" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="MSFS:AS1000_PFD_HEADING_FAST_INC">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HEADING SLOW" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_HEADING_PFD_Dec">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:HEADING SLOW" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="MSFS:AS1000_PFD_HEADING_FAST_DEC">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_HEADING_SYNC_PFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_E_2">
+            <EventDefinitions>
+              <EventDefinition Trigger="TUNER_CLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:ALTITUDE BY 100" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_ALTITUDE_OUTER_PFD_Inc">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_CLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:ALTITUDE BY 100" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_ALTITUDE_INNER_PFD_Inc">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:ALTITUDE BY 100" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_ALTITUDE_OUTER_PFD_Dec">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:ALTITUDE BY 100" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_ALTITUDE_INNER_PFD_Dec">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_E_3">
+            <EventDefinitions>
+              <EventDefinition Trigger="TUNER_CLOCKWISE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_COURSE_PFD_Inc">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_COURSE_PFD_Dec">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_COURSE_PUSH_PFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_E_4">
+            <EventDefinitions>
+              <EventDefinition Trigger="TUNER_CLOCKWISE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_RANGE_ZOOM_PFD_Inc">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_RANGE_ZOOM_PFD_Dec">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_RANGE_PUSH_PFD_PUSH" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -4959,24 +4993,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_E_4">
-            <EventDefinitions>
-              <EventDefinition Trigger="TUNER_CLOCKWISE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Baro">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Baro">
-                    <Parameter Value="-1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_E_1">
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
@@ -5013,25 +5029,43 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_E_3">
+          <Event BoundTo="EGSD_E_4">
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_MFD_1_Range_Zoom">
+                  <EventActionControl TargetDataDefinition="B:AS1000_BARO_PFD_Inc">
                     <Parameter Value="1" />
                   </EventActionControl>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_MFD_1_Range_Zoom">
-                    <Parameter Value="-1" />
+                  <EventActionControl TargetDataDefinition="B:AS1000_BARO_PFD_Dec">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_E_3">
+            <EventDefinitions>
+              <EventDefinition Trigger="TUNER_CLOCKWISE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_RANGE_ZOOM_MFD_Inc">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_RANGE_ZOOM_MFD_Dec">
+                    <Parameter Value="1" />
                   </EventActionControl>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_MFD_1_Range_Cursor" />
+                  <EventActionControl TargetDataDefinition="B:AS1000_RANGE_PUSH_MFD_PUSH" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -6034,7 +6068,7 @@
       <Events />
       <CustomExpressions>
         <CustomExpression Name="CURRENT PAGE NAME">
-          <Expression> [LOCAL:DEVICE_0FD9_0084_CURRENT_PAGE_NAME_1] </Expression>
+          <Expression> [LOCAL:STREAMDECK_CURRENT_PAGE_NAME] </Expression>
         </CustomExpression>
       </CustomExpressions>
       <Extensions />
@@ -6881,34 +6915,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="BUTTON_3">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSLONG">
-                <Comment>Reset TrackIR</Comment>
-                <EventActions>
-                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
-                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
-                      <Keys>
-                        <Keys>F12</Keys>
-                      </Keys>
-                    </KeyboardMacro>
-                  </EventActionKeyboard>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESSSHORT">
-                <Comment>Pause TrackIR</Comment>
-                <EventActions>
-                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
-                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
-                      <Keys>
-                        <Keys>F9</Keys>
-                      </Keys>
-                    </KeyboardMacro>
-                  </EventActionKeyboard>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="BUTTON_2">
             <EventDefinitions>
               <EventDefinition Trigger="PRESSSHORT">
@@ -7132,6 +7138,43 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="BUTTON_5">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="25" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="25" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_6">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="26" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="26" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_4">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESSSHORT">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AUTOPILOT_OFF" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
           <Event BoundTo="HATSWITCH_0">
             <EventDefinitions>
               <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="100" ConditionBinding="OR">
@@ -7261,9 +7304,7 @@
               <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="302" ConditionBinding="OR">
                 <Comment>Drone</Comment>
                 <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="RELEASE" />
@@ -7272,9 +7313,7 @@
               <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="303" ConditionBinding="OR">
                 <Comment>Drone</Comment>
                 <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="RELEASE" />
@@ -7283,9 +7322,7 @@
               <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="303" ConditionBinding="OR">
                 <Comment>Drone</Comment>
                 <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="PRESS" />
@@ -7294,9 +7331,7 @@
               <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="302" ConditionBinding="OR">
                 <Comment>Drone</Comment>
                 <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="PRESS" />
@@ -7305,9 +7340,7 @@
               <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="301" ConditionBinding="OR">
                 <Comment>Drone</Comment>
                 <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="RELEASE" />
@@ -7316,9 +7349,7 @@
               <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="301" ConditionBinding="OR">
                 <Comment>Drone</Comment>
                 <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="PRESS" />
@@ -7327,9 +7358,7 @@
               <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="300" ConditionBinding="OR">
                 <Comment>Drone</Comment>
                 <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="RELEASE" />
@@ -7338,9 +7367,7 @@
               <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="300" ConditionBinding="OR">
                 <Comment>Drone</Comment>
                 <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="PRESS" />
@@ -7348,39 +7375,23 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="BUTTON_5">
+          <Event BoundTo="BUTTON_3">
             <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
+              <EventDefinition Trigger="PRESSLONG">
+                <Comment>Reset TrackIR</Comment>
                 <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="25" JoystickMode="PRESS" />
+                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
+                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
+                      <Keys>
+                        <Keys>F12</Keys>
+                      </Keys>
+                    </KeyboardMacro>
+                  </EventActionKeyboard>
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="RELEASE">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="25" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_6">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="26" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="RELEASE">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="26" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_4">
-            <EventDefinitions>
               <EventDefinition Trigger="PRESSSHORT">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AUTOPILOT_OFF" />
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="60" JoystickMode="PRESSANDRELEASE" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -7734,43 +7745,6 @@
     <Device VendorID="0xFFFF" ProductID="0x0003" DevicePath="SERIAL_COM3" Serial="COM3" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="KNOB_A">
-            <EventDefinitions>
-              <EventDefinition Trigger="TUNER_OUTER_CLOCKWISE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_FMS_Outer">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_OUTER_COUNTERCLOCKWISE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_FMS_Outer">
-                    <Parameter Value="-1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_INNER_CLOCKWISE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_FMS_Inner">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_INNER_COUNTERCLOCKWISE">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_FMS_Inner">
-                    <Parameter Value="-1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_FMS_Inner_Button" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="KNOB_B">
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_OUTER_CLOCKWISE">
@@ -7808,6 +7782,106 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="KNOB_A">
+            <EventDefinitions>
+              <EventDefinition Trigger="TUNER_OUTER_CLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:AS1000 FMS PFD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FMS_LOWER_MFD_INC">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_OUTER_COUNTERCLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:AS1000 FMS PFD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FMS_LOWER_MFD_DEC">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_INNER_CLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:AS1000 FMS PFD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FMS_UPPER_MFD_INC">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_INNER_COUNTERCLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:AS1000 FMS PFD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FMS_UPPER_MFD_DEC">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:AS1000 FMS PFD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FMS_UPPER_PUSH_MFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_OUTER_CLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:AS1000 FMS PFD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FMS_LOWER_PFD_INC">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_OUTER_COUNTERCLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:AS1000 FMS PFD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FMS_LOWER_PFD_DEC">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_INNER_CLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:AS1000 FMS PFD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FMS_UPPER_PFD_Inc">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_INNER_COUNTERCLOCKWISE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:AS1000 FMS PFD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FMS_UPPER_PFD_Dec">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:AS1000 FMS PFD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_FMS_UPPER_PUSH_PFD_PUSH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -7817,24 +7891,6 @@
     <Device VendorID="0xFFFF" ProductID="0x0004" DevicePath="SERIAL_COM4" Serial="COM4" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="BUTTON_3">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_VS_UP" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_4">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_VS_DN" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="KNOB_A">
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
@@ -7875,7 +7931,7 @@
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_VNAV_Mode" />
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_VERTICAL_NAVIGATION_PFD_Toggle" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -7884,7 +7940,642 @@
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="B:AS1000_PFD_1_Backcourse_Button" />
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_BACKCOURSE_PFD_TOGGLE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_4">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_VERTICALSPEED_DOWN_PFD_Toggle" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_3">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="B:AS1000_AUTOPILOT_VERTICALSPEED_UP_PFD_Toggle" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+        </Events>
+        <Extensions />
+      </DevicePage>
+      <Events />
+      <Extensions />
+    </Device>
+    <Device VendorID="SPAD" ProductID="VDECK" DevicePath="VDCK0001" DeviceIndex="1" Version="3">
+      <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
+        <Events>
+          <Event BoundTo="EGSD_1_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_6">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_6">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_6">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_5">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_6">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -7910,9 +8601,17 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="2b1f1ab4-1dd4-44be-b5b9-25dad4d1abc5" Version="0.102">
+  <CustomExpressions>
+    <CustomExpression Name="HAT AS MOVE">
+      <Expression> [LOCAL:SIM_ISAVATAR]  ||
+[SIMCONNECT:CAMERA STATE] == 4 ||
+ [SIMCONNECT:IS SLEW ACTIVE] != 0 ||
+ [LOCAL:COCKPIT MOVE FLAG] != 0</Expression>
+    </CustomExpression>
+  </CustomExpressions>
+  <ProfileInformation ProfileID="2b1f1ab4-1dd4-44be-b5b9-25dad4d1abc5" Version="0.127">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-06-14T20:05:01.5104568-06:00</LastChanged>
+    <LastChanged>2025-11-25T21:48:08.4458948-07:00</LastChanged>
   </ProfileInformation>
 </Profile>

@@ -3,12 +3,12 @@
     <Variable Name="PROFILE:COM SPACING OVERRIDE" Value="0" ValueType="Decimal" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 4" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 1" Value="Flight" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
   </Variables>
   <Devices>
     <Device VendorID="0x0FD9" ProductID="0x006C" DevicePath="\\?\hid#vid_0fd9&amp;pid_006c#b&amp;1c4d507f&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="CL07L2A00420" DeviceIndex="0" Version="3">
@@ -6171,7 +6171,7 @@
       <Events />
       <CustomExpressions>
         <CustomExpression Name="CURRENT PAGE NAME">
-          <Expression> [LOCAL:DEVICE_0FD9_0084_CURRENT_PAGE_NAME_1] </Expression>
+          <Expression> [LOCAL:STREAMDECK_CURRENT_PAGE_NAME_2] </Expression>
         </CustomExpression>
       </CustomExpressions>
       <Extensions />
@@ -7905,9 +7905,9 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
-  <ProfileInformation ProfileID="90b8e15a-5940-468f-889f-b17632fa7e18" Version="0.73">
+  <ProfileInformation ProfileID="90b8e15a-5940-468f-889f-b17632fa7e18" Version="0.74">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-09-07T14:13:35.5532542-06:00</LastChanged>
+    <LastChanged>2025-09-27T11:06:25.6181308-06:00</LastChanged>
   </ProfileInformation>
 </Profile>
