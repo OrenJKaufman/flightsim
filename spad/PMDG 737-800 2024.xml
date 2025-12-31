@@ -12200,25 +12200,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_4_3">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_3_2">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -12300,44 +12281,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_4_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_2">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_2_7">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -12392,25 +12335,6 @@
                           <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Background="Green" Font="Calibri" FontSize="28">
                             <Text>Pitch Down</Text>
                           </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_7">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
                         </GaugeLayers>
                       </SimpleGauge>
                     </Data>
@@ -12836,6 +12760,105 @@
                       </SimpleGauge>
                     </Data>
                   </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_3">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_1">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="50" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
+                            <Text>Toggle Char</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" ConditionBinding="OR">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="2" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="2" Color="#FF8B0000" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -18524,16 +18547,22 @@
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_PANEL_LIGHT_CONTROL">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:OH_PANEL_LIGHT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_PANEL_LIGHT_CONTROL">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:OH_PANEL_LIGHT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -18962,16 +18991,22 @@
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_MAIN_PANEL_BRT">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_MAIN_PANEL_LIGHT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_MAIN_PANEL_BRT">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_MAIN_PANEL_LIGHT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -18980,16 +19015,22 @@
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_AFDS_BRT">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_AFDS_FLOOD_LIGHT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_AFDS_BRT">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_AFDS_FLOOD_LIGHT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -18998,16 +19039,22 @@
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_BACKGROUND_BRT">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_BACKGROUND_BRT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_BACKGROUND_BRT">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_BACKGROUND_BRT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -19460,16 +19507,22 @@
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_OUTBD_DU_BRT">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_OUTBD_DU_BRIGHT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_OUTBD_DU_BRT">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_OUTBD_DU_BRIGHT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -19481,9 +19534,12 @@
                   <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:MFD BRIGHTNESS TOGGLE" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_INBD_DU_BRT">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_INBD_DU_BRIGHT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="PRESS">
@@ -19496,9 +19552,12 @@
                   <EventCondition ConditionTargetValue="1" ConditionValueSource="LOCAL:MFD BRIGHTNESS TOGGLE" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_INBD_DU_INNER_BRT">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_INBD_DU_RDR_BRIGHT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE" IsFinal="true" Priority="10">
@@ -19506,9 +19565,12 @@
                   <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:MFD BRIGHTNESS TOGGLE" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_INBD_DU_BRT">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_INBD_DU_BRIGHT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE" IsFinal="true">
@@ -19516,9 +19578,12 @@
                   <EventCondition ConditionTargetValue="1" ConditionValueSource="LOCAL:MFD BRIGHTNESS TOGGLE" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_INBD_DU_INNER_BRT">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_INBD_DU_RDR_BRIGHT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -19527,16 +19592,22 @@
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_UPPER_DU_BRT">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_UPPER_DU_BRIGHT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_UPPER_DU_BRT">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_UPPER_DU_BRIGHT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -19545,16 +19616,22 @@
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_LOWER_DU_BRT">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_LOWER_DU_BRIGHT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_LWRMAIN_CAPT_LOWER_DU_BRT">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:CA_LOWER_DU_BRIGHT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -19970,16 +20047,22 @@
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_PED_PANEL_CONTROL">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:PED_PANEL_LIGHT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_PED_PANEL_CONTROL">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:PED_PANEL_LIGHT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -19988,16 +20071,22 @@
             <EventDefinitions>
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_PED_FLOOD_CONTROL">
-                    <Parameter Value="8192" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:PED_FLOOD_LIGHT_CONTROL" Value="20" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="TUNER_CLOCKWISE">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_PED_FLOOD_CONTROL">
-                    <Parameter Value="16384" />
-                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:PED_FLOOD_LIGHT_CONTROL" Value="20" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="300" />
+                    </Options>
+                  </EventActionChangeValue>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -20907,7 +20996,7 @@
       <Events />
       <CustomExpressions>
         <CustomExpression Name="CURRENT PAGE NAME">
-          <Expression> [LOCAL:DEVICE_0FD9_0084_CURRENT_PAGE_NAME_1] </Expression>
+          <Expression> [LOCAL:STREAMDECK_CURRENT_PAGE_NAME_2] </Expression>
         </CustomExpression>
       </CustomExpressions>
       <Extensions />
@@ -21905,222 +21994,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="HATSWITCH_0">
-            <EventDefinitions>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view right</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view right</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view left</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view left</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="100">
-                <Comment>External view</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="3" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="100">
-                <Comment>Instrument view</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="200">
-                <Comment>Previous instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="21" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="200">
-                <Comment>Next instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="22" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Top instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="16" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Bottom instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="15" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Middle instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Middle instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="6" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="302" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="303" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="303" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="302" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="301" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="301" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="300" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="300" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="BUTTON_5">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -22276,6 +22149,212 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="HATSWITCH_0">
+            <EventDefinitions>
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="108" ConditionBinding="OR">
+                <Comment>Quick view right</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="107" ConditionBinding="OR">
+                <Comment>Quick view right</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="110" ConditionBinding="OR">
+                <Comment>Quick view left</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="109" ConditionBinding="OR">
+                <Comment>Quick view left</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="106">
+                <Comment>External view</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="3" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="105">
+                <Comment>Instrument view</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="209">
+                <Comment>Next instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="LOCAL:TEMP VIEW INDEX" SourceDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="22" JoystickMode="PRESSANDRELEASE" />
+                  <EventActionDelay Delay="100" />
+                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="IF([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] ==  [LOCAL:TEMP VIEW INDEX],&#xD;&#xA;([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] +&#xD;&#xA; [SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2] + 1) %&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2],&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1])" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="208">
+                <Comment>Top instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="16" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="207">
+                <Comment>Bottom instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="15" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="206">
+                <Comment>Middle instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="307" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="205">
+                <Comment>Middle instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionTargetValue="6" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="210">
+                <Comment>Previous instrument</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="LOCAL:TEMP VIEW INDEX" SourceDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="21" JoystickMode="PRESSANDRELEASE" />
+                  <EventActionDelay Delay="100" />
+                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="IF([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] ==  [LOCAL:TEMP VIEW INDEX],&#xD;&#xA;([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] +&#xD;&#xA; [SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2] - 1) %&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2],&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1])" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="309" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="310" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="308" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="305" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="306" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="303" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="304" ConditionBinding="OR">
+                <Comment>Drone</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -22285,15 +22364,6 @@
     <Device VendorID="0x294B" ProductID="0x1901" DevicePath="\\?\hid#vid_294b&amp;pid_1901#9&amp;ea6ceff&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="BUTTON_8">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="60" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="BUTTON_31">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -22359,22 +22429,6 @@
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE" EnableAcceleration="true">
                 <EventActions>
                   <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT KNOB DEC" Value="1" ValueOperation="Increment" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_10">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <Comment>Thrust Reverser 1</Comment>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="40" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="RELEASE">
-                <Comment>Thrust Reverser 1</Comment>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="40" JoystickMode="RELEASE" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -22472,46 +22526,6 @@
             </EventDefinitions>
             <Options>
               <Option Key="NAME" Value="Speed Brake" />
-            </Options>
-          </Event>
-          <Event BoundTo="RZ_AXIS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_NOREVERSE_THROTTLE">
-                    <Options>
-                      <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION1" Value="True" />
-                      <Option Key="MAXTO" Value="1023" />
-                      <Option Key="IDLETO" Value="0" />
-                      <Option Key="IDLE" Value="0" />
-                      <Option Key="MAX" Value="1023" />
-                    </Options>
-                  </EventActionRangedAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-            <Options>
-              <Option Key="NAME" Value="Throttle Left" />
-            </Options>
-          </Event>
-          <Event BoundTo="RY_AXIS">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <EventActions>
-                  <EventActionRangedAxis ConfigID="LEVER_NOREVERSE_THROTTLE">
-                    <Options>
-                      <Option Key="USERAWVALUE" Value="True" />
-                      <Option Key="OPTION2" Value="True" />
-                      <Option Key="IDLE" Value="0" />
-                      <Option Key="MAX" Value="1023" />
-                    </Options>
-                  </EventActionRangedAxis>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-            <Options>
-              <Option Key="NAME" Value="Throttle Right" />
             </Options>
           </Event>
           <Event BoundTo="Z_AXIS">
@@ -22758,6 +22772,122 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="BUTTON_10">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:SET_THROTTLE1_REVERSE_THRUST_ON" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:SET_THROTTLE1_REVERSE_THRUST_OFF" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_11">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:SET_THROTTLE2_REVERSE_THRUST_ON" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:SET_THROTTLE2_REVERSE_THRUST_OFF" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="RZ_AXIS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:JOY_0X294B0X1901_BUTTON_10" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionRangedAxis ConfigID="LEVER_NOREVERSE_THROTTLE">
+                    <Options>
+                      <Option Key="USERAWVALUE" Value="True" />
+                      <Option Key="OPTION1" Value="True" />
+                      <Option Key="MAXTO" Value="1023" />
+                      <Option Key="IDLETO" Value="0" />
+                      <Option Key="IDLE" Value="0" />
+                      <Option Key="MAX" Value="1023" />
+                    </Options>
+                  </EventActionRangedAxis>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:JOY_0X294B0X1901_BUTTON_10" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionRangedAxis ConfigID="LEVER_REVERSER">
+                    <Options>
+                      <Option Key="USERAWVALUE" Value="True" />
+                      <Option Key="OPTION1" Value="True" />
+                      <Option Key="IDLETO" Value="0" />
+                      <Option Key="MIN" Value="1023" />
+                      <Option Key="MINTO" Value="1023" />
+                      <Option Key="IDLE" Value="0" />
+                      <Option Key="RANGE.IDLE" Value="-1" />
+                      <Option Key="RANGE.MIN" Value="-8192" />
+                    </Options>
+                  </EventActionRangedAxis>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+            <Options>
+              <Option Key="NAME" Value="Throttle Left" />
+            </Options>
+          </Event>
+          <Event BoundTo="RY_AXIS">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:JOY_0X294B0X1901_BUTTON_11" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionRangedAxis ConfigID="LEVER_NOREVERSE_THROTTLE">
+                    <Options>
+                      <Option Key="USERAWVALUE" Value="True" />
+                      <Option Key="OPTION1" Value="False" />
+                      <Option Key="MAXTO" Value="1023" />
+                      <Option Key="IDLETO" Value="0" />
+                      <Option Key="IDLE" Value="0" />
+                      <Option Key="MAX" Value="1023" />
+                      <Option Key="OPTION2" Value="True" />
+                    </Options>
+                  </EventActionRangedAxis>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:JOY_0X294B0X1901_BUTTON_11" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionRangedAxis ConfigID="LEVER_REVERSER">
+                    <Options>
+                      <Option Key="USERAWVALUE" Value="True" />
+                      <Option Key="OPTION1" Value="False" />
+                      <Option Key="IDLETO" Value="0" />
+                      <Option Key="MIN" Value="1023" />
+                      <Option Key="MINTO" Value="1023" />
+                      <Option Key="IDLE" Value="0" />
+                      <Option Key="RANGE.IDLE" Value="-1" />
+                      <Option Key="OPTION2" Value="True" />
+                      <Option Key="RANGE.MIN" Value="-8192" />
+                    </Options>
+                  </EventActionRangedAxis>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+            <Options>
+              <Option Key="NAME" Value="Throttle Right" />
+            </Options>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -23002,7 +23132,7 @@
             <ShowLabel>true</ShowLabel>
             <WideMode>false</WideMode>
             <PanelSize X="320" Y="240" />
-            <Position Top="2162" Left="695" Height="298" Width="395" />
+            <Position Top="2172" Left="699" Height="297" Width="392" />
           </VirtualFIP>
         </Extension>
       </Extensions>
@@ -23805,10 +23935,16 @@
     <CustomExpression Name="XPDR_LEN">
       <Expression>Len([SIMCONNECT:TRANSPONDER CODE:1])</Expression>
     </CustomExpression>
+    <CustomExpression Name="HAT AS MOVE">
+      <Expression> [LOCAL:SIM_ISAVATAR]  ||
+[SIMCONNECT:CAMERA STATE] == 4 ||
+ [SIMCONNECT:IS SLEW ACTIVE] != 0 ||
+ [LOCAL:COCKPIT MOVE FLAG] != 0</Expression>
+    </CustomExpression>
   </CustomExpressions>
-  <ProfileInformation ProfileID="e1024a36-4dd9-4df8-b460-4bcd26710565" Version="0.111">
+  <ProfileInformation ProfileID="f9e2018a-fc25-484b-b994-91c11ef32762" Version="0.20">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-12-14T15:08:37.7238188-07:00</LastChanged>
+    <LastChanged>2025-12-28T22:04:16.6852726-07:00</LastChanged>
   </ProfileInformation>
 </Profile>

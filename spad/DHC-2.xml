@@ -3,12 +3,12 @@
     <Variable Name="PROFILE:COM SPACING OVERRIDE" Value="0" ValueType="Decimal" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 4" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 1" Value="Flight" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="XPDR" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
     <Variable Name="PROFILE:CAMERA STATE CHARACTER" Value="0" ValueType="Decimal" />
   </Variables>
   <Devices>
@@ -4453,7 +4453,7 @@
                       <SimpleGauge>
                         <GaugeLayers>
                           <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="GNS_Button1_RNGdn" ImageId="a5bd2bc9-7885-52c5-8e45-aaa588f7f1ab" />
+                          <GaugeImageLayer Layer="1" Name="GNS_Button1_RNGdn" ImageId="54bbbad2-2e8b-5386-aa7c-85853b64c235" />
                           <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="60" Height="60" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -4477,7 +4477,7 @@
                       <SimpleGauge>
                         <GaugeLayers>
                           <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="GNS_Button1_RNGup" ImageId="f6922cdd-8b16-59a8-8b32-6528e14c5782" />
+                          <GaugeImageLayer Layer="1" Name="GNS_Button1_RNGup" ImageId="46fc4ede-a78a-5419-929a-ad3651223ba8" />
                           <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="60" Height="60" />
                         </GaugeLayers>
                       </SimpleGauge>
@@ -4733,8 +4733,6 @@
         <Extensions />
       </DevicePage>
       <Images>
-        <Image Id="{a5bd2bc9-7885-52c5-8e45-aaa588f7f1ab}" Name="GNS_Button1_RNGdn" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\Standard Avionics Suite\icons\Standard GNS\GNS_Button1_RNGdn.png" />
-        <Image Id="{f6922cdd-8b16-59a8-8b32-6528e14c5782}" Name="GNS_Button1_RNGup" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\Standard Avionics Suite\icons\Standard GNS\GNS_Button1_RNGup.png" />
         <Image Id="{591b942f-b560-5811-b80b-860d887634a5}" Name="GNS_Button1_directTo" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\Standard Avionics Suite\icons\Standard GNS\GNS_Button1_directTo.png" />
         <Image Id="{54d82a7e-063a-5c18-a0c4-0001b61d3bac}" Name="GNS_Button2_" Source="C:\Users\oren\Documents\SPAD.neXt\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\Standard Avionics Suite\icons\Standard GNS\GNS_Button2_.png" />
       </Images>
@@ -9575,9 +9573,9 @@
  [LOCAL:COCKPIT MOVE FLAG] != 0</Expression>
     </CustomExpression>
   </CustomExpressions>
-  <ProfileInformation ProfileID="606b2aed-3167-4206-b127-723486c5497e" Version="0.51">
+  <ProfileInformation ProfileID="606b2aed-3167-4206-b127-723486c5497e" Version="0.52">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-11-30T15:02:19.0237377-07:00</LastChanged>
+    <LastChanged>2025-12-06T15:53:09.4417908-07:00</LastChanged>
   </ProfileInformation>
 </Profile>

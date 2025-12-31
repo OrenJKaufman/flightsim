@@ -42,13 +42,13 @@ void knobBInnerRotate(bool clockwise) {
 Encoder knobAOuter(19, 18, knobAOuterRotate);
 Encoder knobAInner(21, 20, knobAInnerRotate);
 Encoder knobBOuter(6, 5, knobBOuterRotate);
-Encoder knobBInner(8, 7, knobBInnerRotate);
+//Encoder knobBInner(8, 7, knobBInnerRotate);
 
 void CheckAllEncoders() {
   knobAOuter.process();
   knobAInner.process();
   knobBOuter.process();
-  knobBInner.process();
+  //knobBInner.process();
 }
 
 //----- DEFINITIONS ------
@@ -206,7 +206,7 @@ void onIdentifyRequest() {
 
 #ifdef DEBUG
 void sendCmd(int id, int value) {
-  Serial.print("Buggon ID:");
+  Serial.print("Button ID:");
   Serial.print(id);
   Serial.print(" VALUE: ");
   Serial.println(value);
@@ -255,7 +255,7 @@ void setup() {
   knobAOuter.begin();
   knobAInner.begin();
   knobBOuter.begin();
-  knobBInner.begin();
+  //knobBInner.begin();
 
   attachCommandCallbacks();
 }
@@ -269,3 +269,4 @@ void loop() {
   messenger.feedinSerialData();
   #endif
 }
+
