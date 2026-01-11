@@ -1,0 +1,4 @@
+Landing Gear: Up
+Flaps: Up
+Thrust Revers: Off
+Lights: Check

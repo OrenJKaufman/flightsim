@@ -1,0 +1,3 @@
+Minimums: Set
+Landing Elevation: Set
+Landing Calculations: Check

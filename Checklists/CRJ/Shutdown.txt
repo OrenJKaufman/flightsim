@@ -1,0 +1,13 @@
+Parking Brake: Set
+Lights: Check
+Windshield Heat: Off
+APU: On
+Thrust Levers: Shutoff
+Boost Pumps: Off
+Hydraulic Pumps: Off
+Beacon: Off
+Chocks and Parking Brake: Check
+IRS: Off
+Emergency Lights: Off
+APU: Off
+Battery: Off

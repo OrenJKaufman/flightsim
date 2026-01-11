@@ -1,0 +1,4 @@
+Landing Gear: Down
+Flaps: Full
+Landing Lights: On
+Thrust Revers and Spoilers: Armed and Auto

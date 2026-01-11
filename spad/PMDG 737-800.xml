@@ -22959,7 +22959,7 @@
       <Extensions>
         <Extension type="ProfileGauges">
           <Gauges>
-            <Gauge Filename="arc://C:\Users\oren\SPAD.neXt\gauges\fipgauges\B737FLAPS.snp;B737FLAPS.xml" IsActiveGauge="true" ProfileGaugeID="0952442b-051a-4595-b143-b9e48f01a682">
+            <Gauge Filename="arc://C:\Users\oren\SPAD.neXt\gauges\fipgauges\B737FLAPS.snp;B737FLAPS.xml" IsActiveGauge="false" ProfileGaugeID="0952442b-051a-4595-b143-b9e48f01a682">
               <GaugeButton BoundTo="FIP_BUTTON_PAGEUP">
                 <Event type="SPADBaseEvent">
                   <BaseEvent BoundTo="FIP_BUTTON_PAGEUP">
@@ -23809,6 +23809,6 @@
   <ProfileInformation ProfileID="e1024a36-4dd9-4df8-b460-4bcd26710565" Version="0.111">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2025-12-14T15:08:37.7238188-07:00</LastChanged>
+    <LastChanged>2025-12-14T15:08:37.79532-07:00</LastChanged>
   </ProfileInformation>
 </Profile>

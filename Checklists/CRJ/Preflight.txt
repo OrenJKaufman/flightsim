@@ -1,0 +1,32 @@
+Parking Brake: Set
+Weather Radar: Off
+Spoiler: 0
+Thrust Levers: Off
+Flaps: 0
+Landing Gear Lever: Down
+Hydraulics: Off
+Battery: On
+External Power: On
+Generators: Auto
+Nav Lights: On
+Emergency Lights: Armed
+APU: On
+External Power: Disconnected
+Bleed Valves: Auto
+Recirculation Fan: On
+Hydraulic 3A: On
+IRS: Nav
+EFB: Flight Plan and Performance
+FMS: Setup
+Speed Bug: V2 plus 10
+Landing Elevation: Departure Altitude
+Packs: On
+Windshield Heat: Low
+Probes Heat: Off
+Barometer: Set
+Spoilers: Auto
+Reversers: Armed
+Transponder: Set and On
+T CAS: Auto
+Trims: Set
+Yaw Damper: On
