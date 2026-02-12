@@ -1,14 +1,17 @@
 <Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2" xmlns="http://www.fsgs.com/SPAD">
   <Variables>
+    <Variable Name="PROFILE:BOTTOM INSTRUMENT VIEW INDEX" Value="12" ValueType="Decimal" />
     <Variable Name="PROFILE:COM SPACING OVERRIDE" Value="0" ValueType="Decimal" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 4" Value="Ice" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 1" Value="Flight" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="Switch" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="Startup" ValueType="String" />
+    <Variable Name="PROFILE:TOP INSTRUMENT VIEW INDEX" Value="8" ValueType="Decimal" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="Lights" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="GNS" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
+    <Variable Name="PROFILE:MIDDLE INSTRUMENT VIEW INDEX" Value="2" ValueType="Decimal" />
   </Variables>
   <Devices>
     <Device VendorID="0x0FD9" ProductID="0x006C" DevicePath="\\?\hid#vid_0fd9&amp;pid_006c#b&amp;1c4d507f&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="CL07L2A00420" DeviceIndex="0" Version="3">
@@ -8310,32 +8313,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_1_8">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Background="Red" Font="Calibri" FontSize="22">
-                            <Text>Master Battery</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="7" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_1_7">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -8501,132 +8478,6 @@
                       </SimpleGauge>
                     </Data>
                   </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_3_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
-                            <Text>Toggle Cockpit Move</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:COCKPIT MOVE FLAG" Value="0" ValueOperation="ToggleBit" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="Transparent" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="#FF8B0000" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_1">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="30" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
-                            <Text>Toggle Slew</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="Transparent" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="#FF8B0000" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_1_1">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="8" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
-                            <Text>Toggle Drone</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="Transparent" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="#FF8B0000" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -8801,48 +8652,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_2_8">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="28">
-                            <Text>GSX</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventActions>
-                  <EventActionCommand>
-                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
-                    <Parameter1 Value="72512c14-4ea9-471f-8fb9-bbed28990c38" />
-                  </EventActionCommand>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESSLONG">
-                <EventActions>
-                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
-                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
-                      <Keys>
-                        <Keys>LControlKey</Keys>
-                        <Keys>LShiftKey</Keys>
-                        <Keys>F12</Keys>
-                      </Keys>
-                    </KeyboardMacro>
-                  </EventActionKeyboard>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_1_2">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -8907,25 +8716,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_4_2">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_4_3">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -8946,6 +8736,56 @@
             </EventDefinitions>
           </Event>
           <Event BoundTo="EGSD_4_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" HorizontalAlignment="0" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_3">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESSSHORT">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="47" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Calibri" FontSize="26">
+                            <Text>Custom View    0</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESSLONG">
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="48" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_2">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
                 <EventActions>
@@ -8988,31 +8828,26 @@
                   </EventActionDummy>
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="VALUE" ConditionBinding="OR">
+              <EventDefinition Trigger="VALUE">
                 <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:SIM_ISAVATAR" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="Transparent" />
+                  <EventActionPlateColor TargetLayer="0" Color="#FF0000FF" TargetScope="1" />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUE">
                 <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:HAT AS MOVE" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:SIM_ISAVATAR" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="#FF8B0000" />
+                  <EventActionPlateColor TargetLayer="0" Color="#FF8B0000" TargetScope="1" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_1_3">
+          <Event BoundTo="EGSD_2_8">
             <EventDefinitions>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="47" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
                 <EventActions>
                   <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
@@ -9021,8 +8856,8 @@
                         <GaugeLayers>
                           <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" Font="Calibri" FontSize="26">
-                            <Text>Custom View    0</Text>
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="28">
+                            <Text>GSX</Text>
                           </GaugeTextLayer>
                         </GaugeLayers>
                       </SimpleGauge>
@@ -9030,9 +8865,198 @@
                   </EventActionDummy>
                 </EventActions>
               </EventDefinition>
+              <EventDefinition Trigger="PRESSSHORT">
+                <EventActions>
+                  <EventActionCommand>
+                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
+                    <Parameter1 Value="72512c14-4ea9-471f-8fb9-bbed28990c38" />
+                  </EventActionCommand>
+                </EventActions>
+              </EventDefinition>
               <EventDefinition Trigger="PRESSLONG">
                 <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="48" JoystickMode="PRESSANDRELEASE" />
+                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
+                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
+                      <Keys>
+                        <Keys>LControlKey</Keys>
+                        <Keys>LShiftKey</Keys>
+                        <Keys>F12</Keys>
+                      </Keys>
+                    </KeyboardMacro>
+                  </EventActionKeyboard>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_8">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Background="Red" Font="Calibri" FontSize="22">
+                            <Text>Master Battery</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:MASTER_BATTERY_OFF" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
+                            <Text>Toggle Cockpit Move</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" Priority="10">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA STATE" Value="2" />
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:COCKPIT MOVE FLAG" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true" Priority="20">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:COCKPIT MOVE FLAG" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF0000FF" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" ConditionBinding="OR">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF8B0000" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
+                            <Text>Toggle Slew</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ALLOWED" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:SLEW_ON" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:SLEW_OFF" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF0000FF" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF8B0000" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_1">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="SIMCONNECT:CAMERA STATE" SourceDataDefinition="IF( [SIMCONNECT:CAMERA STATE] == 4, 2, 4 )" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
+                            <Text>Toggle Drone</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:IS DRONE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF0000FF" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS DRONE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF8B0000" TargetScope="1" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -9866,7 +9890,7 @@
               </EventDefinition>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="MSFS:EICAS_Line2" />
+                  <EventActionControl TargetDataDefinition="H:EICAS_Line2" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -9875,7 +9899,7 @@
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="MSFS:EICAS_Line3" />
+                  <EventActionControl TargetDataDefinition="H:EICAS_Line3" />
                 </EventActions>
               </EventDefinition>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -9937,7 +9961,7 @@
                   <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="NORTH" ConditionValueSource="LOCAL:CURRENT CURSOR POS" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="MSFS:MFD_Joystick_Up" />
+                  <EventActionControl TargetDataDefinition="H:MFD_Joystick_Up" />
                 </EventActions>
                 <Options>
                   <Option Key="HELD_FREQUENCY" Value="50" />
@@ -9966,7 +9990,7 @@
                   <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="SOUTH" ConditionValueSource="LOCAL:CURRENT CURSOR POS" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="MSFS:MFD_Joystick_Down" />
+                  <EventActionControl TargetDataDefinition="H:MFD_Joystick_Down" />
                 </EventActions>
                 <Options>
                   <Option Key="HELD_FREQUENCY" Value="50" />
@@ -9978,7 +10002,7 @@
                   <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="WEST" ConditionValueSource="LOCAL:CURRENT CURSOR POS" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="MSFS:MFD_Joystick_Left" />
+                  <EventActionControl TargetDataDefinition="H:MFD_Joystick_Left" />
                 </EventActions>
                 <Options>
                   <Option Key="HELD_FREQUENCY" Value="50" />
@@ -9990,7 +10014,7 @@
                   <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="EAST" ConditionValueSource="LOCAL:CURRENT CURSOR POS" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="MSFS:MFD_Joystick_Right" />
+                  <EventActionControl TargetDataDefinition="H:MFD_Joystick_Right" />
                 </EventActions>
                 <Options>
                   <Option Key="HELD_FREQUENCY" Value="50" />
@@ -10019,7 +10043,7 @@
               </EventDefinition>
               <EventDefinition Trigger="PRESS">
                 <EventActions>
-                  <EventActionControl TargetDataDefinition="MSFS:EICAS_Line1" />
+                  <EventActionControl TargetDataDefinition="H:EICAS_Line1" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -14485,45 +14509,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_E_2">
-            <EventDefinitions>
-              <EventDefinition Trigger="TUNER_CLOCKWISE" IsFinal="true" Priority="10">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Less" ConditionTargetValue="500" ConditionValueSource="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" Value="500">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="25000" />
-                      <Option Key="VALUEMIN" Value="100" />
-                    </Options>
-                  </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_CLOCKWISE">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" Value="500" ValueOperation="Increment">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="25000" />
-                    </Options>
-                  </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" Value="500" ValueOperation="Decrement">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="True" />
-                      <Option Key="VALUEMAX" Value="25000" />
-                      <Option Key="VALUEMIN" Value="100" />
-                    </Options>
-                  </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_1_1">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -14893,39 +14878,33 @@
                       <SimpleGauge>
                         <GaugeLayers>
                           <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" ImageId="00000000-0000-0000-0000-000000000000" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="00000000-0000-0000-0000-000000000000" />
                           <GaugeTextLayer Layer="2" Name="Label 1" Width="200" Height="66" Font="Calibri" FontSize="30">
                             <Text>Sim Rate</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="3" Name="Sim Rate" Y="66" Width="200" Height="34" Foreground="Green" Font="Calibri" FontSize="30">
-                            <Text>1 X</Text>
+                          <GaugeTextLayer Layer="3" Name="Sim Rate" Y="66" Width="200" Height="34" Foreground="Transparent" Font="Calibri" FontSize="30" TextType="Exp">
+                            <Text>ToString( [SIMCONNECT:SIMULATION RATE] ) + ' X'</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="4" Name="TextLayer 6" X="200" Width="200" Height="66" Font="Calibri" FontSize="30">
+                          <GaugeTextLayer Layer="4" Name="Drone Label" X="200" Width="200" Height="66" Font="Calibri" FontSize="30">
+                            <Visibility>[LOCAL:IS DRONE]</Visibility>
                             <Text>Drone Speed</Text>
                           </GaugeTextLayer>
-                          <GaugeTextLayer Layer="5" Name="Drone Speed" X="200" Y="66" Width="200" Height="34" Font="Calibri" FontSize="30">
-                            <Text>-</Text>
+                          <GaugeTextLayer Layer="5" Name="Drone Speed" X="200" Y="66" Width="200" Height="34" Font="Calibri" FontSize="30" TextType="Exp">
+                            <Visibility>[LOCAL:IS DRONE]</Visibility>
+                            <Text>ToString( [MSFS:DRONE CAMERA SPEED TRAVELLING]  / 100) + ' %'</Text>
+                          </GaugeTextLayer>
+                          <GaugeTextLayer Layer="6" Name="Cockpit Move Label" X="200" Width="200" Height="66" Font="Calibri" FontSize="30">
+                            <Visibility>[LOCAL:IS COCKPIT MOVE]</Visibility>
+                            <Text>Cockpit Move Speed</Text>
+                          </GaugeTextLayer>
+                          <GaugeTextLayer Layer="7" Name="Cockpit Move Speed" X="200" Y="66" Width="200" Height="34" Font="Calibri" FontSize="30" TextType="Exp">
+                            <Visibility>[LOCAL:IS COCKPIT MOVE]</Visibility>
+                            <Text>ToString( [SIMCONNECT:COCKPIT CAMERA SPEED]) + ' %'</Text>
                           </GaugeTextLayer>
                         </GaugeLayers>
                       </SimpleGauge>
                     </Data>
                   </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="LABEL" Priority="40">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:SIMULATION RATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLabel TargetLayer="3" Text="ToString( [SIMCONNECT:SIMULATION RATE] ) + ' X'" TextType="Exp" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="LABEL" Priority="40">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Always" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionLabel TargetLayer="5" Text="ToString( [MSFS:DRONE CAMERA SPEED TRAVELLING]  / 100) + ' %'" TextType="Exp" />
                 </EventActions>
               </EventDefinition>
               <EventDefinition Trigger="VALUE">
@@ -14955,15 +14934,99 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="EGSD_E_2">
+            <EventDefinitions>
+              <EventDefinition Trigger="TUNER_CLOCKWISE" IsFinal="true" Priority="105">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS DRONE" />
+                  <EventCondition ConditionComparator="Less" ConditionTargetValue="500" ConditionValueSource="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" Value="500">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="25000" />
+                      <Option Key="VALUEMIN" Value="100" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_CLOCKWISE" IsFinal="true" Priority="100">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS DRONE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" Value="500" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="25000" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE" IsFinal="true" Priority="100">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS DRONE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:DRONE CAMERA SPEED TRAVELLING" Value="500" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMAX" Value="25000" />
+                      <Option Key="VALUEMIN" Value="100" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_CLOCKWISE" IsFinal="true" Priority="95">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
+                  <EventCondition ConditionComparator="Less" ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:COCKPIT CAMERA SPEED" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:COCKPIT CAMERA SPEED" Value="5">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMIN" Value="1" />
+                      <Option Key="VALUEMAX" Value="100" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_CLOCKWISE" IsFinal="true" Priority="90">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:COCKPIT CAMERA SPEED" Value="5" ValueOperation="Increment">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMIN" Value="1" />
+                      <Option Key="VALUEMAX" Value="100" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE" IsFinal="true" Priority="90">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:COCKPIT CAMERA SPEED" Value="5" ValueOperation="Decrement">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="True" />
+                      <Option Key="VALUEMIN" Value="1" />
+                      <Option Key="VALUEMAX" Value="100" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
       <Events />
-      <CustomExpressions>
-        <CustomExpression Name="CURRENT PAGE NAME">
-          <Expression> [LOCAL:DEVICE_0FD9_0084_CURRENT_PAGE_NAME_1] </Expression>
-        </CustomExpression>
-      </CustomExpressions>
       <Extensions />
     </Device>
     <Device VendorID="0x06A3" ProductID="0x0D05" DevicePath="\\?\hid#vid_06a3&amp;pid_0d05#c&amp;36f8f2a1&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
@@ -15799,81 +15862,6 @@
     <Device VendorID="0x294B" ProductID="0x1900" DevicePath="\\?\hid#vid_294b&amp;pid_1900#d&amp;2d8801a0&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="BUTTON_2">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="3" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="4" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_13">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:ALTERNATOR_ON" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_14">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:ALTERNATOR_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_17">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AVIONICS_MASTER_1_ON" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_18">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AVIONICS_MASTER_1_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_19">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AVIONICS_MASTER_2_ON" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_20">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AVIONICS_MASTER_2_OFF" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="BUTTON_5">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -15898,26 +15886,6 @@
               <EventDefinition Trigger="RELEASE">
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="26" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_15">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:BATTERY1_SET">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_16">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:BATTERY1_SET" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -15970,332 +15938,26 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="BUTTON_9">
+          <Event BoundTo="BUTTON_2">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:RUDDER_TRIM_LEFT" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="HELD">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:RUDDER_TRIM_LEFT" />
-                </EventActions>
-                <Options>
-                  <Option Key="HELD_FREQUENCY" Value="50" />
-                </Options>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="BUTTON_10">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:RUDDER_TRIM_RIGHT" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="HELD">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:RUDDER_TRIM_RIGHT" />
-                </EventActions>
-                <Options>
-                  <Option Key="HELD_FREQUENCY" Value="50" />
-                </Options>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="HATSWITCH_0">
-            <EventDefinitions>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view right</Comment>
                 <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:SIM_ISAVATAR" />
                 </EventConditions>
                 <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view right</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view left</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="100" ConditionBinding="OR">
-                <Comment>Quick view left</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="100">
-                <Comment>External view</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="3" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="100">
-                <Comment>Instrument view</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="200">
-                <Comment>Previous instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="21" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="200">
-                <Comment>Next instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="22" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Top instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="19" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Bottom instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="20" JoystickMode="PRESSANDRELEASE" />
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="22" JoystickMode="PRESSANDRELEASE" />
-                  <EventActionDelay Delay="200" />
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="22" JoystickMode="PRESSANDRELEASE" />
-                  <EventActionDelay Delay="200" />
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="22" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Middle instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="200">
-                <Comment>Middle instrument</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="5" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="6" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="302" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="303" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="303" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="302" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="301" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="301" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="300" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="RELEASE" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="300" ConditionBinding="OR">
-                <Comment>Drone</Comment>
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="4" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:COCKPIT MOVE FLAG" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="PRESS" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="400">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="BLANK" ConditionValueSource="LOCAL:CURRENT CURSOR KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="EAST RELEASED" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="401">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="BLANK" ConditionValueSource="LOCAL:CURRENT CURSOR KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="WEST RELEASED" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="402">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="BLANK" ConditionValueSource="LOCAL:CURRENT CURSOR KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="SOUTH RELEASED" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="403">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="BLANK" ConditionValueSource="LOCAL:CURRENT CURSOR KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="NORTH RELEASED" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PROFILE_LOADED">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR KEY" Value="BLANK" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="401">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="BLANK" ConditionValueSource="LOCAL:CURRENT CURSOR KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="WEST" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="400">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="BLANK" ConditionValueSource="LOCAL:CURRENT CURSOR KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="EAST" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="403">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="BLANK" ConditionValueSource="LOCAL:CURRENT CURSOR KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="NORTH" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="402">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrNotEquals" ConditionTargetValue="BLANK" ConditionValueSource="LOCAL:CURRENT CURSOR KEY" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="SOUTH" />
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:TRIGGER VIEW RESET" Value="1" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
           </Event>
           <Event BoundTo="BUTTON_3">
             <EventDefinitions>
+              <EventDefinition Trigger="PRESSSHORT">
+                <Comment>Toggle TrackIR Pause</Comment>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="60" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
               <EventDefinition Trigger="PRESSLONG">
                 <Comment>Reset TrackIR</Comment>
                 <EventActions>
@@ -16308,9 +15970,354 @@
                   </EventActionKeyboard>
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="PRESSSHORT">
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="HATSWITCH_0">
+            <EventDefinitions>
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="152" ConditionBinding="OR">
+                <Comment>Quick view right</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="7947fdd0-1f26-4b51-bd54-adbc77138acc" />
+                </EventConditions>
                 <EventActions>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="60" JoystickMode="PRESSANDRELEASE" />
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="150" ConditionBinding="OR">
+                <Comment>Quick view right</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="7947fdd0-1f26-4b51-bd54-adbc77138acc" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="156">
+                <Comment>Quick view left</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="7947fdd0-1f26-4b51-bd54-adbc77138acc" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="154" ConditionBinding="OR">
+                <Comment>Quick view left</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="7947fdd0-1f26-4b51-bd54-adbc77138acc" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="106">
+                <Comment>External view</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="3" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="105">
+                <Comment>Instrument view</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="11" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="209">
+                <Comment>Next instrument</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="9becdfee-d07a-4b6f-9853-22fd4fd48985" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="LOCAL:TEMP VIEW INDEX" SourceDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="22" JoystickMode="PRESSANDRELEASE" />
+                  <EventActionDelay Delay="100" />
+                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="IF([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] ==  [LOCAL:TEMP VIEW INDEX],&#xD;&#xA;([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] +&#xD;&#xA; [SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2] + 1) %&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2],&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1])" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="208">
+                <Comment>Top instrument</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="9becdfee-d07a-4b6f-9853-22fd4fd48985" />
+                  <EventConditionReference RefId="682bebb0-a3f1-4f82-af05-e1ddb9d1f631" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="PROFILE:TOP INSTRUMENT VIEW INDEX" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="207">
+                <Comment>Bottom instrument</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="9becdfee-d07a-4b6f-9853-22fd4fd48985" />
+                  <EventConditionReference RefId="682bebb0-a3f1-4f82-af05-e1ddb9d1f631" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="PROFILE:BOTTOM INSTRUMENT VIEW INDEX" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="206">
+                <Comment>Middle instrument</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="9becdfee-d07a-4b6f-9853-22fd4fd48985" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="PROFILE:MIDDLE INSTRUMENT VIEW INDEX" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="307">
+                <Comment>vJoy Pan</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="205">
+                <Comment>Middle instrument</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="9becdfee-d07a-4b6f-9853-22fd4fd48985" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="PROFILE:MIDDLE INSTRUMENT VIEW INDEX" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="210">
+                <Comment>Previous instrument</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="9becdfee-d07a-4b6f-9853-22fd4fd48985" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue SourceType="Data" TargetDataDefinition="LOCAL:TEMP VIEW INDEX" SourceDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" />
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="21" JoystickMode="PRESSANDRELEASE" />
+                  <EventActionDelay Delay="100" />
+                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="IF([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] ==  [LOCAL:TEMP VIEW INDEX],&#xD;&#xA;([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] +&#xD;&#xA; [SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2] - 1) %&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2],&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1])" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="309">
+                <Comment>vJoy Pan</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="310">
+                <Comment>vJoy Pan</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="308">
+                <Comment>vJoy Pan</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="305">
+                <Comment>vJoy Pan</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="306">
+                <Comment>vJoy Pan</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="303">
+                <Comment>vJoy Pan</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="304">
+                <Comment>vJoy Pan</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PROFILE_LOADED">
+                <Comment>Initialize Cursor Key</Comment>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR KEY" Value="BLANK" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="400">
+                <Comment>Cursor East</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="ec93cd5a-5d3f-4900-a192-62042473a1b5" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="EAST RELEASED" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="400">
+                <Comment>Cursor East</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="ec93cd5a-5d3f-4900-a192-62042473a1b5" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="EAST" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="401">
+                <Comment>Cursor West</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="ec93cd5a-5d3f-4900-a192-62042473a1b5" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="WEST RELEASED" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="401">
+                <Comment>Cursor West</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="ec93cd5a-5d3f-4900-a192-62042473a1b5" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="WEST" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="402">
+                <Comment>Cursor South</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="ec93cd5a-5d3f-4900-a192-62042473a1b5" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="SOUTH RELEASED" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="402">
+                <Comment>Cursor South</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="ec93cd5a-5d3f-4900-a192-62042473a1b5" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="SOUTH" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="403">
+                <Comment>Cursor North</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="ec93cd5a-5d3f-4900-a192-62042473a1b5" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="NORTH RELEASED" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="403">
+                <Comment>Cursor North</Comment>
+                <EventConditions>
+                  <EventConditionReference RefId="ec93cd5a-5d3f-4900-a192-62042473a1b5" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:CURRENT CURSOR POS" Value="NORTH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_9">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <Comment>Rudder Trim Left</Comment>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="27" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <Comment>Rudder Trim Left</Comment>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="27" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_10">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <Comment>Rudder Trim Right</Comment>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="28" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <Comment>Rudder Trim Right</Comment>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="28" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_1">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <Comment>PTT VATSIM</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:PTT TARGET" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="51" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <Comment>PTT VATSIM</Comment>
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:PTT TARGET" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="51" JoystickMode="RELEASE" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <Comment>PTT SayIntentions</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:PTT TARGET" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="52" JoystickMode="PRESS" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <Comment>PTT SayIntentions</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:PTT TARGET" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="52" JoystickMode="RELEASE" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -16478,19 +16485,6 @@
           </Event>
           <Event BoundTo="BUTTON_7">
             <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionKeyboard MacroType="PRESSANDRELEASE" TargetWindow="__ACTIVEWINDOW__">
-                    <KeyboardMacro Duration="50" Repeat="1" Pause="25">
-                      <Keys>
-                        <Keys>LMenu</Keys>
-                        <Keys>LShiftKey</Keys>
-                        <Keys>F2</Keys>
-                      </Keys>
-                    </KeyboardMacro>
-                  </EventActionKeyboard>
-                </EventActions>
-              </EventDefinition>
               <EventDefinition Trigger="PROFILE_LOADED">
                 <EventActions>
                   <EventActionLED>
@@ -17019,6 +17013,86 @@
             </EventDefinitions>
             <Options>
               <Option Key="NAME" Value="PAGE SWITCHER" />
+            </Options>
+          </Event>
+          <Event BoundTo="SCRIPT_1_2">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUE">
+                <Comment>Reset Trigger Variable</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionDelay Delay="500" />
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:TRIGGER VIEW RESET" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" Priority="25">
+                <Comment>Ensure Cockpit Camera State</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA STATE" Value="2" />
+                  <EventActionDelay Delay="100" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" Priority="20">
+                <Comment>Ensure Fixed Look Camera Substate</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA SUBSTATE" Value="1" />
+                  <EventActionDelay Delay="100" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" Priority="15">
+                <Comment>Ensure Pilot View Type</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" Value="1" />
+                  <EventActionDelay Delay="100" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" Priority="10">
+                <Comment>Reset the Pilot View</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA REQUEST ACTION" Value="1" />
+                  <EventActionDelay Delay="100" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" Priority="5">
+                <Comment>Load Custom Camera 0</Comment>
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
+                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" Value="1" />
+                  <EventActionDelay Delay="100" />
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="47" JoystickMode="PRESSANDRELEASE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+            <Options>
+              <Option Key="NAME" Value="NO NAME" />
             </Options>
           </Event>
         </Events>
@@ -17800,6 +17874,17 @@
     <Option Key="Ultimarc.PacLed64.EnableVirtualPower" Value="True" />
     <Option Key="Ultimarc.PacLed64.Brightness" Value="128" />
   </Options>
+  <CustomExpressions>
+    <CustomExpression Name="CURRENT PAGE NAME">
+      <Expression>[LOCAL:STREAMDECK_CURRENT_PAGE_NAME_2]</Expression>
+    </CustomExpression>
+    <CustomExpression Name="IS COCKPIT MOVE">
+      <Expression>[SIMCONNECT:CAMERA STATE] == 2 &amp;&amp;  [LOCAL:COCKPIT MOVE FLAG] != 0</Expression>
+    </CustomExpression>
+    <CustomExpression Name="IS DRONE">
+      <Expression>[SIMCONNECT:CAMERA STATE] == 4</Expression>
+    </CustomExpression>
+  </CustomExpressions>
   <CustomClientEvents>
     <CustomClientEvent Name="ALT_BaroAdjust_Inc_1" EventID="H:ALT_BaroAdjust_Inc_1" SubCategory="Bksq Starship" />
     <CustomClientEvent Name="ALT_BaroAdjust_Dec_1" EventID="H:ALT_BaroAdjust_Dec_1" SubCategory="Bksq Starship" />
@@ -17854,9 +17939,9 @@
     <CustomClientEvent Name="RTU_TransponderStandbyButton_1" EventID="H:RTU_TransponderStandbyButton_1" SubCategory="Bksq Starship" />
     <CustomClientEvent Name="RTU_ComSquelchButtonPress_1" EventID="H:RTU_ComSquelchButtonPress_1" SubCategory="Bksq Starship" />
   </CustomClientEvents>
-  <ProfileInformation ProfileID="f38f6fbb-82df-458b-8d0d-a56a5b6a5e4c" Version="0.272">
+  <ProfileInformation ProfileID="f38f6fbb-82df-458b-8d0d-a56a5b6a5e4c" Version="0.283">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2026-01-07T17:27:09.9284158-07:00</LastChanged>
+    <LastChanged>2026-02-03T18:48:55.8531928-07:00</LastChanged>
   </ProfileInformation>
 </Profile>

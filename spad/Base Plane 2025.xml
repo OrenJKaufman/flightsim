@@ -2132,57 +2132,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_3_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
-                            <Text>Toggle Cockpit Move</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS" Priority="10">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA STATE" Value="2" />
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:COCKPIT MOVE FLAG" Value="1" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS" IsFinal="true" Priority="20">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:COCKPIT MOVE FLAG" Value="0" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="Transparent" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE" ConditionBinding="OR">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="#FF8B0000" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_4_2">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -2198,102 +2147,6 @@
                       </SimpleGauge>
                     </Data>
                   </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_1_1">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="SIMCONNECT:CAMERA STATE" SourceDataDefinition="IF( [SIMCONNECT:CAMERA STATE] == 4, 2, 4 )" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
-                            <Text>Toggle Drone</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:IS DRONE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="Transparent" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS DRONE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="#FF8B0000" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
-                            <Text>Toggle Slew</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ALLOWED" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:SLEW_ON" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:SLEW_OFF" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="Transparent" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="2" Color="#FF8B0000" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -2404,6 +2257,153 @@
               <EventDefinition Trigger="PRESS">
                 <EventActions>
                   <EventActionControl TargetDataDefinition="SIMCONNECT:MASTER_BATTERY_OFF" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
+                            <Text>Toggle Cockpit Move</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" Priority="10">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA STATE" Value="2" />
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:COCKPIT MOVE FLAG" Value="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true" Priority="20">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:COCKPIT MOVE FLAG" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF0000FF" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" ConditionBinding="OR">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS COCKPIT MOVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF8B0000" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
+                            <Text>Toggle Slew</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ALLOWED" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:SLEW_ON" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:SLEW_OFF" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF0000FF" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:IS SLEW ACTIVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF8B0000" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_1">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue SourceType="Exp" TargetDataDefinition="SIMCONNECT:CAMERA STATE" SourceDataDefinition="IF( [SIMCONNECT:CAMERA STATE] == 4, 2, 4 )" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF0000FF" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="24">
+                            <Text>Toggle Drone</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:IS DRONE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF0000FF" TargetScope="1" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:IS DRONE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF8B0000" TargetScope="1" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -4614,15 +4614,6 @@
     <Device VendorID="0x294B" ProductID="0x1900" DevicePath="\\?\hid#vid_294b&amp;pid_1900#d&amp;2d8801a0&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="BUTTON_2">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:TRIGGER VIEW RESET" Value="1" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="BUTTON_3">
             <EventDefinitions>
               <EventDefinition Trigger="PRESSSHORT">
@@ -4801,7 +4792,7 @@
           </Event>
           <Event BoundTo="HATSWITCH_0">
             <EventDefinitions>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="108" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="152" ConditionBinding="OR">
                 <Comment>Quick view right</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="7947fdd0-1f26-4b51-bd54-adbc77138acc" />
@@ -4810,7 +4801,7 @@
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="PRESS" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="107" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="150" ConditionBinding="OR">
                 <Comment>Quick view right</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="7947fdd0-1f26-4b51-bd54-adbc77138acc" />
@@ -4819,7 +4810,7 @@
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="2" JoystickMode="RELEASE" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="110" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="156">
                 <Comment>Quick view left</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="7947fdd0-1f26-4b51-bd54-adbc77138acc" />
@@ -4828,7 +4819,7 @@
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="1" JoystickMode="PRESS" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="109" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="154" ConditionBinding="OR">
                 <Comment>Quick view left</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="7947fdd0-1f26-4b51-bd54-adbc77138acc" />
@@ -4896,10 +4887,11 @@
                   <EventActionChangeValue SourceType="Data" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="PROFILE:MIDDLE INSTRUMENT VIEW INDEX" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="307" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_SOUTH_RELEASE" IsFinal="true" Priority="307">
                 <Comment>vJoy Pan</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="RELEASE" />
@@ -4926,64 +4918,71 @@
                   <EventActionChangeValue SourceType="Exp" TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" SourceDataDefinition="IF([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] ==  [LOCAL:TEMP VIEW INDEX],&#xD;&#xA;([SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1] +&#xD;&#xA; [SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2] - 1) %&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX MAX:2],&#xD;&#xA;[SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1])" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="309" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_NORTH_RELEASE" IsFinal="true" Priority="309">
                 <Comment>vJoy Pan</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="RELEASE" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="310" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_NORTH_PRESS" IsFinal="true" Priority="310">
                 <Comment>vJoy Pan</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="33" JoystickMode="PRESS" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="308" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_SOUTH_PRESS" IsFinal="true" Priority="308">
                 <Comment>vJoy Pan</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="34" JoystickMode="PRESS" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="305" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_WEST_RELEASE" IsFinal="true" Priority="305">
                 <Comment>vJoy Pan</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="RELEASE" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="306" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_WEST_PRESS" IsFinal="true" Priority="306">
                 <Comment>vJoy Pan</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="35" JoystickMode="PRESS" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="303" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_EAST_RELEASE" IsFinal="true" Priority="303">
                 <Comment>vJoy Pan</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="RELEASE" />
                 </EventActions>
               </EventDefinition>
-              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="304" ConditionBinding="OR">
+              <EventDefinition Trigger="POV_EAST_PRESS" IsFinal="true" Priority="304">
                 <Comment>vJoy Pan</Comment>
                 <EventConditions>
                   <EventConditionReference RefId="a107f5ed-ea43-49c4-95d9-b8eec0d08154" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
                 </EventConditions>
                 <EventActions>
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="36" JoystickMode="PRESS" />
@@ -5069,6 +5068,18 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="BUTTON_2">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:SIM_ISAVATAR" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:TRIGGER VIEW RESET" Value="1" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -5078,6 +5089,59 @@
     <Device VendorID="0xFFFF" ProductID="0xFFFF" DevicePath="0xFFFF_0xFFFF" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
+          <Event BoundTo="SCRIPT_1_1">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUE" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="Flight" ConditionValueSource="LOCAL:ACTIVE SECTION" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionCommand TargetDeviceID="0FD9:0084:0">
+                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
+                    <Parameter1 Value="a2562e54-600c-453d-a001-798c4b39868f" />
+                  </EventActionCommand>
+                  <EventActionCommand TargetDeviceID="0FD9:006C:0">
+                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
+                    <Parameter1 Value="298d9ae6-3f76-4057-9aaf-4ee588a73bcb" />
+                  </EventActionCommand>
+                  <EventActionCommand TargetDeviceID="0FD9:006D:0">
+                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
+                    <Parameter1 Value="72c73483-060e-4a22-94be-a6d0c6e32179" />
+                  </EventActionCommand>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" Priority="10">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:ACTIVE SECTION" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:ACTIVE SECTION" Value="Flight" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="Sim" ConditionValueSource="LOCAL:ACTIVE SECTION" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionCommand TargetDeviceID="0FD9:0084:0">
+                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
+                    <Parameter1 Value="797bb186-55c1-4549-a1d9-d749731ef15a" />
+                  </EventActionCommand>
+                  <EventActionCommand TargetDeviceID="0FD9:006C:0">
+                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
+                    <Parameter1 Value="0b55384b-95c4-4b60-bede-400d1674d21f" />
+                  </EventActionCommand>
+                  <EventActionCommand TargetDeviceID="0FD9:006D:0">
+                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
+                    <Parameter1 Value="72c73483-060e-4a22-94be-a6d0c6e32179" />
+                  </EventActionCommand>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+            <Options>
+              <Option Key="NAME" Value="PAGE SWITCHER" />
+            </Options>
+          </Event>
           <Event BoundTo="SCRIPT_1_2">
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
@@ -5148,65 +5212,14 @@
                   <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" />
                 </EventConditions>
                 <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" Value="1" />
+                  <EventActionDelay Delay="100" />
                   <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="47" JoystickMode="PRESSANDRELEASE" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
             <Options>
               <Option Key="NAME" Value="Reset View" />
-            </Options>
-          </Event>
-          <Event BoundTo="SCRIPT_1_1">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="Flight" ConditionValueSource="LOCAL:ACTIVE SECTION" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionCommand TargetDeviceID="0FD9:0084:0">
-                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
-                    <Parameter1 Value="a2562e54-600c-453d-a001-798c4b39868f" />
-                  </EventActionCommand>
-                  <EventActionCommand TargetDeviceID="0FD9:006C:0">
-                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
-                    <Parameter1 Value="298d9ae6-3f76-4057-9aaf-4ee588a73bcb" />
-                  </EventActionCommand>
-                  <EventActionCommand TargetDeviceID="0FD9:006D:0">
-                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
-                    <Parameter1 Value="72c73483-060e-4a22-94be-a6d0c6e32179" />
-                  </EventActionCommand>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE" Priority="10">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LOCAL:ACTIVE SECTION" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:ACTIVE SECTION" Value="Flight" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE" IsFinal="true">
-                <EventConditions>
-                  <EventCondition ConditionComparator="StrEquals" ConditionTargetValue="Sim" ConditionValueSource="LOCAL:ACTIVE SECTION" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionCommand TargetDeviceID="0FD9:0084:0">
-                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
-                    <Parameter1 Value="797bb186-55c1-4549-a1d9-d749731ef15a" />
-                  </EventActionCommand>
-                  <EventActionCommand TargetDeviceID="0FD9:006C:0">
-                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
-                    <Parameter1 Value="0b55384b-95c4-4b60-bede-400d1674d21f" />
-                  </EventActionCommand>
-                  <EventActionCommand TargetDeviceID="0FD9:006D:0">
-                    <Parameter Value="SPAD_neXt.Gauge_Switch" />
-                    <Parameter1 Value="72c73483-060e-4a22-94be-a6d0c6e32179" />
-                  </EventActionCommand>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-            <Options>
-              <Option Key="NAME" Value="PAGE SWITCHER" />
             </Options>
           </Event>
         </Events>
@@ -5232,18 +5245,18 @@
   </Options>
   <CustomExpressions>
     <CustomExpression Name="CURRENT PAGE NAME">
-      <Expression> [LOCAL:STREAMDECK_CURRENT_PAGE_NAME_2] </Expression>
-    </CustomExpression>
-    <CustomExpression Name="IS DRONE">
-      <Expression> [SIMCONNECT:CAMERA STATE] == 4</Expression>
+      <Expression>[LOCAL:STREAMDECK_CURRENT_PAGE_NAME_2]</Expression>
     </CustomExpression>
     <CustomExpression Name="IS COCKPIT MOVE">
-      <Expression> [SIMCONNECT:CAMERA STATE] == 2 &amp;&amp;  [LOCAL:COCKPIT MOVE FLAG] != 0</Expression>
+      <Expression>[SIMCONNECT:CAMERA STATE] == 2 &amp;&amp;  [LOCAL:COCKPIT MOVE FLAG] != 0</Expression>
+    </CustomExpression>
+    <CustomExpression Name="IS DRONE">
+      <Expression>[SIMCONNECT:CAMERA STATE] == 4</Expression>
     </CustomExpression>
   </CustomExpressions>
-  <ProfileInformation ProfileID="1f36bf38-8c2f-499c-98b1-1d11da15343c" Version="0.90">
+  <ProfileInformation ProfileID="1f36bf38-8c2f-499c-98b1-1d11da15343c" Version="0.99">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2026-01-10T23:58:30.946439-07:00</LastChanged>
+    <LastChanged>2026-01-17T14:44:00.9026216-07:00</LastChanged>
   </ProfileInformation>
 </Profile>
