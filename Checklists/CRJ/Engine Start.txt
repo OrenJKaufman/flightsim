@@ -6,11 +6,8 @@ Jetway and Doors: Closed
 Parking Brake: On
 Chocks: Removed
 Takeoff Data: Set
-Beacon: On
 Hydraulic Pumps: Auto
-Engines: Start
 Generators: Auto
-Nav Source: Set
 Fuel Quantity: Check
 Hydraulic Pumps: Auto
 Doors GPU and Chocks: Check
@@ -21,4 +18,3 @@ APU: Stopped and Off
 Anti Ice: As Required
 Probes Heat: On
 Weather Radar or Terrain: Check
-Flaps: Set

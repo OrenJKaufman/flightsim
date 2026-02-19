@@ -6,5 +6,5 @@ Transponder: Check
 Altimeter: Set
 Heading: Set
 Landing Gear Light: Green
-Nav Lights: Check
+Lights: Check
 Brakes: Test

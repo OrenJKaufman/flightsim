@@ -1,3 +1,4 @@
+Propeller Levers: Full Forward
 Pressurization: Check progress
 Auto Feather: Arm
 Landing Gear: Down

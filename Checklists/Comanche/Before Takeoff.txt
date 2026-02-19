@@ -11,4 +11,4 @@ Carb Heat: Off
 Engine Gauges: Check
 Pitot Heat: Check
 Strobes: On
-Landing Lights: Check
+Lights: Check

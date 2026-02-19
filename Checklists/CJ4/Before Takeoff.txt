@@ -1,6 +1,6 @@
 Flaps: Set
 Speed brakes: 0%
-TCAS: Set
+T CAS: Set
 Go Around Button: Push
 Pitot: On
 Landing lights: On
