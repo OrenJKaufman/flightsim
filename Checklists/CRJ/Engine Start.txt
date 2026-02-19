@@ -1,20 +1,12 @@
+Fuel Quantity: Check
 Boost Pumps: On
 Altimeters: Set
 APU: On
-External Power: Disconnected
-Jetway and Doors: Closed
-Parking Brake: On
-Chocks: Removed
-Takeoff Data: Set
 Hydraulic Pumps: Auto
-Generators: Auto
-Fuel Quantity: Check
-Hydraulic Pumps: Auto
-Doors GPU and Chocks: Check
+Parking Brake: Set
 Pushback: Requested
 Beacon: On
 Engines: Started
 APU: Stopped and Off
-Anti Ice: As Required
 Probes Heat: On
-Weather Radar or Terrain: Check
+Flaps: Set

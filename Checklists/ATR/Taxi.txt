@@ -1,7 +1,0 @@
-Overhead Panel: No Off or Fault Lights
-Engine Start: Verify Off
-Flaps: 15
-Call for Before Taxi Checklist
-Taxi Lights: On
-Parking Brake: Release
-Call for Taxi Checklist

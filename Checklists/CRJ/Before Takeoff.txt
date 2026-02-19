@@ -1,4 +1,9 @@
 Continuous Ignition: As Required
 Anti Ice: As Required
+TOGA: Check
+Nav Source: Check
+Terrain: Check
 Flaps: Check
+Spoilers and Reversers: Auto
+Stabilizer Trim: Check
 Landing Lights and Strobes: On

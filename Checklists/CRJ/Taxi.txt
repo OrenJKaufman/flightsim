@@ -1,4 +1,2 @@
-Flaps: Set
 Taxi Lights: On
-Nav Source: Set
 Brakes: Check
