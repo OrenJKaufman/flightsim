@@ -1274,25 +1274,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_4_7">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="32" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_1_6">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -1414,6 +1395,48 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="EGSD_4_7">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" ImageId="e412ab45-9b97-4e80-a0db-e7d617a73b84" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="84" Height="84" Font="Calibri" FontSize="32" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESSLONG">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_CONTROL_STAND_ENG1_START_LEVER">
+                    <Parameter Value="536870912" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LVAR:switch_688_73X" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{dedd9b15-42be-503c-9e08-b1a1b11ffab8}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LVAR:switch_688_73X" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{489982fc-0666-5410-bc18-017cd5c8f967}" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
           <Event BoundTo="EGSD_4_8">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -1429,6 +1452,29 @@
                       </SimpleGauge>
                     </Data>
                   </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESSLONG">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_CONTROL_STAND_ENG2_START_LEVER">
+                    <Parameter Value="536870912" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LVAR:switch_689_73X" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{21165dfc-f02c-5f27-8d0f-a1bf9e09cb01}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="LVAR:switch_689_73X" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{c5416fc4-85c9-5f00-a314-498b1c4c1254}" />
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -12643,7 +12689,7 @@
                         <GaugeLayers>
                           <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28">
-                            <Text>COM1 TX</Text>
+                            <Text>COM2 TX</Text>
                           </GaugeTextLayer>
                         </GaugeLayers>
                       </SimpleGauge>
@@ -22411,7 +22457,7 @@
       <Events />
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0D05" DevicePath="\\?\hid#vid_06a3&amp;pid_0d05#c&amp;36f8f2a1&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0D05" DevicePath="\\?\hid#vid_06a3&amp;pid_0d05#c&amp;11859157&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="RADIOPANEL_UPPER_SELECTOR_COM1">
@@ -23806,17 +23852,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="BUTTON_30">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESSSHORT">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_CONTROL_STAND_TOGA1_SWITCH">
-                    <Parameter Value="536870912" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="Y_AXIS">
             <EventDefinitions>
               <EventDefinition Trigger="VALUE">
@@ -24234,6 +24269,28 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="BUTTON_48">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_CONTROL_STAND_TOGA1_SWITCH">
+                    <Parameter Value="536870912" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="BUTTON_30">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_CONTROL_STAND_AT1_DISENGAGE_SWITCH">
+                    <Parameter Value="536870912" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -24531,43 +24588,10 @@
     </Device>
     <Device VendorID="0x06A3" ProductID="0xA2AE" DevicePath="VIRT0000" Serial="VIRT0000" DeviceIndex="0" Version="3">
       <Events />
+      <Options>
+        <Option Key="ACTIVE" Value="False" />
+      </Options>
       <Extensions>
-        <Extension type="ProfileGauges">
-          <Gauges>
-            <Gauge Filename="arc://C:\Users\oren\SPAD.neXt\gauges\fipgauges\B737FLAPS.snp;B737FLAPS.xml" IsActiveGauge="true" ProfileGaugeID="0952442b-051a-4595-b143-b9e48f01a682">
-              <GaugeButton BoundTo="FIP_BUTTON_PAGEUP">
-                <Event type="SPADBaseEvent">
-                  <BaseEvent BoundTo="FIP_BUTTON_PAGEUP">
-                    <EventDefinitions>
-                      <EventDefinition Trigger="PRESS">
-                        <EventActions>
-                          <EventActionCommand>
-                            <Parameter Value="SPAD_neXt.Gauge_Next" />
-                          </EventActionCommand>
-                        </EventActions>
-                      </EventDefinition>
-                    </EventDefinitions>
-                  </BaseEvent>
-                </Event>
-              </GaugeButton>
-              <GaugeButton BoundTo="FIP_BUTTON_PAGEDOWN">
-                <Event type="SPADBaseEvent">
-                  <BaseEvent BoundTo="FIP_BUTTON_PAGEDOWN">
-                    <EventDefinitions>
-                      <EventDefinition Trigger="PRESS">
-                        <EventActions>
-                          <EventActionCommand>
-                            <Parameter Value="SPAD_neXt.Gauge_Prev" />
-                          </EventActionCommand>
-                        </EventActions>
-                      </EventDefinition>
-                    </EventDefinitions>
-                  </BaseEvent>
-                </Event>
-              </GaugeButton>
-            </Gauge>
-          </Gauges>
-        </Extension>
         <Extension type="VirtualFIP">
           <VirtualFIP>
             <PositionWide Top="0" Left="0" Height="0" Width="0" />
@@ -24577,7 +24601,7 @@
             <ShowLabel>true</ShowLabel>
             <WideMode>false</WideMode>
             <PanelSize X="320" Y="240" />
-            <Position Top="2172" Left="699" Height="297" Width="392" />
+            <Position Top="1085" Left="-1203" Height="273" Width="364" />
           </VirtualFIP>
         </Extension>
       </Extensions>
@@ -25390,9 +25414,9 @@
       <Expression>Len([SIMCONNECT:TRANSPONDER CODE:1])</Expression>
     </CustomExpression>
   </CustomExpressions>
-  <ProfileInformation ProfileID="f9e2018a-fc25-484b-b994-91c11ef32762" Version="0.64">
+  <ProfileInformation ProfileID="f9e2018a-fc25-484b-b994-91c11ef32762" Version="0.71">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2026-02-07T12:16:44.6713542-07:00</LastChanged>
+    <LastChanged>2026-03-19T18:19:30.2438474-06:00</LastChanged>
   </ProfileInformation>
 </Profile>

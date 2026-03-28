@@ -5981,7 +5981,7 @@
       <Events />
       <Extensions />
     </Device>
-    <Device VendorID="0x06A3" ProductID="0x0D05" DevicePath="\\?\hid#vid_06a3&amp;pid_0d05#c&amp;36f8f2a1&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
+    <Device VendorID="0x06A3" ProductID="0x0D05" DevicePath="\\?\hid#vid_06a3&amp;pid_0d05#c&amp;11859157&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
           <Event BoundTo="RADIOPANEL_UPPER_SELECTOR_COM1">
@@ -8379,9 +8379,9 @@
       <Expression>[SIMCONNECT:CAMERA STATE] == 4</Expression>
     </CustomExpression>
   </CustomExpressions>
-  <ProfileInformation ProfileID="4a7bbc47-b89d-457c-8d58-cb58799f80bc" Version="0.87">
+  <ProfileInformation ProfileID="4a7bbc47-b89d-457c-8d58-cb58799f80bc" Version="0.89">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2026-02-08T16:26:41.4784942-07:00</LastChanged>
+    <LastChanged>2026-03-19T20:26:47.464774-06:00</LastChanged>
   </ProfileInformation>
 </Profile>

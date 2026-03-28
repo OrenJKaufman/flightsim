@@ -1,16 +1,16 @@
 <Profile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="2" xmlns="http://www.fsgs.com/SPAD">
   <Variables>
-    <Variable Name="PROFILE:BOTTOM INSTRUMENT VIEW INDEX" Value="12" ValueType="Decimal" />
     <Variable Name="PROFILE:COM SPACING OVERRIDE" Value="0" ValueType="Decimal" />
+    <Variable Name="PROFILE:BOTTOM INSTRUMENT VIEW INDEX" Value="12" ValueType="Decimal" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 4" Value="Ice" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 1" Value="Flight" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="Switch" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="Startup" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="Switch" ValueType="String" />
     <Variable Name="PROFILE:TOP INSTRUMENT VIEW INDEX" Value="8" ValueType="Decimal" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="Lights" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="GNS" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="GNS" ValueType="String" />
     <Variable Name="PROFILE:MIDDLE INSTRUMENT VIEW INDEX" Value="2" ValueType="Decimal" />
   </Variables>
   <Devices>
@@ -16839,6 +16839,20 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="BUTTON_34">
+            <EventDefinitions>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:PTT TARGET" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:PTT TARGET" Value="1" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
         <Extensions />
       </DevicePage>
@@ -17939,9 +17953,9 @@
     <CustomClientEvent Name="RTU_TransponderStandbyButton_1" EventID="H:RTU_TransponderStandbyButton_1" SubCategory="Bksq Starship" />
     <CustomClientEvent Name="RTU_ComSquelchButtonPress_1" EventID="H:RTU_ComSquelchButtonPress_1" SubCategory="Bksq Starship" />
   </CustomClientEvents>
-  <ProfileInformation ProfileID="f38f6fbb-82df-458b-8d0d-a56a5b6a5e4c" Version="0.283">
+  <ProfileInformation ProfileID="f38f6fbb-82df-458b-8d0d-a56a5b6a5e4c" Version="0.285">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2026-02-03T18:48:55.8531928-07:00</LastChanged>
+    <LastChanged>2026-02-18T20:27:46.8362742-07:00</LastChanged>
   </ProfileInformation>
 </Profile>
