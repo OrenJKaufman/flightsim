@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?><pluginstrument><aircraft>Beechcraft B58 Pro</aircraft><type>Engine Temp - Left</type><uuid>aa2e2a67-2a74-4e0b-bd19-0339248f6d1e</uuid><author>macnfly</author><description>Engine Gauge
+Set your prefered EGT scale setting in the code, it's very easy!
+
+An instrument fitted the Baron B58 instrument set.
+EGT varies from sim and from aircraft to aircraft. You might need to adjust the scale to make it suit your needs.
+
+@screen size 1440 x 900 for a full screen panel, the geometry can be set to:
+(x, y, w, h)  1120, 480, 160, 160</description><compatibleFSX>false</compatibleFSX><compatibleP3D>false</compatibleP3D><compatibleXPL>false</compatibleXPL><compatibleFS2020>true</compatibleFS2020><compatibleFS2024>true</compatibleFS2024><version>113</version><configVersion>1</configVersion><pluginInterfaceVersion>100</pluginInterfaceVersion><prefWidth>256</prefWidth><prefHeight>256</prefHeight><source>PERSONAL</source><platforms><platform>WINDOWS</platform><platform>MAC</platform><platform>LINUX</platform><platform>RASPBERRY_PI</platform><platform>ANDROID</platform><platform>IPAD</platform></platforms><tiers><tier>HOME_USE_STANDARD</tier><tier>PROFESSIONAL_STANDARD</tier></tiers></pluginstrument>
