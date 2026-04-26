@@ -4,13 +4,13 @@
     <Variable Name="PROFILE:RESET VIEW INDEX" Value="7" ValueType="Decimal" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 4" Value="" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 1" Value="Flight" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="Cabin" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 1 COL 2" Value="Switch Panel" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 1 COL 3" Value="Cabin" ValueType="String" />
     <Variable Name="PROFILE:TOP INSTRUMENT VIEW INDEX" Value="2" ValueType="Decimal" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 2" Value="WX" ValueType="String" />
-    <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 4" Value="Sim" ValueType="String" />
     <Variable Name="PROFILE:SD PLUS ROW 2 COL 1" Value="" ValueType="String" />
+    <Variable Name="PROFILE:SD PLUS ROW 2 COL 3" Value="COMs" ValueType="String" />
     <Variable Name="PROFILE:MIDDLE INSTRUMENT VIEW INDEX" Value="1" ValueType="Decimal" />
   </Variables>
   <Devices>
@@ -3187,176 +3187,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_1_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
-                            <Text>COM1 TX</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:PILOT_TRANSMITTER_SET" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_1_2">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
-                            <Text>COM2 TX</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:2" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:2" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:PILOT_TRANSMITTER_SET">
-                    <Parameter Value="1" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
-                            <Text>COM1 RX</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:1" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM1_RECEIVE_SELECT">
-                    <Parameter Type="Exp" Value="IF( [SIMCONNECT:COM RECEIVE:1], 0, 1 )" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_2">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
-                            <Text>COM2 RX</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:2" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:2" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RECEIVE_SELECT">
-                    <Parameter Type="Exp" Value="IF( [SIMCONNECT:COM RECEIVE:2], 0, 1 )" />
-                  </EventActionControl>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_1_3">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -3386,7 +3216,7 @@
                         <GaugeLayers>
                           <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
                           <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
-                            <Text>COM ALL</Text>
+                            <Text>COM\nALL</Text>
                           </GaugeTextLayer>
                         </GaugeLayers>
                       </SimpleGauge>
@@ -3715,6 +3545,204 @@
                 <EventActions>
                   <EventActionControl TargetDataDefinition="SIMCONNECT:COM_1_SPACING_MODE_SWITCH" />
                   <EventActionControl TargetDataDefinition="SIMCONNECT:COM_2_SPACING_MODE_SWITCH" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
+                            <Text>COM1\nRX</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM1_RECEIVE_SELECT" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true" Priority="10">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE EX1:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM1_RECEIVE_SELECT">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
+                            <Text>COM1\nTX</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:PILOT_TRANSMITTER_SET" />
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM1_RECEIVE_SELECT">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
+                            <Text>COM2\nTX</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:PILOT_TRANSMITTER_SET">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RECEIVE_SELECT">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
+                            <Text>COM2\nRX</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RECEIVE_SELECT" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true" Priority="10">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE EX1:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RECEIVE_SELECT">
+                    <Parameter Value="1" />
+                  </EventActionControl>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -7096,25 +7124,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_3_4">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="6" Y="6" Width="60" Height="60" FontStretch="5" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_2_2">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -7143,11 +7152,38 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="EGSD_3_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" FontSize="28" FontStretch="5">
+                            <Text>GSX</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:FSDT_GSX_MENU_OPEN" Value="1" />
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:ACTIVE LAYOUT" Value="GSX" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
       </DevicePage>
     </Device>
     <Device VendorID="0x0FD9" ProductID="0x0084" DevicePath="\\?\hid#vid_0fd9&amp;pid_0084#b&amp;2b464975&amp;0&amp;0000#{4d1e55b2-f16f-11cf-88cb-001111000030}" Serial="A00WA3361P44A8" DeviceIndex="1" Version="3">
-      <DevicePage ID="a2562e54-600c-453d-a001-798c4b39868f" IsDefaultPage="false" Name="Flight">
+      <DevicePage ID="a2562e54-600c-453d-a001-798c4b39868f" IsDefaultPage="true" Name="Flight">
         <Events>
           <Event BoundTo="EGSD_PLUS_IMAGE">
             <EventDefinitions>
@@ -7228,44 +7264,6 @@
               <EventDefinition Trigger="TUNER_COUNTERCLOCKWISE">
                 <EventActions>
                   <EventActionControl TargetDataDefinition="H:GTN750_ZOOM_IN" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_1_2">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" FontStretch="5" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_2_2">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" FontStretch="5" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -7355,12 +7353,37 @@
                       <SimpleGauge>
                         <GaugeLayers>
                           <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" FontStretch="5" />
+                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
+                            <Text>COM1\nTX</Text>
+                          </GaugeTextLayer>
                         </GaugeLayers>
                       </SimpleGauge>
                     </Data>
                   </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:PILOT_TRANSMITTER_SET" />
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM1_RECEIVE_SELECT">
+                    <Parameter Value="1" />
+                  </EventActionControl>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -7374,12 +7397,147 @@
                       <SimpleGauge>
                         <GaugeLayers>
                           <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" FontStretch="5" />
+                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
+                            <Text>COM1\nRX</Text>
+                          </GaugeTextLayer>
                         </GaugeLayers>
                       </SimpleGauge>
                     </Data>
                   </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM1_RECEIVE_SELECT" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true" Priority="10">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE EX1:1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM1_RECEIVE_SELECT">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
+                            <Text>COM2\nTX</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:PILOT_TRANSMITTER_SET">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RECEIVE_SELECT">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_2">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Calibri" FontSize="28" FontStretch="5">
+                            <Text>COM2\nRX</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM TRANSMIT:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RECEIVE_SELECT" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="#FF008000" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="VALUE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateColor TargetLayer="0" Color="Transparent" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS" IsFinal="true" Priority="10">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:COM RECEIVE EX1:2" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:COM2_RECEIVE_SELECT">
+                    <Parameter Value="1" />
+                  </EventActionControl>
                 </EventActions>
               </EventDefinition>
             </EventDefinitions>
@@ -8965,25 +9123,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_1_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" FontStretch="5" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_1_2">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -9041,25 +9180,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_2_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeImageLayer Layer="1" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" FontStretch="5" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_2_2">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
@@ -9099,6 +9219,44 @@
             </EventDefinitions>
           </Event>
           <Event BoundTo="EGSD_2_4">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" FontStretch="5" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_1_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeImageLayer Layer="1" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" FontStretch="5" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_1">
             <EventDefinitions>
               <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
                 <EventActions>
@@ -10699,98 +10857,6 @@
     <Device VendorID="0xFFFF" ProductID="0xFFFF" DevicePath="0xFFFF_0xFFFF" DeviceIndex="0" Version="3">
       <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
         <Events>
-          <Event BoundTo="SCRIPT_1_2">
-            <EventDefinitions>
-              <EventDefinition Trigger="VALUE">
-                <Comment>Reset Trigger Variable</Comment>
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionDelay Delay="500">
-                    <Parameter Value="500" />
-                  </EventActionDelay>
-                  <EventActionChangeValue TargetDataDefinition="LOCAL:TRIGGER VIEW RESET" Value="0" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE" Priority="25">
-                <Comment>Ensure Cockpit Camera State</Comment>
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA STATE" Value="2" />
-                  <EventActionDelay Delay="100">
-                    <Parameter Value="100" />
-                  </EventActionDelay>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE" Priority="20">
-                <Comment>Ensure Fixed Look Camera Substate</Comment>
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA SUBSTATE" Value="1" />
-                  <EventActionDelay Delay="100">
-                    <Parameter Value="100" />
-                  </EventActionDelay>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE" Priority="15">
-                <Comment>Ensure Pilot View Type</Comment>
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" Value="1" />
-                  <EventActionDelay Delay="100">
-                    <Parameter Value="100" />
-                  </EventActionDelay>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE" Priority="10">
-                <Comment>Reset the Pilot View</Comment>
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA REQUEST ACTION" Value="1" />
-                  <EventActionDelay Delay="100">
-                    <Parameter Value="100" />
-                  </EventActionDelay>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="VALUE" Priority="5">
-                <Comment>Load Custom Camera 0</Comment>
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
-                  <EventCondition ConditionTargetValue="2" ConditionValueSource="SIMCONNECT:CAMERA STATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA SUBSTATE" />
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" Value="1" />
-                  <EventActionDelay Delay="100">
-                    <Parameter Value="100" />
-                  </EventActionDelay>
-                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="47" JoystickMode="PRESSANDRELEASE" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-            <Options>
-              <Option Key="NAME" Value="Reset View" />
-            </Options>
-          </Event>
           <Event BoundTo="SCRIPT_1_1">
             <EventDefinitions>
               <EventDefinition Trigger="VALUE" IsFinal="true">
@@ -11115,6 +11181,25 @@
             </EventDefinitions>
             <Options>
               <Option Key="NAME" Value="SWITCHER SD+ 1" />
+            </Options>
+          </Event>
+          <Event BoundTo="SCRIPT_1_2">
+            <EventDefinitions>
+              <EventDefinition Trigger="VALUE">
+                <Comment />
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:TRIGGER VIEW RESET" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:0" Value="1" />
+                  <EventActionChangeValue TargetDataDefinition="SIMCONNECT:CAMERA VIEW TYPE AND INDEX:1" Value="1" />
+                  <EventActionVirtualJoyStick Value="0" JoystickAction="VJOY_BUTTON" JoystickNumber="1" JoystickTarget="47" JoystickMode="PRESSANDRELEASE" />
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:TRIGGER VIEW RESET" Value="0" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+            <Options>
+              <Option Key="NAME" Value="NO NAME" />
             </Options>
           </Event>
         </Events>
@@ -12574,48 +12659,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_3_1">
-            <EventDefinitions>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="38" Y="43" Width="60" Height="50" Foreground="#FF000000" FontSize="21" FontStretch="5" HorizontalAlignment="0" VerticalAlignment="0">
-                            <Text>ENG</Text>
-                          </GaugeTextLayer>
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="H:kas297b_Vsbutton" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{f30f2cb0-0544-5099-aace-9997edb22386}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{45f0a596-7072-5c91-a5d0-f95d441536ac}" />
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_4_1">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -12972,302 +13015,6 @@
                           <GaugeTextLayer Layer="2" Name="Textlayer" Y="50" Height="40" Foreground="#FF000000" FontSize="24" FontStretch="5">
                             <Text>UP</Text>
                           </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_9">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_MASTER" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{a10fbf83-556c-5abe-8696-b805fc39ef26}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{717ca88e-57b8-53dc-9aa5-b15efc6622f4}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="62" Width="70" Height="50" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
-                            <Text>AP</Text>
-                          </GaugeTextLayer>
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_8">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_BC_HOLD" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT BACKCOURSE HOLD" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{832579bf-be9b-5771-9535-ce144d32684f}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT BACKCOURSE HOLD" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{2197f360-874d-5ed1-8bfa-590e92576d41}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
-                            <Text>BC</Text>
-                          </GaugeTextLayer>
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_7">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_APR_HOLD" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT APPROACH HOLD" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{cc9d0452-fc21-57a6-a882-988c3ae314eb}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT APPROACH HOLD" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{b28e90f9-eb94-5ddd-8e19-c4853c9f03d1}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
-                            <Text>APR</Text>
-                          </GaugeTextLayer>
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_6">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_NAV1_HOLD" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT NAV1 LOCK" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{8105d717-d98a-5c78-8256-f09f03baed5d}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT NAV1 LOCK" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{18188713-7e76-5d94-bc1d-2cdc675d1789}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
-                            <Text>NAV</Text>
-                          </GaugeTextLayer>
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_5">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_PANEL_HEADING_HOLD" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT HEADING LOCK" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{ff19543c-0d85-56ad-9f64-6fb69d0085ca}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT HEADING LOCK" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{1aea77bb-49b0-53bc-ac23-400c8d786f1d}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
-                            <Text>HDG</Text>
-                          </GaugeTextLayer>
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_4">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_ALT_HOLD" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" />
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{11bfeca1-98c6-5abd-9d62-55ec9e9defe7}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE" ConditionBinding="OR">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" />
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{415d5cb7-11b8-5145-870c-410597c402b6}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
-                            <Text>ALT</Text>
-                          </GaugeTextLayer>
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
-          <Event BoundTo="EGSD_4_3">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_FLIGHT_DIRECTOR" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT FLIGHT DIRECTOR ACTIVE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{9ac48866-4b40-5fce-8ce6-ca1082edc3eb}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT FLIGHT DIRECTOR ACTIVE" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="1" Image="{0ff1d520-e73f-5f2c-b04c-041233eddf21}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
-                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
-                            <Text>FD</Text>
-                          </GaugeTextLayer>
-                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
                         </GaugeLayers>
                       </SimpleGauge>
                     </Data>
@@ -14001,53 +13748,6 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
-          <Event BoundTo="EGSD_2_7">
-            <EventDefinitions>
-              <EventDefinition Trigger="PRESS">
-                <EventActions>
-                  <EventActionChangeValue TargetDataDefinition="LVAR:var_surfaceDeiceSwitch" Value="0">
-                    <Options>
-                      <Option Key="HASMINMAX" Value="False" />
-                      <Option Key="VALUEMAX" Value="2" />
-                    </Options>
-                  </EventActionChangeValue>
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionTargetValue="1" ConditionValueSource="LVAR:var_surfaceDeiceSwitch" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="2" Image="{004d2b67-a3c3-5029-9e9d-bcba76cf3e3a}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition Trigger="IMAGE">
-                <EventConditions>
-                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="LVAR:var_surfaceDeiceSwitch" />
-                </EventConditions>
-                <EventActions>
-                  <EventActionPlateImage TargetLayer="2" Image="{d4a7234c-8caf-5df8-8fc9-e7d4e531c914}" />
-                </EventActions>
-              </EventDefinition>
-              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
-                <EventActions>
-                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
-                    <Data type="SimpleGauge">
-                      <SimpleGauge>
-                        <GaugeLayers>
-                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF000033" />
-                          <GaugeImageLayer Layer="2" Name="EMPTY [system]" X="41" Y="20" Width="36" Height="76" SizeMode="SIZE" />
-                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Bahnschrift" FontSize="30" FontStretch="3" VerticalAlignment="0">
-                            <Text>SURFACE</Text>
-                          </GaugeTextLayer>
-                        </GaugeLayers>
-                      </SimpleGauge>
-                    </Data>
-                  </EventActionDummy>
-                </EventActions>
-              </EventDefinition>
-            </EventDefinitions>
-          </Event>
           <Event BoundTo="EGSD_2_9">
             <EventDefinitions>
               <EventDefinition Trigger="PRESS">
@@ -14316,19 +14016,397 @@
               </EventDefinition>
             </EventDefinitions>
           </Event>
+          <Event BoundTo="EGSD_4_3">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:TOGGLE_FLIGHT_DIRECTOR" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT FLIGHT DIRECTOR ACTIVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{9ac48866-4b40-5fce-8ce6-ca1082edc3eb}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT FLIGHT DIRECTOR ACTIVE" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{0ff1d520-e73f-5f2c-b04c-041233eddf21}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
+                            <Text>FD</Text>
+                          </GaugeTextLayer>
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_9">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_MASTER" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{dce80725-b1c9-5b0a-a761-9fa97481e4c7}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT MASTER" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{29583626-8363-5fec-87ea-f2f765f40a4e}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="62" Width="70" Height="50" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
+                            <Text>AP</Text>
+                          </GaugeTextLayer>
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_4">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_ALT_HOLD" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" />
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{20eb9601-1724-52cd-9e81-43201ecb4afa}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE" ConditionBinding="OR">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT ALTITUDE LOCK" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{cee09da3-dfe7-5d07-adb2-5fbfc810f31c}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
+                            <Text>ALT</Text>
+                          </GaugeTextLayer>
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_5">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_PANEL_HEADING_HOLD" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT HEADING LOCK" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{16678d05-dc86-5709-9916-18fe0852b223}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT HEADING LOCK" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{acd3b40c-1e0f-53fe-a103-cdc7331dd541}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
+                            <Text>HDG</Text>
+                          </GaugeTextLayer>
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_6">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_NAV1_HOLD" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT NAV1 LOCK" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{ac89abb6-2fd5-5eab-a442-469aa2420e93}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT NAV1 LOCK" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{2ea7f19e-c5bf-5bf8-81bb-ef83190ff9a1}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
+                            <Text>NAV</Text>
+                          </GaugeTextLayer>
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_7">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_APR_HOLD" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT APPROACH HOLD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{9bd22025-8f0a-5ff7-981b-0663833c5009}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT APPROACH HOLD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{97739021-743d-5208-9d76-65e6fbe05768}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
+                            <Text>APR</Text>
+                          </GaugeTextLayer>
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_4_8">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="SIMCONNECT:AP_BC_HOLD" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT BACKCOURSE HOLD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{31f7c211-8ab6-57fb-9045-061fd9fa198e}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT BACKCOURSE HOLD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{c9cc8c3c-b2b0-5349-886a-fbe151e85652}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="21" Y="82" Width="70" Height="30" Foreground="#FF000000" Background="#FFFFFFFF" Font="Calibri" FontSize="30" FontStretch="5">
+                            <Text>BC</Text>
+                          </GaugeTextLayer>
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_3_1">
+            <EventDefinitions>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" />
+                          <GaugeTextLayer Layer="2" Name="Textlayer" X="38" Y="43" Width="60" Height="50" Foreground="#FF000000" FontSize="21" FontStretch="5" HorizontalAlignment="0" VerticalAlignment="0">
+                            <Text>ENG</Text>
+                          </GaugeTextLayer>
+                          <GaugeImageLayer Layer="1" Name="EMPTY [system]" />
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="H:kas297b_Vsbutton" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{f30f2cb0-0544-5099-aace-9997edb22386}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="SIMCONNECT:AUTOPILOT VERTICAL HOLD" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="1" Image="{45f0a596-7072-5c91-a5d0-f95d441536ac}" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="EGSD_2_7">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LVAR:var_surfaceDeiceSwitch" Value="0">
+                    <Options>
+                      <Option Key="HASMINMAX" Value="False" />
+                      <Option Key="VALUEMAX" Value="2" />
+                    </Options>
+                  </EventActionChangeValue>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="LVAR:var_surfaceDeiceSwitch" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="2" Image="{004d2b67-a3c3-5029-9e9d-bcba76cf3e3a}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="IMAGE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="LVAR:var_surfaceDeiceSwitch" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionPlateImage TargetLayer="2" Image="{755f2ae2-fe32-5e53-b058-79343519aa56}" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72" Trigger="DEFAULTDATA">
+                <EventActions>
+                  <EventActionDummy SingletonID="91fb60b2-de15-4877-9e09-7c0c84f9bf72">
+                    <Data type="SimpleGauge">
+                      <SimpleGauge>
+                        <GaugeLayers>
+                          <GaugeColorLayer Layer="0" Name="BackgroundLayer" Color="#FF000033" />
+                          <GaugeImageLayer Layer="2" Name="EMPTY [system]" X="41" Y="20" Width="36" Height="76" SizeMode="SIZE" />
+                          <GaugeTextLayer Layer="1" Name="Textlayer" Font="Bahnschrift" FontSize="30" FontStretch="3" VerticalAlignment="0">
+                            <Text>SURFACE</Text>
+                          </GaugeTextLayer>
+                        </GaugeLayers>
+                      </SimpleGauge>
+                    </Data>
+                  </EventActionDummy>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
         </Events>
       </DevicePage>
       <Images>
         <Image Id="{9ac48866-4b40-5fce-8ce6-ca1082edc3eb}" Name="ap fd indicator off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap fd indicator off.png" />
         <Image Id="{f30f2cb0-0544-5099-aace-9997edb22386}" Name="kas vs button off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\kas vs button off.png" />
         <Image Id="{3acb923a-f565-5d29-8e94-cd96f84263ee}" Name="kas arm button off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\kas arm button off.png" />
-        <Image Id="{11bfeca1-98c6-5abd-9d62-55ec9e9defe7}" Name="ALT_off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\BKSQ Baron B58\icons\AP\ALT_off.png" />
-        <Image Id="{ff19543c-0d85-56ad-9f64-6fb69d0085ca}" Name="HDG_off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\BKSQ Baron B58\icons\AP\HDG_off.png" />
-        <Image Id="{8105d717-d98a-5c78-8256-f09f03baed5d}" Name="NAV_off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\BKSQ Baron B58\icons\AP\NAV_off.png" />
-        <Image Id="{cc9d0452-fc21-57a6-a882-988c3ae314eb}" Name="APR_off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\BKSQ Baron B58\icons\AP\APR_off.png" />
-        <Image Id="{a10fbf83-556c-5abe-8696-b805fc39ef26}" Name="AP_off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\BKSQ Baron B58\icons\AP\AP_off.png" />
-        <Image Id="{832579bf-be9b-5771-9535-ce144d32684f}" Name="BC_off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\BKSQ Baron B58\icons\AP\BC_off.png" />
-        <Image Id="{2197f360-874d-5ed1-8bfa-590e92576d41}" Name="BC_on" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\BKSQ Baron B58\icons\AP\BC_on.png" />
         <Image Id="{f27cf21c-e5d0-5299-948c-2ed2f4e31283}" Name="ap rocker up" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap rocker up.png" />
         <Image Id="{63ed1e2e-4a95-5106-a2a7-a2ae0e5a6a50}" Name="ap rocker down" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap rocker down.png" />
         <Image Id="{004d2b67-a3c3-5029-9e9d-bcba76cf3e3a}" Name="Cylinder White Down" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Building Blocks\Switches\Cylinder White Down.png" />
@@ -14340,6 +14418,20 @@
         <Image Id="{da16c09e-0e7d-53b9-97fa-6994cae29248}" Name="ap source rnav" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap source rnav.png" />
         <Image Id="{697edf88-ce3e-5610-9ee2-357daf48fd64}" Name="CowlFlaps_L" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\BKSQ Baron B58\icons\CowlFlaps_L.png" />
         <Image Id="{58b49ee3-4370-5521-8334-db19f628e560}" Name="CowlFlaps_R" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\BKSQ Baron B58\icons\CowlFlaps_R.png" />
+        <Image Id="{0ff1d520-e73f-5f2c-b04c-041233eddf21}" Name="ap fd indicator on" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap fd indicator on.png" />
+        <Image Id="{cee09da3-dfe7-5d07-adb2-5fbfc810f31c}" Name="ap alt indicator on" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap alt indicator on.png" />
+        <Image Id="{acd3b40c-1e0f-53fe-a103-cdc7331dd541}" Name="ap heading indicator on" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap heading indicator on.png" />
+        <Image Id="{2ea7f19e-c5bf-5bf8-81bb-ef83190ff9a1}" Name="ap nav indicator on" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap nav indicator on.png" />
+        <Image Id="{97739021-743d-5208-9d76-65e6fbe05768}" Name="ap approach indicator on" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap approach indicator on.png" />
+        <Image Id="{29583626-8363-5fec-87ea-f2f765f40a4e}" Name="ap ap button on" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap ap button on.png" />
+        <Image Id="{dce80725-b1c9-5b0a-a761-9fa97481e4c7}" Name="ap ap button off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap ap button off.png" />
+        <Image Id="{20eb9601-1724-52cd-9e81-43201ecb4afa}" Name="ap alt indicator off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap alt indicator off.png" />
+        <Image Id="{16678d05-dc86-5709-9916-18fe0852b223}" Name="ap heading indicator off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap heading indicator off.png" />
+        <Image Id="{ac89abb6-2fd5-5eab-a442-469aa2420e93}" Name="ap nav indicator off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap nav indicator off.png" />
+        <Image Id="{9bd22025-8f0a-5ff7-981b-0663833c5009}" Name="ap approach indicator off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap approach indicator off.png" />
+        <Image Id="{31f7c211-8ab6-57fb-9045-061fd9fa198e}" Name="ap backcourse indicator off" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap backcourse indicator off.png" />
+        <Image Id="{c9cc8c3c-b2b0-5349-886a-fbe151e85652}" Name="ap backcourse indicator on" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\ap backcourse indicator on.png" />
+        <Image Id="{45f0a596-7072-5c91-a5d0-f95d441536ac}" Name="kas vs button on" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\Oren\Baron B58\kas vs button on.png" />
       </Images>
       <Options>
         <Option Key="Brightness" Value="100" />
@@ -14371,9 +14463,9 @@
       <Expression>[SIMCONNECT:CAMERA STATE] == 4</Expression>
     </CustomExpression>
   </CustomExpressions>
-  <ProfileInformation ProfileID="23b82f82-4bdd-48b3-ab3a-1f273fd71088" Version="0.295">
+  <ProfileInformation ProfileID="23b82f82-4bdd-48b3-ab3a-1f273fd71088" Version="0.308">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2026-04-12T20:11:09.6947112-06:00</LastChanged>
+    <LastChanged>2026-04-19T12:23:16.829883-06:00</LastChanged>
   </ProfileInformation>
 </Profile>
