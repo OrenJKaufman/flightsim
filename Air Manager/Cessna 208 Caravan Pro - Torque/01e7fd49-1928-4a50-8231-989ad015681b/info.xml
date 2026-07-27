@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><pluginstrument><aircraft>Cessna 208 Caravan Pro</aircraft><type>Torque</type><uuid>01e7fd49-1928-4a50-8231-989ad015681b</uuid><author></author><description>Cessna Gran Caravan C208
+
+Torque
+Scale: x100
+
+Built by Filipe Bessa
+São Paulo - Brazil</description><compatibleFSX>false</compatibleFSX><compatibleP3D>false</compatibleP3D><compatibleXPL>false</compatibleXPL><compatibleFS2020>true</compatibleFS2020><compatibleFS2024>true</compatibleFS2024><version>102</version><configVersion>1</configVersion><pluginInterfaceVersion>100</pluginInterfaceVersion><prefWidth>500</prefWidth><prefHeight>500</prefHeight><source>PERSONAL</source><platforms><platform>WINDOWS</platform><platform>MAC</platform><platform>LINUX</platform><platform>RASPBERRY_PI</platform><platform>ANDROID</platform><platform>IPAD</platform><platform>ESP32</platform></platforms><tiers><tier>HOME_USE_STANDARD</tier></tiers></pluginstrument>
