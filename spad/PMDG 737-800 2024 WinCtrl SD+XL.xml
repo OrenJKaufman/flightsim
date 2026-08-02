@@ -19066,6 +19066,398 @@ IF ([LVAR:OREN_RADIO_KNOB_INDEX] == 2,
         <Image Id="{5edc1ac3-752b-5e5a-bd0a-5e7eceacb0e7}" Name="test-dim" Source="{DIRECTORY_DOCUMENTS}\StreamdeckImages\X- Icon Pack Guenseli 1_6_60Klp\PMDG 737\icons\test-dim.png" />
       </Images>
     </Device>
+    <Device VendorID="0xFFFF" ProductID="0x0005" DevicePath="SERIAL_COM5" Serial="COM5" DeviceIndex="0" Version="3">
+      <DevicePage ID="72c73483-060e-4a22-94be-a6d0c6e32179" IsDefaultPage="true" Name="Default">
+        <Events>
+          <Event BoundTo="LANDING_LEFT">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_L_FIXED">
+                    <Parameter Value="2" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_L_FIXED" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="LANDING_RIGHT">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_R_FIXED">
+                    <Parameter Value="2" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_R_FIXED" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="TURNOFF_LEFT">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_L_TURNOFF">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_L_TURNOFF" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="TURNOFF_RIGHT">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_R_TURNOFF">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_R_TURNOFF" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="TAXI">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_TAXI">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_TAXI" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="APU">
+            <EventDefinitions>
+              <EventDefinition Trigger="OFF">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="PMDGNG3:APU_Selector" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_APU_START" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="ON">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="PMDGNG3:APU_Selector" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_APU_START">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="START" Priority="10">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="PMDGNG3:APU_Selector" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_APU_START">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                  <EventActionDelay Delay="500">
+                    <Parameter Value="500" />
+                  </EventActionDelay>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="START">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="2" ConditionValueSource="PMDGNG3:APU_Selector" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_APU_START">
+                    <Parameter Value="8192" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SCRIPT">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="LOCAL:CUSTOM_737 PANEL 1_APU" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="PMDGNG3:APU_Selector" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionText2Speech Text="Check APU" Voice="Microsoft David Desktop" Volume="100" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="ENGINE_START_LEFT">
+            <EventDefinitions>
+              <EventDefinition Trigger="GRD" IsFinal="true" Priority="10">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="PMDGNG3:ENG_StartSelector_0" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_L_ENGINE_START" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="OFF">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="PMDGNG3:ENG_StartSelector_0" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_L_ENGINE_START">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:WATCH FOR LEFT START" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="CONT">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="2" ConditionValueSource="PMDGNG3:ENG_StartSelector_0" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_L_ENGINE_START">
+                    <Parameter Value="2" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="FLT">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="PMDGNG3:ENG_StartSelector_0" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_L_ENGINE_START">
+                    <Parameter Value="3" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SCRIPT">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="PMDGNG3:ENG_StartSelector_0" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:WATCH FOR LEFT START" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="LOCAL:CUSTOM_737 PANEL 1_ENGINE_START_LEFT" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionText2Speech Text="Check left starter" Voice="Microsoft David Desktop" Volume="100" />
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:WATCH FOR LEFT START" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SCRIPT">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="PMDGNG3:ENG_StartSelector_0" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:WATCH FOR LEFT START" Value="1" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="ENGINE_START_RIGHT">
+            <EventDefinitions>
+              <EventDefinition Trigger="GRD">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="PMDGNG3:ENG_StartSelector_1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_R_ENGINE_START" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="OFF">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="PMDGNG3:ENG_StartSelector_1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_R_ENGINE_START">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:WATCH FOR RIGHT START" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="CONT">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="2" ConditionValueSource="PMDGNG3:ENG_StartSelector_1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_R_ENGINE_START">
+                    <Parameter Value="2" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="FLT">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="3" ConditionValueSource="PMDGNG3:ENG_StartSelector_1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_R_ENGINE_START">
+                    <Parameter Value="3" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SCRIPT">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="PMDGNG3:ENG_StartSelector_1" />
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="LOCAL:WATCH FOR RIGHT START" />
+                  <EventCondition ConditionTargetValue="1" ConditionValueSource="LOCAL:CUSTOM_737 PANEL 1_ENGINE_START_RIGHT" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionText2Speech Text="Check right starter" Voice="Microsoft David Desktop" Volume="100" />
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:WATCH FOR RIGHT START" Value="0" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="SCRIPT">
+                <EventConditions>
+                  <EventCondition ConditionTargetValue="0" ConditionValueSource="PMDGNG3:ENG_StartSelector_1" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionChangeValue TargetDataDefinition="LOCAL:WATCH FOR RIGHT START" Value="1" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="ENGINE_START">
+            <EventDefinitions>
+              <EventDefinition Trigger="BOTH">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="PMDGNG3:ENG_IgnitionSelector" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_IGN_SEL">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="LEFT">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="PMDGNG3:ENG_IgnitionSelector" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_IGN_SEL" />
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RIGHT">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="2" ConditionValueSource="PMDGNG3:ENG_IgnitionSelector" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_IGN_SEL">
+                    <Parameter Value="2" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="LOGO">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_LOGO">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_LOGO" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="POSITION">
+            <EventDefinitions>
+              <EventDefinition Trigger="OFF">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="1" ConditionValueSource="PMDGNG3:LTS_PositionSw" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_POS_STROBE">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="STEADY">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="2" ConditionValueSource="PMDGNG3:LTS_PositionSw" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_POS_STROBE">
+                    <Parameter Value="2" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="STROBE">
+                <EventConditions>
+                  <EventCondition ConditionComparator="Unequal" ConditionTargetValue="0" ConditionValueSource="PMDGNG3:LTS_PositionSw" />
+                </EventConditions>
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_POS_STROBE" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="ANTI_COLLISION">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_ANT_COL">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_ANT_COL" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="WING">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_WING">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_WING" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+          <Event BoundTo="WHEEL_WELL">
+            <EventDefinitions>
+              <EventDefinition Trigger="PRESS">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_WHEEL_WELL">
+                    <Parameter Value="1" />
+                  </EventActionControl>
+                </EventActions>
+              </EventDefinition>
+              <EventDefinition Trigger="RELEASE">
+                <EventActions>
+                  <EventActionControl TargetDataDefinition="PMDGNG3:EVT_OH_LIGHTS_WHEEL_WELL" />
+                </EventActions>
+              </EventDefinition>
+            </EventDefinitions>
+          </Event>
+        </Events>
+      </DevicePage>
+    </Device>
   </Devices>
   <Options>
     <Option Key="Saitek.BIP.EnableVirtualPower" Value="True" />
@@ -19095,9 +19487,9 @@ IF ([LVAR:OREN_RADIO_KNOB_INDEX] == 2,
       <Expression>Len([SIMCONNECT:TRANSPONDER CODE:1])</Expression>
     </CustomExpression>
   </CustomExpressions>
-  <ProfileInformation ProfileID="d34d9489-8b4f-46cd-ac82-f3e8560dd971" Version="0.104">
+  <ProfileInformation ProfileID="d34d9489-8b4f-46cd-ac82-f3e8560dd971" Version="0.139">
     <Author>.erlich</Author>
     <Description />
-    <LastChanged>2026-07-04T17:03:55.4496461-06:00</LastChanged>
+    <LastChanged>2026-08-01T19:12:21.265101-06:00</LastChanged>
   </ProfileInformation>
 </Profile>
