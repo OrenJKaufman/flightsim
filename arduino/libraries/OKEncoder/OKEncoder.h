@@ -1,11 +1,11 @@
 #include "Arduino.h"
-#ifndef Encoder_h
-#define Encoder_h
+#ifndef OKEncoder_h
+#define OKEncoder_h
 
-class Encoder
+class OKEncoder
 {
 public:
-    Encoder(int pin1, int pin2, void (*rotationCallback)(bool clockwise));
+    OKEncoder(int pin1, int pin2, void (*rotationCallback)(bool clockwise));
     void begin();
     void process();
 

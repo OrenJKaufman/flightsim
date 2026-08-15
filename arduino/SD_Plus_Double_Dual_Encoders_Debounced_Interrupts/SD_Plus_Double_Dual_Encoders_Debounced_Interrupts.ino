@@ -1,107 +1,89 @@
-// For a SPAD.neXt compatible Arduino library import CmdMessenger (4.0) into the Arduino IDE (recommended)
-
 //#define DEBUG
+#define DEBOUNCER_TIMEOUT 2
+
+#define ENCODER_OPTIMIZE_INTERRUPTS
+#include <Encoder.h>
+#include "./lib/debouncer/debouncer.h"
+
+// For a SPAD.neXt compatible Arduino library import CmdMessenger (4.0) into the Arduino IDE (recommended)
 
 #include <CmdMessenger.h>
 CmdMessenger messenger(Serial);
 
-//----- ROTARIES -------
-
-#define NUMROTARIES 4
-
-struct rotariesdef {
-  byte pin1;
-  byte pin2;
-  int ccwchar;
-  int cwchar;
-  volatile unsigned char state;
-};
-
-rotariesdef rotaries[NUMROTARIES]{
-  { 7, 8, 2, 3, 0 },
-  { 6, 5, 0, 1, 0 },
-  { 20, 21, 6, 7, 0 },
-  { 19, 18, 4, 5, 0 },
-};
+Encoder knobAOuter(20, 21);
+Encoder knobAInner(19, 18);
+Encoder knobBOuter(7, 8);
+Encoder knobBInner(6, 5);
 
 
-#define DIR_CCW 0x10
-#define DIR_CW 0x20
-#define R_START 0x0
+Debouncer<long> knobAOuterDebouncer(DEBOUNCER_TIMEOUT);
+Debouncer<long> knobAInnerDebouncer(DEBOUNCER_TIMEOUT);
+Debouncer<long> knobBOuterDebouncer(DEBOUNCER_TIMEOUT);
+Debouncer<long> knobBInnerDebouncer(DEBOUNCER_TIMEOUT);
 
-// Use the half-step state table (emits a code at 00 and 11)
-#define R_CCW_BEGIN 0x1
-#define R_CW_BEGIN 0x2
-#define R_START_M 0x3
-#define R_CW_BEGIN_M 0x4
-#define R_CCW_BEGIN_M 0x5
-const unsigned char ttable[6][4] = {
-  // R_START (00)
-  { R_START_M, R_CW_BEGIN, R_CCW_BEGIN, R_START },
-  // R_CCW_BEGIN
-  { R_START_M | DIR_CCW, R_START, R_CCW_BEGIN, R_START },
-  // R_CW_BEGIN
-  { R_START_M | DIR_CW, R_CW_BEGIN, R_START, R_START },
-  // R_START_M (11)
-  { R_START_M, R_CCW_BEGIN_M, R_CW_BEGIN_M, R_START },
-  // R_CW_BEGIN_M
-  { R_START_M, R_START_M, R_CW_BEGIN_M, R_START | DIR_CW },
-  // R_CCW_BEGIN_M
-  { R_START_M, R_CCW_BEGIN_M, R_START_M, R_START | DIR_CCW },
-};
+#define KNOB_A_PIN 10
+#define KNOB_B_PIN 9
+DebouncedSwitch knobAButtonDebouncer(KNOB_A_PIN, 1);
+DebouncedSwitch knobBButtonDebouncer(KNOB_B_PIN, 1);
 
-/* Call this once in setup(). */
-void rotary_init() {
-  for (int i = 0; i < NUMROTARIES; i++) {
-    pinMode(rotaries[i].pin1, INPUT_PULLUP);
-    pinMode(rotaries[i].pin2, INPUT_PULLUP);
-  }
-}
+long lastKnobAOuter, lastKnobAInner, lastKnobBOuter, lastKnobBInner = 0;
+bool lastKnobAButtonPressed, lastKnobBButtonPressed = false;
 
-/* Read input pins and process for events. Call this either from a
- * loop or an interrupt (eg pin change or timer).
- *
- * Returns 0 on no event, otherwise 0x80 or 0x40 depending on the direction.
- */
-unsigned char rotary_process(int _i) {
-  unsigned char pinstate = (digitalRead(rotaries[_i].pin2) << 1) | digitalRead(rotaries[_i].pin1);
-  rotaries[_i].state = ttable[rotaries[_i].state & 0xf][pinstate];
-  return (rotaries[_i].state & 0x30);
-}
-
-//----- ROTARIES -------
 #ifdef DEBUG
-void knobRotate(int id, int value) {
-  Serial.print("Rotate ID:");
+void DebugPrint(int id, int value) {
   Serial.print(id);
-  Serial.print(" VALUE: ");
-  Serial.println(value);
+  Serial.print(" ");
+  Serial.print(value);
 }
-#else
+#endif
+
+//----- ROTARIES -------
 void knobRotate(int id, int value) {
+#ifdef DEBUG
+  DebugPrint(id, value);
+#else
   messenger.sendCmdStart(8);  // Channel no for sending input state to SPAD NEXT
   messenger.sendCmdArg(id);   // Input ID
   messenger.sendCmdArg(value);
   messenger.sendCmdEnd();
-}
 #endif
+}
 
-void CheckAllEncoders(void) {
-  for (int i = 0; i < NUMROTARIES; i++) {
-    int rotaryId = i >= 2 ? 1000 : 2000;
-    unsigned char result = rotary_process(i);
-    if (result == DIR_CCW) {
-      knobRotate(rotaryId, i % 2 ? -1 : -100);
-    };
-    if (result == DIR_CW) {
-      knobRotate(rotaryId, i % 2 ? 1 : 100);
-    };
+void buttonChange(int id, bool isPressed) {
+#ifdef DEBUG
+  DebugPrint(id, isPressed ? 1 : 0);
+#else
+  messenger.sendCmdStart(8);   // Channel no for sending input state to SPAD NEXT
+  messenger.sendCmdArg(id);  // Input ID
+  messenger.sendCmdArg(isPressed ? 1 : 0);     // Value for off state
+  messenger.sendCmdEnd();
+#endif
+}
+
+void ProcessEncoder(Debouncer<long> *debouncer, Encoder *knob, long *lastVal, int id, int multiplier) {
+  debouncer->debounce(knob->read()/2);
+  if (debouncer->hasChanged()) {
+    long currentVal = debouncer->getDebounced();
+    if (currentVal > *lastVal) {
+      knobRotate(id, multiplier);
+    }
+    else if (currentVal < *lastVal) {
+      knobRotate(id, -multiplier);
+    }
+    *lastVal = currentVal;
+  }
+}
+
+void ProcessButton(DebouncedSwitch *debouncer, bool *lastPressed, int id) {
+  debouncer->debounce();
+  if (debouncer->isClosed() != *lastPressed) {
+    *lastPressed = !*lastPressed;
+    buttonChange(id, *lastPressed);
   }
 }
 
 //----- DEFINITIONS ------
 
-#ifndef DEBUG
 // AUTHOR ID - You need to request your unique authorkey and type in instead of XXXs below
 // To receive your unique authorkey, issue the command "!deviceinfo" on the SPAD.neXt discord.
 // This key will identify the device author and enable author-only functions like e.g. editing the device UI or
@@ -113,29 +95,19 @@ String authkey = "AUTH KEY";
 // To create a GUID you can use this site: https://www.guidgenerator.com/online-guid-generator.aspx (enable braces and hyphens)
 
 String guid = "{0091149E-1C2E-4988-B0E4-F90B5457838C}";
-#endif
+
 
 // TYPE IN YOUR ARDUINO PINS FOR A LED AND A BUTTON HERE
 
-int knob1button = 10;
-int knob2button = 9;
 
 
 //---------- VARIABLES ---------------
-
-int knob1buttonlast = -1;
-int knob2buttonlast = -1;
 
 bool isReady = false;
 bool isStarted = false;
 
 //------------------- CALLBACKS and SPAD CONFIG ------------------------
 
-#ifdef DEBUG
-void attachCommandCallbacks() {
-  isStarted = true;
-}
-#else
 void attachCommandCallbacks() {
   messenger.sendCmd(3, "ATTACHING CALLBACKS!");
   messenger.attach(0, onIdentifyRequest);
@@ -146,7 +118,6 @@ void attachCommandCallbacks() {
 void onUnknownCommand() {
   messenger.sendCmd(3, "UNKNOWN COMMAND");
 }
-
 
 void onSpadEvent() {
   char *szEvent = messenger.readStringArg();
@@ -159,7 +130,6 @@ void onSpadEvent() {
     return;
   }
 }
-
 
 void onIdentifyRequest() {
   char *szRequest = messenger.readStringArg();
@@ -199,7 +169,6 @@ void onIdentifyRequest() {
     messenger.sendCmdArg("NO_DISPLAY_CLEAR=1");
     messenger.sendCmdEnd();
 
-
     //----- CREATE ENCODER 1 -----
 
     messenger.sendCmdStart(0);
@@ -209,7 +178,6 @@ void onIdentifyRequest() {
     messenger.sendCmdArg("ENCODER");              // Type
     messenger.sendCmdArg("SPAD_DOUBLE_ENCODER");  // Behaviour
     messenger.sendCmdEnd();
-
 
     //----- CREATE KNOB 1 BUTTON -----
 
@@ -223,7 +191,6 @@ void onIdentifyRequest() {
     messenger.sendCmdArg("ROUTETO=KNOB_A");
     messenger.sendCmdEnd();
 
-
     //----- CREATE ENCODER 2 -----
 
     messenger.sendCmdStart(0);
@@ -233,7 +200,6 @@ void onIdentifyRequest() {
     messenger.sendCmdArg("ENCODER");              // Type
     messenger.sendCmdArg("SPAD_DOUBLE_ENCODER");  // Behaviour
     messenger.sendCmdEnd();
-
 
     //----- CREATE KNOB 2 BUTTON -----
 
@@ -253,79 +219,44 @@ void onIdentifyRequest() {
     return;
   }
 }
-#endif
-
 
 // ------------------------ PROCESS FUNCTIONS--------------------
 
-#ifdef DEBUG
-void sendCmd(int id, int value) {
-  Serial.print("Button ID:");
-  Serial.print(id);
-  Serial.print(" VALUE: ");
-  Serial.println(value);
+void CheckAllEncoders() {
+  ProcessEncoder(&knobAOuterDebouncer, &knobAOuter, &lastKnobAOuter, 1000, 100);
+  ProcessEncoder(&knobAInnerDebouncer, &knobAInner, &lastKnobAInner, 1000, 1);
+  ProcessEncoder(&knobBOuterDebouncer, &knobBOuter, &lastKnobBOuter, 2000, 100);
+  ProcessEncoder(&knobBInnerDebouncer, &knobBInner, &lastKnobBInner, 2000, 1);
 }
-#else
-void sendCmd(int id, int value) {
-  messenger.sendCmdStart(8);    // Channel no for sending input state to SPAD NEXT
-  messenger.sendCmdArg(id);     // Input ID
-  messenger.sendCmdArg(value);  // Value for off state
-  messenger.sendCmdEnd();
-}
-#endif
-
-unsigned long knob1ButtonLastMillis = 0;
-unsigned long knob2ButtonLastMillis = 0;
 
 void CheckAllButtons() {
-  if (millis() - knob1ButtonLastMillis > 25) {
-    if (digitalRead(knob1button) != knob1buttonlast) {
-      if (knob1buttonlast == 0) {
-        knob1buttonlast = 1;
-        sendCmd(1100, 0);
-      } else {
-        knob1buttonlast = 0;
-        sendCmd(1100, 1);
-      }
-    }
-    knob1ButtonLastMillis = millis();
-  }
-
-  if (millis() - knob2ButtonLastMillis > 25) {
-    if (digitalRead(knob2button) != knob2buttonlast) {
-      if (knob2buttonlast == 0) {
-        knob2buttonlast = 1;
-        sendCmd(2100, 0);
-      } else {
-        knob2buttonlast = 0;
-        sendCmd(2100, 1);
-      }
-    }
-    knob2ButtonLastMillis = millis();
-  }
+  ProcessButton(&knobAButtonDebouncer, &lastKnobAButtonPressed, KNOB_A_PIN);
+  ProcessButton(&knobBButtonDebouncer, &lastKnobBButtonPressed, KNOB_B_PIN);
 }
 
 // ------------------ M A I N  --------------------------------
 
 void setup() {
-  #ifdef DEBUG
-  Serial.begin(9600);
-  #else
+
   Serial.begin(115200);
-  #endif
 
-  pinMode(knob1button, INPUT_PULLUP);
-  pinMode(knob2button, INPUT_PULLUP);
+  pinMode(KNOB_A_PIN, INPUT_PULLUP);
+  pinMode(KNOB_B_PIN, INPUT_PULLUP);
 
-  rotary_init();
-
+#ifdef DEBUG
+  isStarted = true;
+#else
   attachCommandCallbacks();
+#endif
 }
 
 void loop() {
   if (isStarted) {
-    CheckAllButtons();
     CheckAllEncoders();
+    CheckAllButtons();
   }
+
+#ifndef DEBUG
   messenger.feedinSerialData();
+#endif
 }

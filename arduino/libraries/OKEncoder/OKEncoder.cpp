@@ -1,7 +1,7 @@
 #include "Arduino.h"
-#include "Encoder.h"
+#include "OKEncoder.h"
 
-Encoder::Encoder(int pin1, int pin2, void (*rotationCallback)(bool clockwise))
+OKEncoder::OKEncoder(int pin1, int pin2, void (*rotationCallback)(bool clockwise))
 {
     _pin1 = pin1;
     _pin2 = pin2;
@@ -11,7 +11,7 @@ Encoder::Encoder(int pin1, int pin2, void (*rotationCallback)(bool clockwise))
     _movingCounterClockwise = false;
 }
 
-void Encoder::begin()
+void OKEncoder::begin()
 {
     pinMode(_pin1, INPUT_PULLUP);
     pinMode(_pin2, INPUT_PULLUP);
@@ -26,7 +26,7 @@ void Encoder::begin()
     }
 }
 
-void Encoder::process()
+void OKEncoder::process()
 {
     _pin1Val = _isLow(_pin1);
     _pin2Val = _isLow(_pin2);
@@ -38,19 +38,19 @@ void Encoder::process()
     }
 }
 
-bool Encoder::_isLow(int pin) {
+bool OKEncoder::_isLow(int pin) {
     return digitalRead(pin) == LOW;
 }
 
-bool Encoder::_bothFalse() {
+bool OKEncoder::_bothFalse() {
     return !(_pin1Val || _pin2Val);
 }
 
-bool Encoder::_bothTrue() {
+bool OKEncoder::_bothTrue() {
     return (_pin1Val && _pin2Val);
 }
 
-void Encoder::_processNotMoving() {
+void OKEncoder::_processNotMoving() {
     if (_truthes && _bothFalse()) {
         _truthes = false;
         return;
@@ -68,7 +68,7 @@ void Encoder::_processNotMoving() {
     }
 }
 
-void Encoder::_processMoving() {
+void OKEncoder::_processMoving() {
     if ((_truthes && _bothFalse()) || (!_truthes && _bothTrue())) {
         if (_movingClockwise) {
             _movingClockwise = false;
